@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the prima_slider feature.
+ */
+
+include_once 'prima_slider.features.inc';
