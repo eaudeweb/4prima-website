@@ -278,7 +278,7 @@ if(file_exists($json_path)) {
 $options['init-modules'] = array(
   'ctools',
   'entity',
-  'elysia_cron',
+//  'elysia_cron',
 
 //  'locale',
 //  'entity_translation',
@@ -295,7 +295,6 @@ $options['init-modules'] = array(
   'views_bulk_operations',
   'date_views',
   'better_exposed_filters',
-  'views_accordion',
   'draggableviews',
 
   'mailsystem',
@@ -312,8 +311,8 @@ $options['init-modules'] = array(
   'title',
   'wysiwyg',
   'pathauto',
-  'redirect',
-  'match_redirect',
+//  'redirect',
+//  'match_redirect',
   'file_entity',
   'media',
   'media_wysiwyg',
@@ -340,17 +339,12 @@ $options['init-modules'] = array(
   'imce_wysiwyg',
   'wysiwyg_accordion',
 
-  'nodequeue',
-  'fe_block',
-  'fe_nodequeue',
-
   'views_slideshow',
   'views_slideshow_cycle',
   'custom_formatters',
 
   'taxonomy_manager',
   'term_reference_tree',
-//  'node_export',
   'mpac',
   'linkit',
   'pathologic',
@@ -383,11 +377,6 @@ $options['init-modules'] = array(
   'responsive_menus',
   'jquery_expander',
 
-  'workbench',
-  'workbench_access',
-  'workbench_moderation',
-  'node_revision_delete',
-
   // print and generate pdf - per node action
   'print',
   'print_ui',
@@ -413,14 +402,6 @@ $options['init-modules'] = array(
 
   'calendar',
   'date_popup',
-  //'feeds',
-  //'feeds_import',
-  //'feeds_ui',
-  //'feeds_tamper',
-  //'feeds_tamper_ui',
-//  'views_php',
-
-//  'views_json',
 
   'views_data_export',
   'phpexcel',
@@ -484,52 +465,10 @@ $options['init-modules'] = array(
   'rest_server',
   'services_views',
 
-  'osha_taxonomies',
-  'oira_country',
-  'osh_image_gallery',
-  'osha_search',
-  'osha',
-  'osha_workflow',
-  'osha_tmgmt',
-//  'osha_press_release',
-  'osha_news',
-  'osha_menu',
-  'osha_wiki',
-  'osha_slideshare',
-  'osha_resources',
-  'osha_authentication',
-  'osha_sitemap',
-  'napo_contact',
-
-  'oira_partner',
-  'hwc_practical_tool',
-  'hwc_feeds',
-  'shorten',
-  'oira',
-  'oira_blocks',
-
-  'linkchecker',
-  'osha_linkchecker',
-
-  'osha_lingua_tools',
-  'ncw_migration',
-  'oira_workflow',
-
-  // Newsletter modules.
-//  'entity_collection',
-//  'entity_collection_db',
-//  'osha_newsletter',
-
   'devel',
-//  'devel_node_access',
   'diff',
   'securepages',
   'update',
-
-  'oira_promotional_material',
-  'oira_homepage',
-  'oira_ws',
-
 );
 
 
