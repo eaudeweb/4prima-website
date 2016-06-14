@@ -1,0 +1,28 @@
+{
+    "db" : {
+        "host": "db",
+        "username" : "root",
+        "password" : "root",
+        "port": 3306,
+        "database" : "4prima"
+    },
+    "admin" : {
+        "username": "admin",
+        "password": "password",
+        "email": "account@example.com"
+    },
+    "uri": "http://prima.localhost",
+    "variables": {
+        "environment": "production",
+        "site_name": "4PRIMA",
+        "site_mail": "account@example.com",
+        "file_temporary_path": "/tmp",
+        "smtp_on": 0,
+        "smtp_queue": 0,
+        "smtp_host": "some.smtp.server",
+        "smtp_hostbackup": "",
+        "smtp_port": 25,
+        "smtp_protocol": "tls",
+        "smtp_username": "account@example.com"
+    }
+}

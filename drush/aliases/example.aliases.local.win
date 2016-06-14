@@ -1,0 +1,13 @@
+<?php
+
+// Example of local setting.
+$aliases['prima.local'] = array(
+  'uri' => 'dev.prima.localhost',
+  'root' => 'c:/home/user/prima-website-develop/docroot',
+  '%dump-dir' => 'c:/tmp',
+  'os' => 'Windows',
+);
+// For windows development environments only
+$aliases['prima.staging.sync']['no-cache'] = TRUE;
+// add this line in ~/.drush/drushrc.php
+// $options['target-dump'] = 'c:/tmp/target-dump.sql.gz';
