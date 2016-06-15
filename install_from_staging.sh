@@ -45,13 +45,6 @@ if [ ${ecode} != 0 ]; then
   exit ${ecode};
 fi
 
-drush devify_solr
-ecode=$?
-if [ ${ecode} != 0 ]; then
-  echo "Devify Solr has returned an error"
-  exit ${ecode};
-fi
-
 # Build the site
 drush prima_build -y
 #drush updatedb -y

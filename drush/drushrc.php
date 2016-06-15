@@ -295,6 +295,7 @@ $options['init-modules'] = array(
   'wysiwyg',
   'imce',
   'imce_wysiwyg',
+  'prima_slider',
 
 
 //  'elysia_cron',
@@ -486,7 +487,6 @@ $command_specific['archive-dump'] = array(
 $command_specific['devify'] = array(
   'enable-modules' => array(
     'devel',
-//    'stage_file_proxy',
   ),
   'delete-variables' => array(
 //    'googleanalytics_account',
