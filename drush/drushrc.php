@@ -278,6 +278,25 @@ if(file_exists($json_path)) {
 $options['init-modules'] = array(
   'ctools',
   'entity',
+  'libraries',
+  'jquery_update',
+  'views',
+  'views_ui',
+  'draggableviews',
+  'strongarm',
+  'features',
+  'email',
+  'title',
+  'pathauto',
+  'variable',
+  'owlcarousel',
+  'owlcarousel_views',
+  'owlcarousel_ui',
+  'wysiwyg',
+  'imce',
+  'imce_wysiwyg',
+
+
 //  'elysia_cron',
 
 //  'locale',
@@ -285,126 +304,100 @@ $options['init-modules'] = array(
 //  'i18n',
 //  'i18n_string',
 //  'i18n_taxonomy',
-//  'variable',
 
-  // contrib module that add email field.
-  'email',
 
-  'views',
-  'views_ui',
-  'views_bulk_operations',
-  'date_views',
-  'better_exposed_filters',
-  'draggableviews',
+//  'views_bulk_operations',
+//  'date_views',
+//  'better_exposed_filters',
+//  'mailsystem',
+//  'htmlmail',
+//
+//  'taxonomy_access_fix',
+//  'date',
 
-  'mailsystem',
-  'htmlmail',
-
-  'taxonomy_access_fix',
-  'date',
-  'features',
-
-  'field_group',
-  'entityreference',
-  'entityreference_view_widget',
-  'link',
-  'title',
-  'wysiwyg',
-  'pathauto',
+//  'field_group',
+//  'entityreference',
+//  'entityreference_view_widget',
+//  'link',
 //  'redirect',
 //  'match_redirect',
-  'file_entity',
-  'media',
-  'media_wysiwyg',
-  'image_field_caption',
-  'rules',
+//  'file_entity',
+//  'media',
+//  'media_wysiwyg',
+//  'image_field_caption',
+//  'rules',
 
 //  'i18n_menu',
 //  'i18n_block',
 
-  'strongarm',
-  'exclude_node_title',
-  'metatag',
-  'metatag_dc',
+//  'exclude_node_title',
+//  'metatag',
+//  'metatag_dc',
 
-  'pdf_to_image',
-  'doc_to_imagefield',
+//  'pdf_to_image',
+//  'doc_to_imagefield',
 
-  'special_menu_items',
-  'menu_block',
-  'menuimage',
-  'lang_dropdown',
-  'multiple_selects',
-
-  'imce_wysiwyg',
-  'wysiwyg_accordion',
-
-  'views_slideshow',
-  'views_slideshow_cycle',
-  'custom_formatters',
-
-  'taxonomy_manager',
-  'term_reference_tree',
-  'mpac',
-  'linkit',
-  'pathologic',
-  'search_and_replace',
-  'nodeblock',
-  'quicktabs',
-  'context',
-  'context_ui',
-  'context_block_visibility',
-  'site_map',
-  'xmlsitemap',
-  'xmlsitemap_node',
-  'xmlsitemap_menu',
-  'xmlsitemap_i18n',
-  'smart_trim',
-  'menu_attributes',
-  'menu_item_visibility',
-  'shs',
-  'smtp',
+//  'special_menu_items',
+//  'menu_block',
+//  'menuimage',
+//  'lang_dropdown',
+//  'multiple_selects',
+//
+//  'views_slideshow',
+//  'views_slideshow_cycle',
+//  'custom_formatters',
+//
+//  'taxonomy_manager',
+//  'term_reference_tree',
+//  'mpac',
+//  'linkit',
+//  'pathologic',
+//  'search_and_replace',
+//  'nodeblock',
+//  'quicktabs',
+//  'context',
+//  'context_ui',
+//  'context_block_visibility',
+//  'site_map',
+//  'xmlsitemap',
+//  'xmlsitemap_node',
+//  'xmlsitemap_menu',
+//  'xmlsitemap_i18n',
+//  'smart_trim',
+//  'menu_attributes',
+//  'menu_item_visibility',
+//  'shs',
+//  'smtp',
 
   // Enable last (conflict with rules)
-  'uuid',
-  'uuid_features',
-
-  'path_breadcrumbs',
-  'path_breadcrumbs_ui',
-  'path_breadcrumbs_i18n',
-
-  'jquery_update',
-  'responsive_menus',
-  'jquery_expander',
-
-  // print and generate pdf - per node action
-  'print',
-  'print_ui',
-  'print_pdf_tcpdf',
-  'print_pdf',
+//  'uuid',
+//  'uuid_features',
+//
+//  'path_breadcrumbs',
+//  'path_breadcrumbs_ui',
+//  'path_breadcrumbs_i18n',
+//
+//
+//  'responsive_menus',
+//  'jquery_expander',
 
   //Youtube and Flickr field
-  'youtube',
-  'flickr',
+//  'youtube',
+//  'flickr',
 //  'flickr_block',
-  'flickrfield',
-  'flickr_sets',
-  'chosen',
-
-  'owlcarousel',
-  'owlcarousel_views',
-  'owlcarousel_ui',
+//  'flickrfield',
+//  'flickr_sets',
+//  'chosen',
 
   // cookie privacy
-  'eu_cookie_compliance',
-  'piwik',
+//  'eu_cookie_compliance',
 //  'googleanalytics',
 
-  'calendar',
-  'date_popup',
-
-  'views_data_export',
-  'phpexcel',
+//  'calendar',
+//  'date_popup',
+//
+//  'views_data_export',
+//  'phpexcel',
 
   //Allow anonymous comments per node type
 //  'comment_allow_anonymous',
@@ -413,61 +406,54 @@ $options['init-modules'] = array(
 //  'twitter_block',
 
   // Captcha
-  'captcha',
-  'eu_captcha',
+//  'captcha',
+//  'eu_captcha',
 //  'spamspan',
 
-  'panels',
-  'page_manager',
-  'views_content',
-  'i18n_panels',
-  'panels_mini',
-  'ds',
-  'ds_ui',
-  'ds_extras',
-  'ds_forms',
-  'field_formatter_settings',
-  'field_formatter_class',
-  'manualcrop',
-  'panels_breadcrumbs',
-  'panels_custom_title_tag',
-  'extra_field_formatter',
-  'extrafield_views_integration',
-
-  'text_resize',
+//  'panels',
+//  'page_manager',
+//  'views_content',
+//  'i18n_panels',
+//  'panels_mini',
+//  'ds',
+//  'ds_ui',
+//  'ds_extras',
+//  'ds_forms',
+//  'field_formatter_settings',
+//  'field_formatter_class',
+//  'manualcrop',
+//  'panels_breadcrumbs',
+//  'panels_custom_title_tag',
+//  'extra_field_formatter',
+//  'extrafield_views_integration',
+//
+//  'text_resize',
 
   // Link content types with main menu items
-  'menu_position',
-  'r4032login',
-
-  'hreflang',
-
-  'contact',
-  'field_collection',
-  'webform',
-  'webform_localization',
-  'webform_references',
-  'webform_block',
-  'fapi_validation',
-
-  'facetapi',
+//  'menu_position',
+//  'r4032login',
+//
+//  'hreflang',
+//
+//  'contact',
+//  'field_collection',
+//  'webform',
+//  'webform_localization',
+//  'webform_references',
+//  'webform_block',
+//  'fapi_validation',
+//
+//  'facetapi',
 //  'facetapi_bonus',
-  'search_api_facetapi',
-  'search_autocomplete',
-  'search_api_et',
-  'search_api_et_solr',
-  'search_api_views',
-  'search_api_attachments',
-  'search_api_title2',
-
-  // serrvices
-  'services',
-  'rest_server',
-  'services_views',
+//  'search_api_facetapi',
+//  'search_autocomplete',
+//  'search_api_et',
+//  'search_api_et_solr',
+//  'search_api_views',
+//  'search_api_attachments',
+//  'search_api_title2',
 
   'devel',
-  'diff',
-  'securepages',
   'update',
 );
 
@@ -477,7 +463,7 @@ $options['init-themes'] = array(
 );
 
 $options['disable-modules'] = array(
-  'varnish', 'memcache_storage'
+  'overlay',
 );
 
 $command_specific['sql-sync'] = array(
@@ -493,31 +479,31 @@ $command_specific['core-rsync'] = array(
 
 // Exclude domains symlinks from archive-dump
 $command_specific['archive-dump'] = array(
-  'tar-options' => ' --exclude=sites/default/files',
+  //'tar-options' => ' --exclude=sites/default/files',
 );
 
 // Add specific settings for development or demo.
 $command_specific['devify'] = array(
   'enable-modules' => array(
     'devel',
-    'stage_file_proxy',
+//    'stage_file_proxy',
   ),
   'delete-variables' => array(
-    'googleanalytics_account',
-    'piwik_site_id',
-    'piwik_url_http',
-    'piwik_url_https',
+//    'googleanalytics_account',
+//    'piwik_site_id',
+//    'piwik_url_http',
+//    'piwik_url_https',
   ),
   'reset-variables' => array_merge(
     array(
-      'reroute_email_enable_message' => TRUE,
-      'reroute_email_enable' => TRUE,
-      'stage_file_proxy_origin' => 'https://4prima.edw.ro',
-      'stage_file_proxy_use_imagecache_root' => TRUE,
-      'stage_file_proxy_hotlink' => FALSE,
-      'reroute_email_address' => $cfg->variables->site_mail,
-      'smtp_from' => $cfg->variables->site_mail,
-      'smtp_fromname' => $cfg->variables->site_name,
+//      'reroute_email_enable_message' => TRUE,
+//      'reroute_email_enable' => TRUE,
+//      'stage_file_proxy_origin' => 'https://4prima.edw.ro',
+//      'stage_file_proxy_use_imagecache_root' => TRUE,
+//      'stage_file_proxy_hotlink' => FALSE,
+//      'reroute_email_address' => $cfg->variables->site_mail,
+//      'smtp_from' => $cfg->variables->site_mail,
+//      'smtp_fromname' => $cfg->variables->site_name,
     )
     , (array) $cfg->variables),
 );

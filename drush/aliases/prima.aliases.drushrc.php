@@ -1,11 +1,11 @@
 <?php
 
 $aliases['staging'] = array(
-  'uri' => 'prima.edw.ro',
+  'uri' => '4prima.edw.ro',
   'db-allows-remote' => TRUE,
   'remote-host' => '4prima.edw.ro',
   'remote-user' => 'php',
-  'root' => '/var/www/html/4prima/docroot',
+  'root' => '/var/www/html/4prima-website/docroot',
   'path-aliases' => array(
     '%files' => 'sites/default/files',
   ),
