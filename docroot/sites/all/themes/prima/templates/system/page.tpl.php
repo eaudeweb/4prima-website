@@ -4,31 +4,29 @@
     <div class="container">
 
       <!-- #pre-header-inside -->
-      <div id="pre-header-inside" class="clearfix">
-        <div class="row">
-          <div class="col-md-4">
-            <?php if ($page['pre_header_first']):?>
-              <div class="pre-header-area">
-                <?php print render($page['pre_header_first']); ?>
-              </div>
-            <?php endif; ?>
-          </div>
+      <div class="row clearfix">
+        <div class="col-md-4">
+          <?php if ($page['pre_header_first']):?>
+            <div class="pre-header-area">
+              <?php print render($page['pre_header_first']); ?>
+            </div>
+          <?php endif; ?>
+        </div>
 
-          <div class="col-md-4">
-            <?php if ($page['pre_header_second']):?>
-              <div class="pre-header-area">
-                <?php print render($page['pre_header_second']); ?>
-              </div>
-            <?php endif; ?>
-          </div>
+        <div class="col-md-4">
+          <?php if ($page['pre_header_second']):?>
+            <div class="pre-header-area">
+              <?php print render($page['pre_header_second']); ?>
+            </div>
+          <?php endif; ?>
+        </div>
 
-          <div class="col-md-4">
-            <?php if ($page['pre_header_third']):?>
-              <div class="pre-header-area">
-                <?php print render($page['pre_header_third']); ?>
-              </div>
-            <?php endif; ?>
-          </div>
+        <div class="col-md-4">
+          <?php if ($page['pre_header_third']):?>
+            <div class="pre-header-area">
+              <?php print render($page['pre_header_third']); ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
       <!-- EOF: #pre-header-inside -->
@@ -84,14 +82,14 @@
     <!-- #header-inside -->
     <div id="header-inside" class="clearfix">
       <div class="row">
-        <div class="col-md-12">
-
+        <div class="col-md-4">
           <?php if ($logo):?>
             <div id="logo">
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" class="img-responsive" alt="<?php print t('Home'); ?>" /> </a>
             </div>
           <?php endif; ?>
-
+        </div>
+        <div class="col-md-8">
           <?php if ($site_name):?>
             <div id="site-name">
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
@@ -107,8 +105,6 @@
           <?php if ($page['header']) :?>
             <?php print render($page['header']); ?>
           <?php endif; ?>
-
-
         </div>
       </div>
     </div>
@@ -120,7 +116,7 @@
 
 <!-- #main-navigation -->
 <div id="main-navigation" class="clearfix">
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- #main-navigation-inside -->
     <div id="main-navigation-inside" class="clearfix">

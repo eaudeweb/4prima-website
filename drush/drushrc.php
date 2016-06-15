@@ -295,6 +295,8 @@ $options['init-modules'] = array(
   'wysiwyg',
   'imce',
   'imce_wysiwyg',
+  'special_menu_items',
+  'superfish',
   'prima_slider',
 
 
@@ -338,7 +340,6 @@ $options['init-modules'] = array(
 //  'pdf_to_image',
 //  'doc_to_imagefield',
 
-//  'special_menu_items',
 //  'menu_block',
 //  'menuimage',
 //  'lang_dropdown',
