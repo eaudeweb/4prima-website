@@ -297,6 +297,9 @@ $options['init-modules'] = array(
   'imce_wysiwyg',
   'special_menu_items',
   'superfish',
+  'date',
+  'calendar',
+  'webform',
   'prima_slider',
 
 
@@ -316,7 +319,6 @@ $options['init-modules'] = array(
 //  'htmlmail',
 //
 //  'taxonomy_access_fix',
-//  'date',
 
 //  'field_group',
 //  'entityreference',
@@ -395,7 +397,6 @@ $options['init-modules'] = array(
 //  'eu_cookie_compliance',
 //  'googleanalytics',
 
-//  'calendar',
 //  'date_popup',
 //
 //  'views_data_export',
@@ -439,7 +440,6 @@ $options['init-modules'] = array(
 //
 //  'contact',
 //  'field_collection',
-//  'webform',
 //  'webform_localization',
 //  'webform_references',
 //  'webform_block',
