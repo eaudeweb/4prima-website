@@ -300,6 +300,12 @@ $options['init-modules'] = array(
   'date',
   'calendar',
   'webform',
+  'page_manager',
+  'panels',
+  'panels_mini',
+  'panels_node',
+  'panels_ipe',
+  'views_content',
   'prima_slider',
 
 
@@ -413,11 +419,8 @@ $options['init-modules'] = array(
 //  'eu_captcha',
 //  'spamspan',
 
-//  'panels',
-//  'page_manager',
-//  'views_content',
+
 //  'i18n_panels',
-//  'panels_mini',
 //  'ds',
 //  'ds_ui',
 //  'ds_extras',
