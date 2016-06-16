@@ -296,6 +296,7 @@ $options['init-modules'] = array(
   'imce',
   'imce_wysiwyg',
   'special_menu_items',
+  'menu_item_visibility',
   'superfish',
   'date',
   'calendar',
@@ -307,6 +308,7 @@ $options['init-modules'] = array(
   'panels_ipe',
   'views_content',
   'prima_slider',
+  'prima_news',
   'prima_homepage',
 
 
@@ -376,7 +378,6 @@ $options['init-modules'] = array(
 //  'xmlsitemap_i18n',
 //  'smart_trim',
 //  'menu_attributes',
-//  'menu_item_visibility',
 //  'shs',
 //  'smtp',
 
