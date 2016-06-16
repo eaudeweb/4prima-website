@@ -307,6 +307,7 @@ $options['init-modules'] = array(
   'panels_ipe',
   'views_content',
   'prima_slider',
+  'prima_homepage',
 
 
 //  'elysia_cron',
