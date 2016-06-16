@@ -299,6 +299,8 @@ $options['init-modules'] = array(
   'menu_item_visibility',
   'superfish',
   'date',
+  'date_popup',
+  'date_views',
   'calendar',
   'webform',
   'page_manager',
@@ -307,9 +309,17 @@ $options['init-modules'] = array(
   'panels_node',
   'panels_ipe',
   'views_content',
+  'addressfield',
+  'geophp',
+  'geofield',
+  'geocoder',
+  'leaflet',
+  'leaflet_views',
+
   'prima_slider',
   'prima_news',
   'prima_homepage',
+  'prima_event',
 
 
 //  'elysia_cron',
@@ -322,7 +332,6 @@ $options['init-modules'] = array(
 
 
 //  'views_bulk_operations',
-//  'date_views',
 //  'better_exposed_filters',
 //  'mailsystem',
 //  'htmlmail',
@@ -405,7 +414,7 @@ $options['init-modules'] = array(
 //  'eu_cookie_compliance',
 //  'googleanalytics',
 
-//  'date_popup',
+
 //
 //  'views_data_export',
 //  'phpexcel',
