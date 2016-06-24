@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the 4Prima Contact feature.
+ */
+
+include_once 'prima_contact.features.inc';

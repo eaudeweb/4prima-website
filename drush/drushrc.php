@@ -303,6 +303,7 @@ $options['init-modules'] = array(
   'date_views',
   'calendar',
   'webform',
+  'webform_block',
   'page_manager',
   'panels',
   'panels_mini',
@@ -320,6 +321,7 @@ $options['init-modules'] = array(
   'prima_news',
   'prima_homepage',
   'prima_event',
+  'prima_contact',
 
 
 //  'elysia_cron',

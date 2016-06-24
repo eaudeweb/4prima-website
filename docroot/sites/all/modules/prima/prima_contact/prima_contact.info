@@ -1,0 +1,10 @@
+name = 4Prima Contact
+description = 4Prima custom contact page.
+core = 7.x
+package = 4Prima
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = contact_us
