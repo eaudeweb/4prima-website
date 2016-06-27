@@ -1466,6 +1466,7 @@ textarea {
 .front .view-news .view-content .news-item .views-field img {
   min-width: 100%;
   max-width: 100%;
+  max-height: 200px;
 }
 .front .view-news .view-content .news-item .views-field h4 {
   margin-top: 15px;
