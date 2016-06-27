@@ -1364,6 +1364,9 @@ textarea {
 #banner #banner-inside {
   padding: 0;
 }
+#main-content {
+  padding-top: 30px;
+}
 #main-content #main #content-wrapper {
   background-color: ffffff;
   border: none;
