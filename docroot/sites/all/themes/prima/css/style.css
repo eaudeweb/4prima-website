@@ -1291,12 +1291,24 @@ textarea {
 #pre-header .block-on-the-web .on-the-web a {
   display: inline-block;
 }
+#header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#header #logo {
+  text-align: left;
+  padding-bottom: 0;
+}
+#header #logo img {
+  max-height: 100px;
+}
 #main-navigation ul.menu li a {
   font-size: 12px;
   font-weight: normal;
+  padding: 15px;
 }
 #main-navigation ul.menu li .nolink {
-  padding: 20px;
+  padding: 15px;
   color: #999;
   cursor: pointer;
 }
