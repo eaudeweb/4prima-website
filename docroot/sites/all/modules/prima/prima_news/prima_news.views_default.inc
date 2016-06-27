@@ -174,7 +174,7 @@ function prima_news_views_default_views() {
       [field_image]
     </div>
     <div class="right-col col-xs-9 col-md-12">
-      <div class="h4">[title]</div>
+      <h4>[title]</h4>
          [body]
     </div>
   </div>';

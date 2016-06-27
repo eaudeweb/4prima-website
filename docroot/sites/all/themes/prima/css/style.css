@@ -1424,7 +1424,18 @@ textarea {
     padding: 20px 0;
   }
 }
-.front .view-news .view-content .row .col-xs-3 img {
+.front .view-news .view-content {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.front .view-news .view-content .news-item .views-field {
+  padding: 15px;
+  border: 1px solid #EEE;
+}
+.front .view-news .view-content .news-item .views-field .left-col img {
   min-width: 100%;
   max-width: 100%;
+}
+.front .view-news .view-content .news-item .views-field .right-col {
+  text-align: center;
 }
