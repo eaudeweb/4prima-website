@@ -42,7 +42,7 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -53,6 +53,7 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -93,14 +94,14 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="container">
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-xs-3 left-col">
       [field_image]
     </div>
-    <div class="col-xs-9">
-      <div class="h4">[title]</div>
-         [body]
-         [field_contacts]
-         [field_link]
+    <div class="col-xs-9 right-col">
+      <h4>[title]</h4>
+      <div class="body_field">[body]</div>
+      <div class="field_contacts">[field_contacts]</div>
+      <div class="field_link">[field_link]</div>
     </div>
   </div>
 </div>';
