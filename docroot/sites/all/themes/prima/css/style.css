@@ -1300,3 +1300,8 @@ textarea {
   color: #999;
   cursor: pointer;
 }
+#main-navigation ul.menu li .nolink:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  margin-left: 5px;
+}
