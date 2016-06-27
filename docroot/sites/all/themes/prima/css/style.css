@@ -1311,20 +1311,34 @@ textarea {
   padding: 15px;
   line-height: 20px;
 }
+#main-navigation ul.menu li a:hover {
+  color: #F33F3F;
+}
 #main-navigation ul.menu li .nolink {
   padding: 15px;
   color: #999;
   cursor: pointer;
   text-transform: uppercase;
   line-height: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #main-navigation ul.menu li .nolink:after {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
   margin-left: 5px;
 }
+#main-navigation ul.menu li .nolink:hover {
+  color: #F33F3F;
+}
 #main-navigation ul.menu li .nolink .sf-sub-indicator {
   display: none;
+}
+#main-navigation ul.menu ul li a {
+  padding: 10px 15px;
 }
 #main #content-wrapper {
   background-color: ffffff;
