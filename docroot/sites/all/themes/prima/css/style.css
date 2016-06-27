@@ -1296,24 +1296,30 @@ textarea {
   padding-bottom: 15px;
 }
 #header #logo {
-  text-align: left;
+  5text-align: left;
   padding-bottom: 0;
 }
 #header #logo img {
   max-height: 100px;
 }
 #main-navigation ul.menu li a {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
-  padding: 15px;
+  padding: 10px;
+  line-height: 20px;
 }
 #main-navigation ul.menu li .nolink {
-  padding: 15px;
+  padding: 10px;
   color: #999;
   cursor: pointer;
+  text-transform: uppercase;
+  line-height: 20px;
 }
 #main-navigation ul.menu li .nolink:after {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
   margin-left: 5px;
+}
+#main-navigation ul.menu li .nolink .sf-sub-indicator {
+  display: none;
 }

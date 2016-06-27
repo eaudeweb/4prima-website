@@ -42,7 +42,7 @@
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  #logo {
+  #logo {5
     text-align: left;
     padding-bottom: 0;
     img {
@@ -54,18 +54,24 @@
   ul.menu {
     li {
       a {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: normal;
-        padding: 15px;
+        padding: 10px;
+        line-height: 20px;
       }
       .nolink {
-        padding: 15px;
+        padding: 10px;
         color: #999;
         cursor: pointer;
+        text-transform: uppercase;
+        line-height: 20px;
         &:after {
           font-family: 'Glyphicons Halflings';
           content: "\e114";
           margin-left: 5px;
+        }
+        .sf-sub-indicator {
+          display: none;
         }
       }
     }
