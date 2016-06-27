@@ -1346,7 +1346,8 @@ textarea {
   color: #F33F3F;
 }
 #main-navigation ul.menu li .nolink {
-  padding: 15px;
+  position: relative;
+  padding: 15px 35px 15px 15px;
   color: #999;
   cursor: pointer;
   text-transform: uppercase;
@@ -1360,7 +1361,10 @@ textarea {
 #main-navigation ul.menu li .nolink:after {
   font-family: 'Glyphicons Halflings';
   content: "\e114";
-  margin-left: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 15px;
 }
 #main-navigation ul.menu li .nolink:hover {
   color: #F33F3F;
