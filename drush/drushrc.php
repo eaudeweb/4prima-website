@@ -320,6 +320,7 @@ $options['init-modules'] = array(
   'geocoder',
   'leaflet',
   'leaflet_views',
+  'youtube',
 
   'prima_slider',
   'prima_news',
@@ -328,6 +329,7 @@ $options['init-modules'] = array(
   'prima_contact',
   'prima_contact_person',
   'prima_partner',
+  'prima_publication',
 
   'smart_trim',
 //  'elysia_cron',
@@ -407,7 +409,6 @@ $options['init-modules'] = array(
 //  'jquery_expander',
 
   //Youtube and Flickr field
-//  'youtube',
 //  'flickr',
 //  'flickr_block',
 //  'flickrfield',

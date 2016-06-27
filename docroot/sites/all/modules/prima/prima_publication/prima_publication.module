@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the 4Prima Publication feature.
+ */
+
+include_once 'prima_publication.features.inc';
