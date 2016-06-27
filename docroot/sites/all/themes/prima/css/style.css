@@ -1272,7 +1272,7 @@ textarea {
   min-height: 20px;
   height: 20px;
   line-height: 20px;
-  padding: 6px 10px;
+  padding: 5px 10px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1283,6 +1283,10 @@ textarea {
 }
 #pre-header #block-search-form .form-search .form-actions {
   margin-bottom: 0;
+}
+#pre-header #block-search-form .form-search button {
+  background-color: #F33F3F;
+  border: none;
 }
 #pre-header .block-on-the-web {
   padding-bottom: 0;
