@@ -1340,9 +1340,9 @@ textarea {
 #main-navigation ul.menu ul li a {
   padding: 10px 15px;
 }
-#banner .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
+#banner .container-fluid,
+#banner #banner-inside {
+  padding: 0;
 }
 #main-content {
   padding-top: 0;
