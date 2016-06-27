@@ -87,6 +87,12 @@ img {
 #bottom-content {
   color: #ffffff;
 }
+::-moz-selection {
+  color: #ffffff;
+}
+::selection {
+  color: #ffffff;
+}
 /*Heading*/
 h1,
 h2,
@@ -1395,6 +1401,18 @@ textarea {
   height: 3px;
   line-height: 3px;
   margin-top: 10px;
+}
+.view-partners.view-display-id-page .view-content .container {
+  width: 100%;
+}
+.view-partners.view-display-id-page .view-content .row {
+  border: 1px solid #EEE;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+.view-partners.view-display-id-page .view-content .row .left-col img {
+  min-width: 100%;
+  max-width: 100%;
 }
 .front #main-content {
   padding-top: 0;
