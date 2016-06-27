@@ -329,7 +329,7 @@ $options['init-modules'] = array(
   'prima_contact_person',
   'prima_partner',
 
-
+  'smart_trim',
 //  'elysia_cron',
 
 //  'locale',
@@ -390,7 +390,6 @@ $options['init-modules'] = array(
 //  'xmlsitemap_node',
 //  'xmlsitemap_menu',
 //  'xmlsitemap_i18n',
-//  'smart_trim',
 //  'menu_attributes',
 //  'shs',
 //  'smtp',

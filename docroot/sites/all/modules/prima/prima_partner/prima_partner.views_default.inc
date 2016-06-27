@@ -71,10 +71,8 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['field_contacts']['label'] = 'Main contacts';
   $handler->display->display_options['fields']['field_contacts']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_contacts']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_contacts']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_contacts']['settings'] = array(
-    'view_mode' => 'token',
-    'links' => 1,
+    'link' => 1,
   );
   $handler->display->display_options['fields']['field_contacts']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_contacts']['multi_type'] = 'ul';
