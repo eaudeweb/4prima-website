@@ -1362,3 +1362,54 @@ textarea {
   font-size: 28px;
   border-bottom: 1px solid #EEE;
 }
+#panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+}
+#panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .field-name-body {
+  float: left;
+  font-size: 20px;
+  line-height: 26px;
+  width: 70%;
+}
+#panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article footer {
+  float: left;
+  padding: 0;
+  text-align: right;
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  #panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .field-name-body,
+  #panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .node-readmore {
+    width: 100%;
+  }
+}
+#panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .node-readmore a {
+  display: block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  padding: 20px 60px;
+  text-align: center;
+}
+#panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .node-readmore a:hover {
+  text-decoration: none;
+  background-color: #333;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  #panels-ipe-display-panel-context-page-front-page-page-front-page-panel .panels-flexible-region-new-4prima_short_description article .node-readmore a {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+}
