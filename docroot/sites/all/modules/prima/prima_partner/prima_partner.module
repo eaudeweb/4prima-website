@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the 4Prima Partner feature.
+ */
+
+include_once 'prima_partner.features.inc';

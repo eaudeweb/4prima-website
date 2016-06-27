@@ -286,7 +286,9 @@ $options['init-modules'] = array(
   'strongarm',
   'features',
   'email',
+  'link',
   'title',
+  'exclude_node_title',
   'pathauto',
   'variable',
   'owlcarousel',
@@ -310,6 +312,8 @@ $options['init-modules'] = array(
   'panels_node',
   'panels_ipe',
   'views_content',
+  'entityreference',
+  'entityreference_view_widget',
   'addressfield',
   'geophp',
   'geofield',
@@ -322,6 +326,8 @@ $options['init-modules'] = array(
   'prima_homepage',
   'prima_event',
   'prima_contact',
+  'prima_contact_person',
+  'prima_partner',
 
 
 //  'elysia_cron',
@@ -341,9 +347,7 @@ $options['init-modules'] = array(
 //  'taxonomy_access_fix',
 
 //  'field_group',
-//  'entityreference',
-//  'entityreference_view_widget',
-//  'link',
+
 //  'redirect',
 //  'match_redirect',
 //  'file_entity',
@@ -355,7 +359,6 @@ $options['init-modules'] = array(
 //  'i18n_menu',
 //  'i18n_block',
 
-//  'exclude_node_title',
 //  'metatag',
 //  'metatag_dc',
 
