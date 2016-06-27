@@ -1287,3 +1287,8 @@ textarea {
   font-size: 12px;
   font-weight: normal;
 }
+#main-navigation ul.menu li .nolink {
+  padding: 20px;
+  color: #999;
+  cursor: pointer;
+}
