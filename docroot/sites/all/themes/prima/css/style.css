@@ -1469,6 +1469,10 @@ textarea {
 .front .view-news .view-content .news-item .views-field .right-col {
   text-align: center;
 }
+.front .view-news .view-content .news-item .views-field .right-col h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .front .view-news .view-content .news-item .views-field .right-col .more a {
   display: inline-block;
   background-color: #F33F3F;
@@ -1480,7 +1484,7 @@ textarea {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .front .view-news .view-content .news-item .views-field .right-col .more a:hover {
   text-decoration: none;
