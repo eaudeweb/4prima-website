@@ -15,6 +15,17 @@
   text-decoration: none;
   background-color: #333;
 }
+.pagination .active span,
+.pagination .active span:hover {
+  background-color: #F33F3F;
+  border-color: #F33F3F;
+}
+.pagination li a {
+  color: #F33F3F;
+}
+.pagination li a:hover {
+  color: #900909;
+}
 /* Reset unusual Firefox-on-Android default style, see https://github.com/necolas/normalize.css/issues/214*/
 @media (max-width: 991px) {
   .form-text,
