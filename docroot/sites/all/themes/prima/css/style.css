@@ -12,7 +12,7 @@ body {
   color: #444;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  line-height: 160%;
+  line-height: 100%;
 }
 p {
   margin: 0 0 25px;
@@ -49,7 +49,7 @@ blockquote::before {
 }
 blockquote p {
   font-size: 14px;
-  line-height: 160%;
+  line-height: 100%;
   font-weight: 400;
 }
 img {
@@ -1257,28 +1257,36 @@ textarea {
 }
 #pre-header {
   background-color: #1C1C1C;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 #pre-header #block-search-form {
   padding-bottom: 0;
 }
 #pre-header #block-search-form .form-search #edit-search-block-form--2 {
+  display: inline-block;
   background-color: #3A3A3A;
   color: #CCC;
   border: 1px solid #444;
+  width: 200px;
   min-height: 20px;
   height: 20px;
   line-height: 20px;
-  padding: 5px 10px;
+  padding: 6px 10px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   box-sizing: content-box;
 }
+#pre-header #block-search-form .form-search .input-group-btn {
+  display: inline-block;
+}
+#pre-header #block-search-form .form-search #edit-actions {
+  margin-bottom: 0;
+}
 #pre-header .block-on-the-web {
   padding-bottom: 0;
-}
-#pre-header .block-on-the-web .on-the-web {
-  float: left;
+  text-align: right;
 }
 #pre-header .block-on-the-web .on-the-web a {
   display: inline-block;
