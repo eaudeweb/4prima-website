@@ -143,7 +143,7 @@
 <?php if ($page['banner']) : ?>
   <!-- #banner -->
   <div id="banner" class="clearfix">
-    <div class="container">
+    <div class="container-fluid">
 
       <!-- #banner-inside -->
       <div id="banner-inside" class="clearfix">
