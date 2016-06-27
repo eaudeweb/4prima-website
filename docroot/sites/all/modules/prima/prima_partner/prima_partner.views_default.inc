@@ -100,8 +100,8 @@ function prima_partner_views_default_views() {
     <div class="col-xs-9 right-col">
       <h4>[title]</h4>
       <div class="body_field">[body]</div>
-      <div class="field_contacts">[field_contacts]</div>
-      <div class="field_link">[field_link]</div>
+      <div class="field_contacts"><h5>Contacts</h5>[field_contacts]</div>
+      <div class="field_link"><h5>Links</h5>[field_link]</div>
     </div>
   </div>
 </div>';

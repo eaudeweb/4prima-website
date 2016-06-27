@@ -1414,6 +1414,16 @@ textarea {
   min-width: 100%;
   max-width: 100%;
 }
+.view-partners.view-display-id-page .view-content .row .right-col h4 {
+  margin-top: 0;
+}
+.view-partners.view-display-id-page .view-content .row .right-col h5 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.view-partners.view-display-id-page .view-content .row .right-col .field_link ul {
+  margin-bottom: 0;
+}
 .front #main-content {
   padding-top: 0;
   padding-bottom: 0;
