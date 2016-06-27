@@ -33,7 +33,7 @@ function prima_homepage_default_page_manager_pages() {
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Front page',
-    'no_blocks' => 1,
+    'no_blocks' => 0,
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
@@ -60,29 +60,11 @@ function prima_homepage_default_page_manager_pages() {
         'width' => 100,
         'width_type' => '%',
         'children' => array(
-          0 => 'main-row',
-          1 => 1,
-          2 => 5,
-          3 => 6,
+          0 => 1,
+          1 => 5,
+          2 => 6,
         ),
         'parent' => 'canvas',
-      ),
-      'main-row' => array(
-        'type' => 'row',
-        'contains' => 'region',
-        'children' => array(
-          0 => 'center',
-        ),
-        'parent' => 'main',
-      ),
-      'center' => array(
-        'type' => 'region',
-        'title' => 'Slider',
-        'width' => 100,
-        'width_type' => '%',
-        'parent' => 'main-row',
-        'class' => '',
-        'hide_empty' => 1,
       ),
       1 => array(
         'type' => 'row',
@@ -187,41 +169,6 @@ function prima_homepage_default_page_manager_pages() {
     $display->content['new-40ee6492-fcf2-4e2e-bbc7-4114a0830827'] = $pane;
     $display->panels['4prima_short_description'][0] = 'new-40ee6492-fcf2-4e2e-bbc7-4114a0830827';
     $pane = new stdClass();
-    $pane->pid = 'new-a2b28bd0-ca13-428c-950c-029cb14e3e32';
-    $pane->panel = 'center';
-    $pane->type = 'views';
-    $pane->subtype = 'slideshow';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '5',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'override_title' => 1,
-      'override_title_text' => '<none>',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'a2b28bd0-ca13-428c-950c-029cb14e3e32';
-    $display->content['new-a2b28bd0-ca13-428c-950c-029cb14e3e32'] = $pane;
-    $display->panels['center'][0] = 'new-a2b28bd0-ca13-428c-950c-029cb14e3e32';
-    $pane = new stdClass();
     $pane->pid = 'new-8b3377f3-c00c-40b4-957b-e4a102c98e49';
     $pane->panel = 'latest_news';
     $pane->type = 'views';
@@ -257,7 +204,7 @@ function prima_homepage_default_page_manager_pages() {
     $display->content['new-8b3377f3-c00c-40b4-957b-e4a102c98e49'] = $pane;
     $display->panels['latest_news'][0] = 'new-8b3377f3-c00c-40b4-957b-e4a102c98e49';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-a2b28bd0-ca13-428c-950c-029cb14e3e32';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['front_page'] = $page;
