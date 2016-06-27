@@ -1302,6 +1302,9 @@ textarea {
 #header #logo img {
   max-height: 100px;
 }
+#header #logo img:hover {
+  opacity: 1;
+}
 #main-navigation ul.menu li a {
   font-size: 14px;
   font-weight: normal;
