@@ -81,16 +81,14 @@
     .more-link {
       text-align: right;
       a {
-        .pink-button;
+        display: inline-block;
+        color: #000000;
         margin-top: 15px;
+        &:hover {
+          text-decoration: none;
+          color: lighten(#000000, 30%);
+        }
       }
-    }
-  }
-
-  .view-events {
-    .views-row {
-      padding: 15px;
-      border: 1px solid #EEE;
     }
   }
 }
