@@ -4,4 +4,19 @@
 @screen-lg: 1200px;
 @pink-color: #F33F3F;
 
-
+.pink-button {
+  display: inline-block;
+  background-color: @pink-color;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    background-color: #333;
+  }
+}

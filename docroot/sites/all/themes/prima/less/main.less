@@ -61,20 +61,8 @@
           width: 100%;
         }
         a {
-          display: block;
-          background-color: @pink-color;
-          color: #ffffff;
+          .pink-button;
           padding: 20px 60px;
-          text-align: center;
-          &:hover {
-            text-decoration: none;
-            background-color: #333;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
           @media screen and (max-width: @screen-sm) {
             width: 100%;
             margin-top: 10px;
@@ -101,6 +89,12 @@
           }
           .right-col {
             text-align: center;
+            .more {
+              a {
+                .pink-button;
+                margin-top: 10px;
+              }
+            }
           }
         }
       }

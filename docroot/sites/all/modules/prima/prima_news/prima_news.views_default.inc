@@ -164,18 +164,27 @@ function prima_news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="row">
-    <div class="left-col col-xs-3 col-md-12">
+    <div class="left-col col-xs-12">
       [field_image]
     </div>
-    <div class="right-col col-xs-9 col-md-12">
+    <div class="right-col col-xs-12">
       <h4>[title]</h4>
-         [body]
+       <div class="body_field">[body]</div>
+       <div class="more">[view_node]</div>
     </div>
   </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;

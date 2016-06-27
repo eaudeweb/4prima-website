@@ -1,4 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,greek);
+.pink-button {
+  display: inline-block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.pink-button:hover {
+  text-decoration: none;
+  background-color: #333;
+}
 /* Reset unusual Firefox-on-Android default style, see https://github.com/necolas/normalize.css/issues/214*/
 @media (max-width: 991px) {
   .form-text,
@@ -1402,20 +1418,21 @@ textarea {
   }
 }
 .front .panels-flexible-region-new-4prima_short_description article .node-readmore a {
-  display: block;
+  display: inline-block;
   background-color: #F33F3F;
   color: #ffffff;
-  padding: 20px 60px;
   text-align: center;
-}
-.front .panels-flexible-region-new-4prima_short_description article .node-readmore a:hover {
-  text-decoration: none;
-  background-color: #333;
+  padding: 10px 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  padding: 20px 60px;
+}
+.front .panels-flexible-region-new-4prima_short_description article .node-readmore a:hover {
+  text-decoration: none;
+  background-color: #333;
 }
 @media screen and (max-width: 768px) {
   .front .panels-flexible-region-new-4prima_short_description article .node-readmore a {
@@ -1438,4 +1455,21 @@ textarea {
 }
 .front .view-news .view-content .news-item .views-field .right-col {
   text-align: center;
+}
+.front .view-news .view-content .news-item .views-field .right-col .more a {
+  display: inline-block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+.front .view-news .view-content .news-item .views-field .right-col .more a:hover {
+  text-decoration: none;
+  background-color: #333;
 }
