@@ -47,6 +47,20 @@ function prima_event_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'smart_trim_format';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_link' => '0',
+    'trim_length' => '300',
+    'trim_type' => 'chars',
+    'trim_suffix' => '...',
+    'more_link' => '0',
+    'more_text' => 'Read more',
+    'summary_handler' => 'ignore',
+    'trim_options' => array(
+      'text' => 0,
+    ),
+    'trim_preserve_tags' => '',
+  );
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
@@ -115,6 +129,13 @@ function prima_event_views_default_views() {
       'address' => 'address',
     ),
   );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Read more';
   /* Sort criterion: Content: Date -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
