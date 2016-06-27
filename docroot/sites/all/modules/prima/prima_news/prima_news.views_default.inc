@@ -124,7 +124,7 @@ function prima_news_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-md-4';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-4 news-item';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -170,10 +170,10 @@ function prima_news_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="row">
-    <div class="col-xs-3 col-md-12">
+    <div class="left-col col-xs-3 col-md-12">
       [field_image]
     </div>
-    <div class="col-xs-9 col-md-12">
+    <div class="right-col col-xs-9 col-md-12">
       <div class="h4">[title]</div>
          [body]
     </div>

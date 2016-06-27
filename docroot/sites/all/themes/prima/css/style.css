@@ -1424,3 +1424,7 @@ textarea {
     padding: 20px 0;
   }
 }
+.front .view-news .view-content .row .col-xs-3 img {
+  min-width: 100%;
+  max-width: 100%;
+}
