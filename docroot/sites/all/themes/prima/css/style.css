@@ -1258,8 +1258,30 @@ textarea {
 #pre-header {
   background-color: #1C1C1C;
 }
+#pre-header #block-search-form {
+  padding-bottom: 0;
+}
+#pre-header #block-search-form .form-search #edit-search-block-form--2 {
+  background-color: #3A3A3A;
+  color: #CCC;
+  border: 1px solid #444;
+  min-height: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-sizing: content-box;
+}
 #pre-header .block-on-the-web {
   padding-bottom: 0;
+}
+#pre-header .block-on-the-web .on-the-web {
+  float: left;
+}
+#pre-header .block-on-the-web .on-the-web a {
+  display: inline-block;
 }
 #main-navigation ul.menu li a {
   font-size: 12px;
