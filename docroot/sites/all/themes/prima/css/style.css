@@ -1368,8 +1368,15 @@ textarea {
 }
 .front .panels-flexible-region-new-4prima_short_description article {
   background-color: #ffffff;
-  border: none;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: #EEE;
   border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.front .panels-flexible-region-new-4prima_short_description article header {
+  display: none;
 }
 .front .panels-flexible-region-new-4prima_short_description article .field-name-body {
   float: left;
