@@ -31,6 +31,9 @@ function prima_news_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-4';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -69,17 +72,15 @@ function prima_news_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="container">
-  <div class="row">
-    <div class="col-xs-3">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '  <div class="row">
+    <div class="col-xs-3 col-md-12">
       [field_image]
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-9 col-md-12">
       <div class="h4">[title]</div>
          [body]
     </div>
-  </div>
-</div>';
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
