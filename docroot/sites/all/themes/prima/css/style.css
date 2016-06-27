@@ -87,12 +87,6 @@ img {
 #bottom-content {
   color: #ffffff;
 }
-::-moz-selection {
-  color: #ffffff;
-}
-::selection {
-  color: #ffffff;
-}
 /*Heading*/
 h1,
 h2,
