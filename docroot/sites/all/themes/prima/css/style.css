@@ -1546,3 +1546,26 @@ textarea {
   padding: 15px;
   border: 1px solid #EEE;
 }
+.front .view-events .views-row .views-field {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.front .view-events .views-row .views-field-title h4 {
+  margin-top: 0;
+}
+.front .view-events .views-row .views-field-title h4 a:hover {
+  text-decoration: none;
+  color: #900909;
+}
+.front .view-events .views-row .views-field-field-location {
+  margin-bottom: 0;
+}
+.front .view-events .views-row .views-label {
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.front .view-events .views-row .field-content {
+  float: left;
+}
