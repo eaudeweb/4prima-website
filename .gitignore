@@ -24,3 +24,4 @@ docroot/sites/*/private
 ehthumbs.db
 Icon\?
 Thumbs.db
+docroot/sites/all/themes/prima/node_modules
