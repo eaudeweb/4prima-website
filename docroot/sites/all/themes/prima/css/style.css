@@ -1435,6 +1435,28 @@ textarea {
 .view-news.view-display-id-page .view-content .row .right-col .field_link ul {
   margin-bottom: 0;
 }
+.view-partners.view-display-id-page .view-content .row .right-col .more-link,
+.view-news.view-display-id-page .view-content .row .right-col .more-link {
+  text-align: right;
+}
+.view-partners.view-display-id-page .view-content .row .right-col .more-link a,
+.view-news.view-display-id-page .view-content .row .right-col .more-link a {
+  display: inline-block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.view-partners.view-display-id-page .view-content .row .right-col .more-link a:hover,
+.view-news.view-display-id-page .view-content .row .right-col .more-link a:hover {
+  text-decoration: none;
+  background-color: #333;
+}
 .view-events .views-row,
 .view-publications .views-row {
   padding: 15px;
