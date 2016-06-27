@@ -26,6 +26,18 @@
 .pagination li a:hover {
   color: #900909;
 }
+.black-more-link {
+  text-align: right;
+}
+.black-more-link a {
+  display: inline-block;
+  color: #000000;
+  margin-top: 15px;
+}
+.black-more-link a:hover {
+  text-decoration: none;
+  color: #4d4d4d;
+}
 /* Reset unusual Firefox-on-Android default style, see https://github.com/necolas/normalize.css/issues/214*/
 @media (max-width: 991px) {
   .form-text,
@@ -1489,6 +1501,25 @@ textarea {
 .view-events .views-row .field-content,
 .view-publications .views-row .field-content {
   float: left;
+}
+.view-events .more-link,
+.view-publications .more-link {
+  text-align: right;
+}
+.view-events .more-link a,
+.view-publications .more-link a {
+  display: inline-block;
+  color: #000000;
+  margin-top: 15px;
+}
+.view-events .more-link a:hover,
+.view-publications .more-link a:hover {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+.view-events .more-link a,
+.view-publications .more-link a {
+  margin-top: 0;
 }
 .view-events .views-field-view-node,
 .view-publications .views-field-view-node {
