@@ -34,7 +34,7 @@
   }
 }
 
-.view-partners.view-display-id-page {
+.view-partners.view-display-id-page, .view-news.view-display-id-page {
   .view-content {
     .container {
       width: 100%
@@ -52,6 +52,10 @@
       .right-col {
         h4 {
           margin-top: 0;
+          a:hover {
+            text-decoration: none;
+            color: darken(@pink-color, 30%);
+          }
         }
         h5 {
           font-size: 16px;
@@ -65,10 +69,11 @@
   }
 }
 
-.view-events {
+.view-events, .view-publications {
   .views-row {
     padding: 15px;
     border: 1px solid #EEE;
+    margin-bottom: 20px;
     .views-field {
       display: inline-block;
       width: 100%;
