@@ -1340,14 +1340,18 @@ textarea {
 #main-navigation ul.menu ul li a {
   padding: 10px 15px;
 }
-#main #content-wrapper {
+#main-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#main-content #main #content-wrapper {
   background-color: ffffff;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-#main #content-wrapper .page-title {
+#main-content #main #content-wrapper .page-title {
   padding: 0 0 10px 0;
   font-weight: normal;
   text-transform: uppercase;
