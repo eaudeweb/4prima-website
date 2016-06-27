@@ -116,7 +116,7 @@
 
 <!-- #main-navigation -->
 <div id="main-navigation" class="clearfix">
-  <div class="container-fluid">
+  <div class="container">
 
     <!-- #main-navigation-inside -->
     <div id="main-navigation-inside" class="clearfix">
