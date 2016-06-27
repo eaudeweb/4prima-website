@@ -1424,6 +1424,33 @@ textarea {
 .view-partners.view-display-id-page .view-content .row .right-col .field_link ul {
   margin-bottom: 0;
 }
+.view-events .views-row {
+  padding: 15px;
+  border: 1px solid #EEE;
+}
+.view-events .views-row .views-field {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.view-events .views-row .views-field-title h4 {
+  margin-top: 0;
+}
+.view-events .views-row .views-field-title h4 a:hover {
+  text-decoration: none;
+  color: #900909;
+}
+.view-events .views-row .views-field-field-location {
+  margin-bottom: 0;
+}
+.view-events .views-row .views-label {
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.view-events .views-row .field-content {
+  float: left;
+}
 .front #main-content {
   padding-top: 0;
   padding-bottom: 0;
@@ -1533,31 +1560,4 @@ textarea {
 .front .view-news .more-link a:hover {
   text-decoration: none;
   color: #4d4d4d;
-}
-.front .view-events .views-row {
-  padding: 15px;
-  border: 1px solid #EEE;
-}
-.front .view-events .views-row .views-field {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 5px;
-}
-.front .view-events .views-row .views-field-title h4 {
-  margin-top: 0;
-}
-.front .view-events .views-row .views-field-title h4 a:hover {
-  text-decoration: none;
-  color: #900909;
-}
-.front .view-events .views-row .views-field-field-location {
-  margin-bottom: 0;
-}
-.front .view-events .views-row .views-label {
-  float: left;
-  font-weight: bold;
-  margin-right: 5px;
-}
-.front .view-events .views-row .field-content {
-  float: left;
 }
