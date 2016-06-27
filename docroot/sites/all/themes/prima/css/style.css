@@ -1281,7 +1281,7 @@ textarea {
 #pre-header #block-search-form .form-search .input-group-btn {
   display: inline-block;
 }
-#pre-header #block-search-form .form-search #edit-actions {
+#pre-header #block-search-form .form-search .form-actions {
   margin-bottom: 0;
 }
 #pre-header .block-on-the-web {
