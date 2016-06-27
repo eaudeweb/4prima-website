@@ -1364,10 +1364,6 @@ textarea {
 #banner #banner-inside {
   padding: 0;
 }
-#main-content {
-  padding-top: 0;
-  padding-bottom: 0;
-}
 #main-content #main #content-wrapper {
   background-color: ffffff;
   border: none;
@@ -1381,6 +1377,10 @@ textarea {
   text-transform: uppercase;
   font-size: 28px;
   border-bottom: 1px solid #EEE;
+}
+.front #main-content {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .front .panels-flexible-region-new-4prima_short_description article {
   background-color: #ffffff;
