@@ -1435,12 +1435,12 @@ textarea {
 .view-news.view-display-id-page .view-content .row .right-col .field_link ul {
   margin-bottom: 0;
 }
-.view-partners.view-display-id-page .view-content .row .right-col .more-link,
-.view-news.view-display-id-page .view-content .row .right-col .more-link {
+.view-partners.view-display-id-page .view-content .more-link,
+.view-news.view-display-id-page .view-content .more-link {
   text-align: right;
 }
-.view-partners.view-display-id-page .view-content .row .right-col .more-link a,
-.view-news.view-display-id-page .view-content .row .right-col .more-link a {
+.view-partners.view-display-id-page .view-content .more-link a,
+.view-news.view-display-id-page .view-content .more-link a {
   display: inline-block;
   background-color: #F33F3F;
   color: #ffffff;
@@ -1452,8 +1452,8 @@ textarea {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.view-partners.view-display-id-page .view-content .row .right-col .more-link a:hover,
-.view-news.view-display-id-page .view-content .row .right-col .more-link a:hover {
+.view-partners.view-display-id-page .view-content .more-link a:hover,
+.view-news.view-display-id-page .view-content .more-link a:hover {
   text-decoration: none;
   background-color: #333;
 }
@@ -1491,6 +1491,32 @@ textarea {
 .view-events .views-row .field-content,
 .view-publications .views-row .field-content {
   float: left;
+}
+.view-events .views-field-view-node,
+.view-publications .views-field-view-node {
+  text-align: right;
+}
+.view-events .views-field-view-node .more-link,
+.view-publications .views-field-view-node .more-link {
+  float: none;
+}
+.view-events .views-field-view-node .more-link a,
+.view-publications .views-field-view-node .more-link a {
+  display: inline-block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.view-events .views-field-view-node .more-link a:hover,
+.view-publications .views-field-view-node .more-link a:hover {
+  text-decoration: none;
+  background-color: #333;
 }
 .front #main-content {
   padding-top: 0;
