@@ -1338,7 +1338,7 @@ textarea {
 }
 #main-navigation ul.menu li .nolink:after {
   font-family: 'Glyphicons Halflings';
-  content: "\e114";
+  content: "\e259";
   position: absolute;
   top: 50%;
   margin-top: -10px;
