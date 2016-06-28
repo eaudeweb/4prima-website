@@ -321,6 +321,7 @@ $options['init-modules'] = array(
   'leaflet',
   'leaflet_views',
   'youtube',
+  'twitter_block',
 
   'prima_slider',
   'prima_news',
