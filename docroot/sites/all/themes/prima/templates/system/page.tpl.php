@@ -230,25 +230,27 @@
             <!-- EOF:#content-wrapper -->
             <div id="content-wrapper">
 
-              <?php print render($title_prefix); ?>
-              <div class="title-container">
-                <?php if ($title):?>
-                  <h1 class="page-title"><?php print $title; ?></h1>
-                <?php endif; ?>
-                <?php print render($title_suffix); ?>
+              <?php if ($title || $breadcrumb): ?>
+                <div class="title-container">
+                  <?php print render($title_prefix); ?>
+                  <?php if ($title):?>
+                    <h1 class="page-title"><?php print $title; ?></h1>
+                  <?php endif; ?>
+                  <?php print render($title_suffix); ?>
 
-                <?php if ($breadcrumb):?>
-                  <!-- #breadcrumb -->
-                  <div id="breadcrumb" class="clearfix">
-                    <!-- #breadcrumb-inside -->
-                    <div id="breadcrumb-inside" class="clearfix">
-                      <?php print $breadcrumb; ?>
+                  <?php if ($breadcrumb):?>
+                    <!-- #breadcrumb -->
+                    <div id="breadcrumb" class="clearfix">
+                      <!-- #breadcrumb-inside -->
+                      <div id="breadcrumb-inside" class="clearfix">
+                        <?php print $breadcrumb; ?>
+                      </div>
+                      <!-- EOF: #breadcrumb-inside -->
                     </div>
-                    <!-- EOF: #breadcrumb-inside -->
-                  </div>
-                  <!-- EOF: #breadcrumb -->
-                <?php endif; ?>
-              </div>
+                    <!-- EOF: #breadcrumb -->
+                  <?php endif; ?>
+                </div>
+              <?php endif; ?>
 
               <?php print render($page['help']); ?>
 
