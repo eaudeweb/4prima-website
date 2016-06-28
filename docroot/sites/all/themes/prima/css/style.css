@@ -1367,6 +1367,9 @@ textarea {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.node header {
+  padding: 0;
+}
 .title-container {
   position: relative;
   display: inline-block;
