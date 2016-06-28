@@ -335,6 +335,7 @@ $options['init-modules'] = array(
   'smart_trim',
   'path_breadcrumbs',
   'path_breadcrumbs_ui',
+  'eu_cookie_compliance',
 //  'elysia_cron',
 
 //  'locale',
