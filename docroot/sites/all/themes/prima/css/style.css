@@ -1367,31 +1367,36 @@ textarea {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-h1.page-title {
-  padding: 0!important;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 28px;
+.title-container {
+  position: relative;
+  display: inline-block;
   border-bottom: 1px solid #EEE;
   margin-top: 0;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: 100%;
 }
-h1.page-title:after {
+.title-container:after {
+  position: absolute;
+  bottom: 0;
   display: block;
   content: " ";
   background-color: #F33F3F;
   width: 30px;
   height: 3px;
   line-height: 3px;
-  margin-top: 10px;
 }
-.title-container {
-  position: relative;
+.title-container h1.page-title {
+  float: left;
+  padding: 0!important;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 .title-container #breadcrumb {
-  position: absolute;
-  right: 0;
-  top: 0;
+  float: right;
 }
 .title-container #breadcrumb .breadcrumb {
   margin-bottom: 0;
@@ -1399,6 +1404,7 @@ h1.page-title:after {
   border: none;
   border-radius: 0;
   background-color: transparent;
+  height: 33px;
   line-height: 33px;
   color: #999;
 }
