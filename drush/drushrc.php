@@ -331,6 +331,7 @@ $options['init-modules'] = array(
   'prima_contact_person',
   'prima_partner',
   'prima_publication',
+  'prima_document',
 
   'smart_trim',
   'path_breadcrumbs',
