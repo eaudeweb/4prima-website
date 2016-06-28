@@ -32,7 +32,6 @@
   }
 }
 
-
 .black-more-link {
   text-align: right;
   a {
@@ -42,6 +41,63 @@
     &:hover {
       text-decoration: none;
       color: lighten(#000000, 30%);
+    }
+  }
+}
+
+#sliding-popup {
+  height: auto;
+  display: inline-block;
+  background-color: #EEE;
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .popup-content {
+    #popup-text {
+      display: block;
+      float: none;
+      clear: both;
+      max-width: 100%;
+      text-align: center;
+    }
+    #popup-buttons {
+      max-width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: block;
+      float: none;
+      clear: both;
+      text-align: center;
+      button {
+        padding: 1px 5px;
+        font-size: 14px;
+        line-height: 1.5;
+        border-radius: 3px;
+        margin: 0;
+        background: transparent;
+        text-shadow: none;
+        border: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        &:hover {
+          background: transparent;
+          text-decoration: underline;
+        }
+      }
+      .agree-button {
+        color: #fff;
+        background: #1cb54b;
+        border-color: #1cb54b;
+        &:hover {
+          background: #158939;
+          border-color: #158939;
+          text-decoration: none;
+        }
+      }
+      .find-more-button {
+        color: #000000;
+      }
     }
   }
 }

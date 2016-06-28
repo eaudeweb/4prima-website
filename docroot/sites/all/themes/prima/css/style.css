@@ -38,6 +38,60 @@
   text-decoration: none;
   color: #4d4d4d;
 }
+#sliding-popup {
+  height: auto;
+  display: inline-block;
+  background-color: #EEE;
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#sliding-popup .popup-content #popup-text {
+  display: block;
+  float: none;
+  clear: both;
+  max-width: 100%;
+  text-align: center;
+}
+#sliding-popup .popup-content #popup-buttons {
+  max-width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+  float: none;
+  clear: both;
+  text-align: center;
+}
+#sliding-popup .popup-content #popup-buttons button {
+  padding: 1px 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 3px;
+  margin: 0;
+  background: transparent;
+  text-shadow: none;
+  border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#sliding-popup .popup-content #popup-buttons button:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+#sliding-popup .popup-content #popup-buttons .agree-button {
+  color: #fff;
+  background: #1cb54b;
+  border-color: #1cb54b;
+}
+#sliding-popup .popup-content #popup-buttons .agree-button:hover {
+  background: #158939;
+  border-color: #158939;
+  text-decoration: none;
+}
+#sliding-popup .popup-content #popup-buttons .find-more-button {
+  color: #000000;
+}
 /* Reset unusual Firefox-on-Android default style, see https://github.com/necolas/normalize.css/issues/214*/
 @media (max-width: 991px) {
   .form-text,
