@@ -1660,6 +1660,38 @@ textarea {
   background-color: #F33F3F;
   border-color: #f00f0f;
 }
+.view-calendar .date-nav-wrapper .date-nav {
+  padding-bottom: 0;
+}
+.view-calendar .date-nav-wrapper .date-nav .pager {
+  width: 100%;
+  margin-bottom: 0;
+}
+.view-calendar .date-nav-wrapper .date-nav .pager li {
+  position: relative;
+  display: inline-block;
+  background: none;
+  padding: 0;
+  margin: 0 5px;
+  right: 0;
+}
+.view-calendar .date-nav-wrapper .date-nav .pager li a {
+  display: inline-block;
+  background-color: #F33F3F;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 10px;
+}
+.view-calendar .date-nav-wrapper .date-nav .pager li a:hover {
+  text-decoration: none;
+  background-color: #333;
+}
 #subfooter {
   background-color: #1C1C1C;
   margin-bottom: 0;
