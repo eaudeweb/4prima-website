@@ -42,6 +42,8 @@ function prima_document_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Documents */
   $handler->display->display_options['fields']['field_documents']['id'] = 'field_documents';
   $handler->display->display_options['fields']['field_documents']['table'] = 'field_data_field_documents';
