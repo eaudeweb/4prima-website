@@ -1519,6 +1519,25 @@ textarea {
   text-decoration: none;
   background-color: #333;
 }
+.page-contact .panels-flexible-region-new-introduction_text article {
+  border: none;
+  border-radius: 0;
+}
+.page-contact .panels-flexible-region-new-introduction_text article header,
+.page-contact .panels-flexible-region-new-introduction_text article footer {
+  display: none;
+}
+.page-contact #webform-client-form-22 input:focus,
+.page-contact #webform-client-form-22 textarea:focus {
+  border-color: #F33F3F;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
+}
+.page-contact #webform-client-form-22 button {
+  background-color: #F33F3F;
+  border-color: #f00f0f;
+}
 #subfooter {
   background-color: #1C1C1C;
   margin-bottom: 0;
