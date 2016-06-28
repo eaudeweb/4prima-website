@@ -1385,6 +1385,30 @@ h1.page-title:after {
   line-height: 3px;
   margin-top: 10px;
 }
+.title-container {
+  position: relative;
+}
+.title-container #breadcrumb {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.title-container #breadcrumb .breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  line-height: 33px;
+  color: #999;
+}
+.title-container #breadcrumb .breadcrumb a {
+  color: #444;
+}
+.title-container #breadcrumb .breadcrumb a:hover {
+  color: #F33F3F;
+  text-decoration: none;
+}
 .view-partners.view-display-id-page .view-content .container,
 .view-news.view-display-id-page .view-content .container {
   width: 100%;

@@ -36,6 +36,30 @@ h1.page-title {
   }
 }
 
+.title-container {
+  position: relative;
+  #breadcrumb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    .breadcrumb {
+      margin-bottom: 0;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+      line-height: 33px;
+      color: #999;
+      a {
+        color: #444;
+        &:hover {
+          color: @pink-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
 .view-partners.view-display-id-page, .view-news.view-display-id-page {
   .view-content {
     .container {

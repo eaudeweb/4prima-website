@@ -216,17 +216,6 @@
 
           <!-- #main -->
           <div id="main" class="clearfix">
-            <?php if ($breadcrumb):?>
-              <!-- #breadcrumb -->
-              <div id="breadcrumb" class="clearfix">
-                <!-- #breadcrumb-inside -->
-                <div id="breadcrumb-inside" class="clearfix">
-                  <?php print $breadcrumb; ?>
-                </div>
-                <!-- EOF: #breadcrumb-inside -->
-              </div>
-              <!-- EOF: #breadcrumb -->
-            <?php endif; ?>
 
             <?php if ($page['promoted']):?>
               <!-- #promoted -->
@@ -242,10 +231,24 @@
             <div id="content-wrapper">
 
               <?php print render($title_prefix); ?>
-              <?php if ($title):?>
-                <h1 class="page-title"><?php print $title; ?></h1>
-              <?php endif; ?>
-              <?php print render($title_suffix); ?>
+              <div class="title-container">
+                <?php if ($title):?>
+                  <h1 class="page-title"><?php print $title; ?></h1>
+                <?php endif; ?>
+                <?php print render($title_suffix); ?>
+
+                <?php if ($breadcrumb):?>
+                  <!-- #breadcrumb -->
+                  <div id="breadcrumb" class="clearfix">
+                    <!-- #breadcrumb-inside -->
+                    <div id="breadcrumb-inside" class="clearfix">
+                      <?php print $breadcrumb; ?>
+                    </div>
+                    <!-- EOF: #breadcrumb-inside -->
+                  </div>
+                  <!-- EOF: #breadcrumb -->
+                <?php endif; ?>
+              </div>
 
               <?php print render($page['help']); ?>
 
