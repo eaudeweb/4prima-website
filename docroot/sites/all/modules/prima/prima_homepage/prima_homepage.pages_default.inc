@@ -109,6 +109,7 @@ function prima_homepage_default_page_manager_pages() {
         'contains' => 'region',
         'children' => array(
           0 => 'upcomming_events',
+          1 => 'latest_tweets',
         ),
         'parent' => 'main',
         'class' => '',
@@ -117,7 +118,16 @@ function prima_homepage_default_page_manager_pages() {
       'upcomming_events' => array(
         'type' => 'region',
         'title' => 'Upcomming events',
-        'width' => 100,
+        'width' => '70.08996462245274',
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+        'hide_empty' => 1,
+      ),
+      'latest_tweets' => array(
+        'type' => 'region',
+        'title' => 'Latest tweets',
+        'width' => '29.91003537754726',
         'width_type' => '%',
         'parent' => '6',
         'class' => '',
@@ -132,6 +142,7 @@ function prima_homepage_default_page_manager_pages() {
       '4prima_short_description' => NULL,
       'latest_news' => NULL,
       'upcomming_events' => NULL,
+      'latest_tweets' => NULL,
     ),
   );
   $display->cache = array();
@@ -203,6 +214,29 @@ function prima_homepage_default_page_manager_pages() {
     $pane->uuid = '8b3377f3-c00c-40b4-957b-e4a102c98e49';
     $display->content['new-8b3377f3-c00c-40b4-957b-e4a102c98e49'] = $pane;
     $display->panels['latest_news'][0] = 'new-8b3377f3-c00c-40b4-957b-e4a102c98e49';
+    $pane = new stdClass();
+    $pane->pid = 'new-b04ec33e-c22b-4337-ae67-88c052b82aa7';
+    $pane->panel = 'latest_tweets';
+    $pane->type = 'block';
+    $pane->subtype = 'twitter_block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '%title',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b04ec33e-c22b-4337-ae67-88c052b82aa7';
+    $display->content['new-b04ec33e-c22b-4337-ae67-88c052b82aa7'] = $pane;
+    $display->panels['latest_tweets'][0] = 'new-b04ec33e-c22b-4337-ae67-88c052b82aa7';
     $pane = new stdClass();
     $pane->pid = 'new-cf6213e9-8ea3-4897-ab79-9d48a1863ae0';
     $pane->panel = 'upcomming_events';
