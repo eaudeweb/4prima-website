@@ -339,6 +339,7 @@ $options['init-modules'] = array(
   'eu_cookie_compliance',
   'captcha',
   'recaptcha',
+  'honeypot',
 //  'elysia_cron',
 
 //  'locale',
