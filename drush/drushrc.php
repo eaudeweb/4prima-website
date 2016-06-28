@@ -322,6 +322,9 @@ $options['init-modules'] = array(
   'leaflet_views',
   'youtube',
   'twitter_block',
+  'file_entity',
+  'media',
+  'media_wysiwyg',
 
   'prima_slider',
   'prima_news',
@@ -360,9 +363,6 @@ $options['init-modules'] = array(
 
 //  'redirect',
 //  'match_redirect',
-//  'file_entity',
-//  'media',
-//  'media_wysiwyg',
 //  'image_field_caption',
 //  'rules',
 
