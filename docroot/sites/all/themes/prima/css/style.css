@@ -1610,6 +1610,25 @@ textarea {
   text-decoration: none;
   background-color: #333;
 }
+.view-contractual-documents .views-row {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #EEE;
+}
+.view-contractual-documents .views-row h4 {
+  margin-top: 0;
+}
+.view-contractual-documents .views-row h4 a:hover {
+  text-decoration: none;
+  color: #900909;
+}
+.view-contractual-documents .views-row li {
+  margin-bottom: 5px;
+}
+.view-contractual-documents .views-row li .file img,
+.view-contractual-documents .views-row li .file a {
+  display: inline-block;
+}
 .page-contact #content-wrapper {
   padding: 0;
 }
