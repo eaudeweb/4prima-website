@@ -1423,7 +1423,7 @@ textarea {
 .view-news.view-display-id-page .view-content .row {
   border: 1px solid #EEE;
   padding: 15px 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .view-partners.view-display-id-page .view-content .row .left-col img,
 .view-news.view-display-id-page .view-content .row .left-col img {
@@ -1474,7 +1474,7 @@ textarea {
 .view-publications .views-row {
   padding: 15px;
   border: 1px solid #EEE;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .view-events .views-row .views-field,
 .view-publications .views-row .views-field {
