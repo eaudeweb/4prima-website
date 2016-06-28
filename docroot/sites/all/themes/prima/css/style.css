@@ -1713,22 +1713,18 @@ textarea {
   margin-bottom: 20px;
 }
 .page-search #block-system-main .search-results li .more-link {
+  text-align: right;
   text-align: left;
-  margin-top: 10px;
 }
 .page-search #block-system-main .search-results li .more-link a {
   display: inline-block;
-  background-color: #F33F3F;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  color: #000000;
+  margin-top: 15px;
 }
 .page-search #block-system-main .search-results li .more-link a:hover {
   text-decoration: none;
-  background-color: #333;
+  color: #4d4d4d;
+}
+.page-search #block-system-main .search-results li .more-link a {
+  margin-top: 0;
 }
