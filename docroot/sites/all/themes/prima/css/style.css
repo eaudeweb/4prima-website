@@ -1750,6 +1750,10 @@ textarea {
   text-decoration: none;
   color: #4d4d4d;
 }
+.front .panels-flexible-region-new-latest_tweets-inside .pane-content {
+  padding: 5px 15px 0 15px;
+  border: 1px solid #EEE;
+}
 #pre-header #block-search-form {
   padding-bottom: 0;
 }
