@@ -337,6 +337,8 @@ $options['init-modules'] = array(
   'path_breadcrumbs',
   'path_breadcrumbs_ui',
   'eu_cookie_compliance',
+  'captcha',
+  'recaptcha',
 //  'elysia_cron',
 
 //  'locale',
