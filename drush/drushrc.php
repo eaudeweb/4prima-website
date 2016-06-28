@@ -333,6 +333,8 @@ $options['init-modules'] = array(
   'prima_publication',
 
   'smart_trim',
+  'path_breadcrumbs',
+  'path_breadcrumbs_ui',
 //  'elysia_cron',
 
 //  'locale',

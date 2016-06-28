@@ -216,8 +216,7 @@
 
           <!-- #main -->
           <div id="main" class="clearfix">
-
-            <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')):?>
+            <?php if ($breadcrumb):?>
               <!-- #breadcrumb -->
               <div id="breadcrumb" class="clearfix">
                 <!-- #breadcrumb-inside -->
