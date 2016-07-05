@@ -318,7 +318,7 @@
 </div>
 <!-- EOF:#page -->
 
-<?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third'] || $page['footer_fourth']):?>
+<?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']):?>
   <!-- #footer -->
   <footer id="footer" class="clearfix">
     <div class="container">
@@ -326,7 +326,7 @@
       <!-- #footer-inside -->
       <div id="footer-inside" class="clearfix">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-6">
             <?php if ($page['footer_first']):?>
               <div class="footer-area">
                 <?php print render($page['footer_first']); ?>
@@ -346,14 +346,6 @@
             <?php if ($page['footer_third']):?>
               <div class="footer-area">
                 <?php print render($page['footer_third']); ?>
-              </div>
-            <?php endif; ?>
-          </div>
-
-          <div class="col-md-3">
-            <?php if ($page['footer_fourth']):?>
-              <div class="footer-area">
-                <?php print render($page['footer_fourth']); ?>
               </div>
             <?php endif; ?>
           </div>
