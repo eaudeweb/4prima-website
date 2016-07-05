@@ -16,14 +16,41 @@
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  #logo {5
+  #logo {
     text-align: left;
     padding-bottom: 0;
-    img {
-      max-height: 100px;
-      &:hover {
-        opacity: 1;
+    a {
+      img {
+        max-height: 100px;
+        &:hover {
+          opacity: 1;
+        }
       }
+    }
+  }
+  #site-slogan {
+    text-align: right;
+    color: #000000;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 0 20px 200px;
+    line-height: 30px;
+    height: 100%;
+  }
+  @media all and (max-width: @screen-md) {
+    #logo {
+      text-align: center;
+    }
+    #site-slogan {
+      text-align: center;
+      padding: 20px 100px 0 100px;
+    }
+  }
+  @media all and (max-width: @screen-sm) {
+    #site-slogan {
+      font-size: 18px;
+      padding: 20px 0 0 0;
     }
   }
 }

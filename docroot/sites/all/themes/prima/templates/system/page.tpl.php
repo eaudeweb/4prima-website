@@ -82,26 +82,24 @@
     <!-- #header-inside -->
     <div id="header-inside" class="clearfix">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-xs-12 col-md-4">
           <?php if ($logo):?>
             <div id="logo">
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" class="img-responsive" alt="<?php print t('Home'); ?>" /> </a>
             </div>
           <?php endif; ?>
         </div>
-        <div class="col-md-8">
-          <?php if ($site_name):?>
-            <div id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-            </div>
-          <?php endif; ?>
-
+        <div class="col-xs-12 col-md-8">
           <?php if ($site_slogan):?>
             <div id="site-slogan">
               <?php print $site_slogan; ?>
             </div>
           <?php endif; ?>
-
+          <?php if ($site_name):?>
+            <div id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+            </div>
+          <?php endif; ?>
           <?php if ($page['header']) :?>
             <?php print render($page['header']); ?>
           <?php endif; ?>
