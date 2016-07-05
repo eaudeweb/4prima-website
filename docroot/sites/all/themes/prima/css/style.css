@@ -1702,6 +1702,10 @@ textarea {
 #subfooter ul.menu li a {
   padding: 5px 10px;
 }
+#subfooter ul.menu li a:hover {
+  color: #ffffff;
+  background: none;
+}
 .front #main-content {
   padding-top: 0;
   padding-bottom: 0;
