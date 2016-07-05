@@ -641,7 +641,6 @@ ul.menu li.expanded ul {
 .node.node-teaser,
 .page-node- #content-wrapper,
 .page-contact #content-wrapper {
-  background-color: #fcfcfc;
   border: 1px solid #eaeaea;
   margin-bottom: 30px;
   -webkit-border-radius: 6px;
