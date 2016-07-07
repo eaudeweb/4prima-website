@@ -1721,8 +1721,28 @@ textarea {
   text-decoration: none;
   background-color: #333;
 }
+.front .view-public-calendar {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
 .front .view-public-calendar .pager {
   display: none;
+}
+.front .view-public-calendar .calendar-calendar .month-view .full tr.single-day .no-entry,
+.front .view-public-calendar .calendar-calendar .month-view .full tr.single-day .no-entry .inner {
+  height: 20px!important;
+  line-height: 20px;
+}
+.front .view-public-calendar .calendar-calendar .month-view .full tr.single-day .noentry-multi-day,
+.front .view-public-calendar .calendar-calendar .month-view .full tr.single-day .noentry-multi-day .inner {
+  height: 0!important;
+  line-height: 0;
+}
+.front .view-public-calendar .date-box {
+  font-size: 10px;
+  height: 12px;
+  max-height: 12px;
+  line-height: 12px;
 }
 #footer {
   padding-top: 30px;
