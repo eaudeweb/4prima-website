@@ -1573,13 +1573,21 @@ textarea {
   border: 1px solid #EEE;
   margin-bottom: 15px;
 }
-.view-events .views-row .element-invisible ul,
-.view-publications .views-row .element-invisible ul {
-  list-style-type: none;
+.view-events .views-row #edit-field-publication-type-tid-wrapper ul li,
+.view-publications .views-row #edit-field-publication-type-tid-wrapper ul li {
+  list-style-type: none!important;
+}
+.view-events .views-row .views-exposed-widget button,
+.view-publications .views-row .views-exposed-widget button {
+  margin-top: 0!important;
 }
 .view-events .views-row .badge,
 .view-publications .views-row .badge {
-  width: auto;
+  width: auto!important;
+}
+.view-events .views-row .file-icon,
+.view-publications .views-row .file-icon {
+  display: inline-block;
 }
 .view-events .views-row .views-field,
 .view-publications .views-row .views-field {
