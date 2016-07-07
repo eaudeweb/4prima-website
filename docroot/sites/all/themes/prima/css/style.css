@@ -9,7 +9,7 @@ body {
 }
 .pink-button {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -25,14 +25,14 @@ body {
 }
 .pagination .active span,
 .pagination .active span:hover {
-  background-color: #F33F3F;
-  border-color: #F33F3F;
+  background-color: #0088D0;
+  border-color: #0088D0;
 }
 .pagination li a {
-  color: #F33F3F;
+  color: #0088D0;
 }
 .pagination li a:hover {
-  color: #900909;
+  color: #002437;
 }
 .black-more-link {
   text-align: right;
@@ -1407,7 +1407,7 @@ textarea {
   line-height: 20px;
 }
 #main-navigation ul.menu li a:hover {
-  color: #F33F3F;
+  color: #0088D0;
 }
 #main-navigation ul.menu li .nolink {
   position: relative;
@@ -1431,7 +1431,7 @@ textarea {
   right: 15px;
 }
 #main-navigation ul.menu li .nolink:hover {
-  color: #F33F3F;
+  color: #0088D0;
 }
 #main-navigation ul.menu li .nolink .sf-sub-indicator {
   display: none;
@@ -1473,7 +1473,7 @@ textarea {
   bottom: 0;
   display: block;
   content: " ";
-  background-color: #F33F3F;
+  background-color: #0088D0;
   width: 30px;
   height: 3px;
   line-height: 3px;
@@ -1504,7 +1504,7 @@ textarea {
   color: #444;
 }
 .title-container #breadcrumb .breadcrumb a:hover {
-  color: #F33F3F;
+  color: #0088D0;
   text-decoration: none;
 }
 .view-partners.view-display-id-page .view-content .container,
@@ -1529,7 +1529,7 @@ textarea {
 .view-partners.view-display-id-page .view-content .row .right-col h4 a:hover,
 .view-news.view-display-id-page .view-content .row .right-col h4 a:hover {
   text-decoration: none;
-  color: #900909;
+  color: #002437;
 }
 .view-partners.view-display-id-page .view-content .row .right-col h5,
 .view-news.view-display-id-page .view-content .row .right-col h5 {
@@ -1547,7 +1547,7 @@ textarea {
 .view-partners.view-display-id-page .view-content .more-link a,
 .view-news.view-display-id-page .view-content .more-link a {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -1581,7 +1581,7 @@ textarea {
 .view-events .views-row .views-field-title h4 a:hover,
 .view-publications .views-row .views-field-title h4 a:hover {
   text-decoration: none;
-  color: #900909;
+  color: #002437;
 }
 .view-events .views-row .views-field-field-location,
 .view-publications .views-row .views-field-field-location {
@@ -1627,7 +1627,7 @@ textarea {
 .view-events .views-field-view-node .more-link a,
 .view-publications .views-field-view-node .more-link a {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -1652,7 +1652,7 @@ textarea {
 }
 .view-contractual-documents .views-row h4 a:hover {
   text-decoration: none;
-  color: #900909;
+  color: #002437;
 }
 .view-contractual-documents .views-row li {
   margin-bottom: 5px;
@@ -1674,15 +1674,15 @@ textarea {
 }
 .page-contact #webform-client-form-22 input:focus,
 .page-contact #webform-client-form-22 textarea:focus {
-  border-color: #F33F3F;
+  border-color: #0088D0;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 136, 208, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 136, 208, 0.6);
 }
 .page-contact #webform-client-form-22 button {
   margin-top: 15px;
-  background-color: #F33F3F;
-  border-color: #f00f0f;
+  background-color: #0088D0;
+  border-color: #00679d;
 }
 .view-calendar .date-nav-wrapper .date-nav {
   padding-bottom: 0;
@@ -1701,7 +1701,7 @@ textarea {
 }
 .view-calendar .date-nav-wrapper .date-nav .pager li a {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -1783,7 +1783,7 @@ textarea {
 }
 .front .panels-flexible-region-new-4prima_short_description article .node-readmore a {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -1829,7 +1829,7 @@ textarea {
 }
 .front .view-news .view-content .news-item .views-field .more a {
   display: inline-block;
-  background-color: #F33F3F;
+  background-color: #0088D0;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
@@ -1885,7 +1885,7 @@ textarea {
   margin-bottom: 0;
 }
 #pre-header #block-search-form .form-search button {
-  background-color: #F33F3F;
+  background-color: #0088D0;
   border: none;
 }
 #search-form .form-text {
@@ -1897,16 +1897,16 @@ textarea {
   padding: 5px 10px;
 }
 #search-form .form-text:focus {
-  border-color: #F33F3F;
+  border-color: #0088D0;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 63, 63, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 136, 208, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 136, 208, 0.6);
 }
 #search-form .input-group-btn {
   display: inline-block;
 }
 #search-form .input-group-btn button {
-  background-color: #F33F3F;
+  background-color: #0088D0;
   border: none;
 }
 .page-search #block-system-main h2 {
@@ -1927,7 +1927,7 @@ textarea {
 }
 .page-search #block-system-main .search-results li h3 a:hover {
   text-decoration: none;
-  color: #900909;
+  color: #002437;
 }
 .page-search #block-system-main .search-results li .search-snippet {
   color: #888;
