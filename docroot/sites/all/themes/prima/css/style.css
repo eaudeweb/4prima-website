@@ -1526,10 +1526,14 @@ textarea {
 .view-news.view-display-id-page .view-content .row .right-col h4 {
   margin-top: 0;
 }
+.view-partners.view-display-id-page .view-content .row .right-col h4 a,
+.view-news.view-display-id-page .view-content .row .right-col h4 a {
+  color: #00679d;
+}
 .view-partners.view-display-id-page .view-content .row .right-col h4 a:hover,
 .view-news.view-display-id-page .view-content .row .right-col h4 a:hover {
   text-decoration: none;
-  color: #002437;
+  color: #000304;
 }
 .view-partners.view-display-id-page .view-content .row .right-col h5,
 .view-news.view-display-id-page .view-content .row .right-col h5 {
@@ -1578,10 +1582,14 @@ textarea {
 .view-publications .views-row .views-field-title h4 {
   margin-top: 0;
 }
+.view-events .views-row .views-field-title h4 a,
+.view-publications .views-row .views-field-title h4 a {
+  color: #00679d;
+}
 .view-events .views-row .views-field-title h4 a:hover,
 .view-publications .views-row .views-field-title h4 a:hover {
   text-decoration: none;
-  color: #002437;
+  color: #000304;
 }
 .view-events .views-row .views-field-field-location,
 .view-publications .views-row .views-field-field-location {
@@ -1650,9 +1658,12 @@ textarea {
 .view-contractual-documents .views-row h4 {
   margin-top: 0;
 }
+.view-contractual-documents .views-row h4 a {
+  color: #00679d;
+}
 .view-contractual-documents .views-row h4 a:hover {
   text-decoration: none;
-  color: #002437;
+  color: #000304;
 }
 .view-contractual-documents .views-row li {
   margin-bottom: 5px;
