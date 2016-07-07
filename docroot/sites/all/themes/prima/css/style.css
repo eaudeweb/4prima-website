@@ -1573,6 +1573,14 @@ textarea {
   border: 1px solid #EEE;
   margin-bottom: 15px;
 }
+.view-events .views-row .element-invisible ul,
+.view-publications .views-row .element-invisible ul {
+  list-style-type: none;
+}
+.view-events .views-row .badge,
+.view-publications .views-row .badge {
+  width: auto;
+}
 .view-events .views-row .views-field,
 .view-publications .views-row .views-field {
   display: inline-block;
