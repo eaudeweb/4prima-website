@@ -109,8 +109,8 @@ function prima_homepage_default_page_manager_pages() {
         'contains' => 'region',
         'children' => array(
           0 => 'upcomming_events',
-          1 => 'latest_tweets',
-          2 => 'calendar',
+          1 => 'calendar',
+          2 => 'latest_tweets',
         ),
         'parent' => 'main',
         'class' => '',
@@ -125,15 +125,6 @@ function prima_homepage_default_page_manager_pages() {
         'class' => '',
         'hide_empty' => 1,
       ),
-      'latest_tweets' => array(
-        'type' => 'region',
-        'title' => 'Calendar',
-        'width' => '33.34',
-        'width_type' => '%',
-        'parent' => '6',
-        'class' => '',
-        'hide_empty' => 1,
-      ),
       'calendar' => array(
         'type' => 'region',
         'title' => 'Latest tweets',
@@ -142,6 +133,15 @@ function prima_homepage_default_page_manager_pages() {
         'parent' => '6',
         'class' => '',
         'hide_empty' => 0,
+      ),
+      'latest_tweets' => array(
+        'type' => 'region',
+        'title' => 'Calendar',
+        'width' => '33.34',
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+        'hide_empty' => 1,
       ),
     ),
   );
@@ -152,8 +152,8 @@ function prima_homepage_default_page_manager_pages() {
       '4prima_short_description' => NULL,
       'latest_news' => NULL,
       'upcomming_events' => NULL,
-      'latest_tweets' => NULL,
       'calendar' => NULL,
+      'latest_tweets' => NULL,
     ),
   );
   $display->cache = array();
