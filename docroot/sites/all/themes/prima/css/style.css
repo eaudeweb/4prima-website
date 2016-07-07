@@ -1684,14 +1684,17 @@ textarea {
   background-color: #0088D0;
   border-color: #00679d;
 }
-.view-calendar .date-nav-wrapper .date-nav {
+.view-calendar .date-nav-wrapper .date-nav,
+.view-public-calendar .date-nav-wrapper .date-nav {
   padding-bottom: 0;
 }
-.view-calendar .date-nav-wrapper .date-nav .pager {
+.view-calendar .date-nav-wrapper .date-nav .pager,
+.view-public-calendar .date-nav-wrapper .date-nav .pager {
   width: 100%;
   margin-bottom: 0;
 }
-.view-calendar .date-nav-wrapper .date-nav .pager li {
+.view-calendar .date-nav-wrapper .date-nav .pager li,
+.view-public-calendar .date-nav-wrapper .date-nav .pager li {
   position: relative;
   display: inline-block;
   background: none;
@@ -1699,7 +1702,8 @@ textarea {
   margin: 0 5px;
   right: 0;
 }
-.view-calendar .date-nav-wrapper .date-nav .pager li a {
+.view-calendar .date-nav-wrapper .date-nav .pager li a,
+.view-public-calendar .date-nav-wrapper .date-nav .pager li a {
   display: inline-block;
   background-color: #0088D0;
   color: #ffffff;
@@ -1712,7 +1716,8 @@ textarea {
   transition: all 0.3s ease-in-out;
   padding: 5px 10px;
 }
-.view-calendar .date-nav-wrapper .date-nav .pager li a:hover {
+.view-calendar .date-nav-wrapper .date-nav .pager li a:hover,
+.view-public-calendar .date-nav-wrapper .date-nav .pager li a:hover {
   text-decoration: none;
   background-color: #333;
 }
