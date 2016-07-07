@@ -1721,6 +1721,9 @@ textarea {
   text-decoration: none;
   background-color: #333;
 }
+.front .view-public-calendar .pager {
+  display: none;
+}
 #footer {
   padding-top: 30px;
   border-bottom: none;
