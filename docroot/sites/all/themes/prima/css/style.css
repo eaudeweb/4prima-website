@@ -1726,7 +1726,7 @@ textarea {
   padding-bottom: 15px;
 }
 .front .view-public-calendar .date-heading {
-  text-align: right;
+  text-align: left;
 }
 .front .view-public-calendar .date-heading h3 {
   font-size: 21px;
