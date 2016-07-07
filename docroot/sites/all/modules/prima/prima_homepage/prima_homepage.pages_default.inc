@@ -127,7 +127,7 @@ function prima_homepage_default_page_manager_pages() {
       ),
       'calendar' => array(
         'type' => 'region',
-        'title' => 'Latest tweets',
+        'title' => 'Calendar',
         'width' => '33.33',
         'width_type' => '%',
         'parent' => '6',
@@ -136,7 +136,7 @@ function prima_homepage_default_page_manager_pages() {
       ),
       'latest_tweets' => array(
         'type' => 'region',
-        'title' => 'Calendar',
+        'title' => 'Latest tweets',
         'width' => '33.34',
         'width_type' => '%',
         'parent' => '6',
