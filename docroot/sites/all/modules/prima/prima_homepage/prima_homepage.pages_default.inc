@@ -122,7 +122,7 @@ function prima_homepage_default_page_manager_pages() {
         'width' => '33.33',
         'width_type' => '%',
         'parent' => '6',
-        'class' => '',
+        'class' => 'col-xs-12 col-sm-4',
         'hide_empty' => 1,
       ),
       'calendar' => array(
@@ -131,7 +131,7 @@ function prima_homepage_default_page_manager_pages() {
         'width' => '33.33',
         'width_type' => '%',
         'parent' => '6',
-        'class' => '',
+        'class' => 'col-xs-12 col-sm-4',
         'hide_empty' => 0,
       ),
       'latest_tweets' => array(
@@ -140,7 +140,7 @@ function prima_homepage_default_page_manager_pages() {
         'width' => '33.34',
         'width_type' => '%',
         'parent' => '6',
-        'class' => '',
+        'class' => 'col-xs-12 col-sm-4',
         'hide_empty' => 1,
       ),
     ),
