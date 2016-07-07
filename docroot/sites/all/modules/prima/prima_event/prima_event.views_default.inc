@@ -682,6 +682,12 @@ function prima_event_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
+  $handler->display->display_options['filters']['promote']['group'] = 1;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -703,6 +709,12 @@ function prima_event_views_default_views() {
   $handler->display->display_options['filters']['status_1']['field'] = 'status';
   $handler->display->display_options['filters']['status_1']['value'] = '1';
   $handler->display->display_options['filters']['status_1']['group'] = 2;
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote_1']['id'] = 'promote_1';
+  $handler->display->display_options['filters']['promote_1']['table'] = 'node';
+  $handler->display->display_options['filters']['promote_1']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote_1']['value'] = '1';
+  $handler->display->display_options['filters']['promote_1']['group'] = 2;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
