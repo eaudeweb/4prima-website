@@ -39,6 +39,7 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'medium',
@@ -61,7 +62,7 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
@@ -69,8 +70,8 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['field_contacts']['id'] = 'field_contacts';
   $handler->display->display_options['fields']['field_contacts']['table'] = 'field_data_field_contacts';
   $handler->display->display_options['fields']['field_contacts']['field'] = 'field_contacts';
-  $handler->display->display_options['fields']['field_contacts']['label'] = 'Main contacts';
   $handler->display->display_options['fields']['field_contacts']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_contacts']['element_label_type'] = 'h5';
   $handler->display->display_options['fields']['field_contacts']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_contacts']['settings'] = array(
     'link' => 1,
@@ -81,8 +82,9 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
-  $handler->display->display_options['fields']['field_link']['label'] = 'Web link';
+  $handler->display->display_options['fields']['field_link']['label'] = 'Links';
   $handler->display->display_options['fields']['field_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link']['element_label_type'] = 'h5';
   $handler->display->display_options['fields']['field_link']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_link']['delta_offset'] = '0';
