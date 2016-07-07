@@ -1725,6 +1725,9 @@ textarea {
   padding-top: 5px;
   padding-bottom: 15px;
 }
+.front .view-public-calendar .date-heading {
+  text-align: right;
+}
 .front .view-public-calendar .pager {
   display: none;
 }
