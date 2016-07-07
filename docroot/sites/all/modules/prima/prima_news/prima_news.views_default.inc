@@ -124,7 +124,7 @@ function prima_news_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'medium_scale_and_crop__220x220_',
     'image_link' => 'content',
   );
   /* Field: Content: Body */
@@ -208,7 +208,7 @@ function prima_news_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'medium_scale_and_crop__220x220_',
     'image_link' => '',
   );
   /* Field: Content: Body */
