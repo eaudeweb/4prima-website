@@ -1728,6 +1728,11 @@ textarea {
 .front .view-public-calendar .date-heading {
   text-align: right;
 }
+.front .view-public-calendar .date-heading h3 {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 24px;
+}
 .front .view-public-calendar .pager {
   display: none;
 }
