@@ -46,3 +46,7 @@ function prima_form_alter(&$form, &$form_state, $form_id) {
 //    $form['search_block_form']['#attributes'] = array('onblur' => "if (this.value == '') {this.value = '{$form_default}';}", 'onfocus' => "if (this.value == '{$form_default}') {this.value = '';}" );
 //  }
 }
+
+function prima_preprocess_calendar_datebox(&$vars) {
+  $vars['selected'] = 1;
+}
