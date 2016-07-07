@@ -343,6 +343,9 @@ $options['init-modules'] = array(
   'captcha',
   'recaptcha',
   'honeypot',
+  'simplenews',
+  'mailsystem',
+  'htmlmail',
 //  'elysia_cron',
 
 //  'locale',
@@ -354,9 +357,7 @@ $options['init-modules'] = array(
 
 //  'views_bulk_operations',
 //  'better_exposed_filters',
-//  'mailsystem',
-//  'htmlmail',
-//
+
 //  'taxonomy_access_fix',
 
 //  'field_group',
