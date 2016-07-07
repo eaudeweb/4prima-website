@@ -215,6 +215,41 @@ function prima_homepage_default_page_manager_pages() {
     $display->content['new-8b3377f3-c00c-40b4-957b-e4a102c98e49'] = $pane;
     $display->panels['latest_news'][0] = 'new-8b3377f3-c00c-40b4-957b-e4a102c98e49';
     $pane = new stdClass();
+    $pane->pid = 'new-86fe1f77-e664-464e-a269-8e7bb464c279';
+    $pane->panel = 'latest_tweets';
+    $pane->type = 'views';
+    $pane->subtype = 'calendar';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '86fe1f77-e664-464e-a269-8e7bb464c279';
+    $display->content['new-86fe1f77-e664-464e-a269-8e7bb464c279'] = $pane;
+    $display->panels['latest_tweets'][0] = 'new-86fe1f77-e664-464e-a269-8e7bb464c279';
+    $pane = new stdClass();
     $pane->pid = 'new-b04ec33e-c22b-4337-ae67-88c052b82aa7';
     $pane->panel = 'latest_tweets';
     $pane->type = 'block';
@@ -232,11 +267,11 @@ function prima_homepage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'b04ec33e-c22b-4337-ae67-88c052b82aa7';
     $display->content['new-b04ec33e-c22b-4337-ae67-88c052b82aa7'] = $pane;
-    $display->panels['latest_tweets'][0] = 'new-b04ec33e-c22b-4337-ae67-88c052b82aa7';
+    $display->panels['latest_tweets'][1] = 'new-b04ec33e-c22b-4337-ae67-88c052b82aa7';
     $pane = new stdClass();
     $pane->pid = 'new-cf6213e9-8ea3-4897-ab79-9d48a1863ae0';
     $pane->panel = 'upcomming_events';
