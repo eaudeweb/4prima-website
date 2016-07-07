@@ -1381,7 +1381,7 @@ textarea {
   font-size: 26px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 20px 0 20px 200px;
+  padding: 20px 0;
   line-height: 30px;
   height: 100%;
 }
