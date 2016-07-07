@@ -335,6 +335,7 @@ $options['init-modules'] = array(
   'prima_partner',
   'prima_publication',
   'prima_document',
+  'prima_meeting',
 
   'smart_trim',
   'path_breadcrumbs',
@@ -408,12 +409,7 @@ $options['init-modules'] = array(
   // Enable last (conflict with rules)
 //  'uuid',
 //  'uuid_features',
-//
-//  'path_breadcrumbs',
-//  'path_breadcrumbs_ui',
 //  'path_breadcrumbs_i18n',
-//
-//
 //  'responsive_menus',
 //  'jquery_expander',
 
