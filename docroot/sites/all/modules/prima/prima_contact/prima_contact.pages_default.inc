@@ -70,13 +70,14 @@ function prima_contact_default_page_manager_pages() {
         'contains' => 'region',
         'children' => array(
           0 => 'center',
+          1 => 'newsletter',
         ),
         'parent' => 'main',
       ),
       'center' => array(
         'type' => 'region',
         'title' => 'Contact form',
-        'width' => 100,
+        'width' => '69.28956762554226',
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => '',
@@ -101,6 +102,15 @@ function prima_contact_default_page_manager_pages() {
         'class' => '',
         'hide_empty' => 1,
       ),
+      'newsletter' => array(
+        'type' => 'region',
+        'title' => 'Newsletter',
+        'width' => '30.710432374457735',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => '',
+        'hide_empty' => 1,
+      ),
     ),
   );
   $display->panel_settings = array(
@@ -108,6 +118,7 @@ function prima_contact_default_page_manager_pages() {
       'default' => NULL,
       'center' => NULL,
       'introduction_text' => NULL,
+      'newsletter' => NULL,
     ),
   );
   $display->cache = array();
@@ -167,6 +178,29 @@ function prima_contact_default_page_manager_pages() {
     $pane->uuid = '41654ae3-85de-4e0b-a59f-c6242bdcef2a';
     $display->content['new-41654ae3-85de-4e0b-a59f-c6242bdcef2a'] = $pane;
     $display->panels['introduction_text'][0] = 'new-41654ae3-85de-4e0b-a59f-c6242bdcef2a';
+    $pane = new stdClass();
+    $pane->pid = 'new-2a252804-77ea-4b74-8b52-bd439807350b';
+    $pane->panel = 'newsletter';
+    $pane->type = 'block';
+    $pane->subtype = 'simplenews-10';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '4Prima newsletter',
+      'override_title_heading' => 'h3',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2a252804-77ea-4b74-8b52-bd439807350b';
+    $display->content['new-2a252804-77ea-4b74-8b52-bd439807350b'] = $pane;
+    $display->panels['newsletter'][0] = 'new-2a252804-77ea-4b74-8b52-bd439807350b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-41654ae3-85de-4e0b-a59f-c6242bdcef2a';
   $handler->conf['display'] = $display;
