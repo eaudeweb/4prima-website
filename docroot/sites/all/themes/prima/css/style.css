@@ -1591,6 +1591,14 @@ textarea {
   text-decoration: none;
   color: #000304;
 }
+.view-events .views-row .views-field-title h4.PRIMA-project a,
+.view-publications .views-row .views-field-title h4.PRIMA-project a {
+  color: #be6707;
+}
+.view-events .views-row .views-field-title h4.External a,
+.view-publications .views-row .views-field-title h4.External a {
+  color: #819c22;
+}
 .view-events .views-row .views-field-field-location,
 .view-publications .views-row .views-field-field-location {
   margin-bottom: 0;
