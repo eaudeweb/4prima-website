@@ -1527,6 +1527,9 @@ textarea {
 .view-news.view-display-id-page .view-content .row .right-col h4 {
   margin-top: 0;
 }
+.view-partners.view-display-id-page .view-content .row .right-col .row {
+  border: none;
+}
 .view-partners.view-display-id-page .view-content .row .right-col h4 a,
 .view-news.view-display-id-page .view-content .row .right-col h4 a {
   color: #00679d;
