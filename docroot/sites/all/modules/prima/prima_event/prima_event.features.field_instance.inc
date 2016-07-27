@@ -303,6 +303,7 @@ function prima_event_field_default_field_instances() {
         'default_country' => 'IT',
         'format_handlers' => array(
           'address' => 'address',
+          'address-country-required' => 'address-country-required',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
           'address-hide-country' => 0,
