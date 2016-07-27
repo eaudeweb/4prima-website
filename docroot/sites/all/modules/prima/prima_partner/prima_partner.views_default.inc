@@ -29,7 +29,10 @@ function prima_partner_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '19';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Image */
@@ -199,10 +202,20 @@ function prima_partner_views_default_views() {
       [field_image]
     </div>
     <div class="col-xs-9 right-col">
-      <h4>[title]</h4>
-      <div class="body_field">[body]</div>
-      <div class="field_contacts"><h5>Contacts</h5>[field_contacts]</div>
-      <div class="field_link"><h5>Links</h5>[field_link]</div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4>[title]</h4>
+          <div class="body_field">[body]</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="field_contacts"><h5>Contacts</h5>[field_contacts]</div>
+        </div>
+        <div class="col-md-6">
+          <div class="field_link"><h5>Links</h5>[field_link]</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>';
