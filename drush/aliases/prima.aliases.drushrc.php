@@ -17,6 +17,23 @@ $aliases['staging'] = array(
   ),
 );
 
+$aliases['prod'] = array(
+  'uri' => '4prima.org',
+  'db-allows-remote' => TRUE,
+  'remote-host' => '176.57.36.50',
+  'remote-user' => 'forprimastg',
+  'root' => '/home/forprimastg/forprimastg/www/docroot',
+  'path-aliases' => array(
+    '%files' => 'sites/default/files',
+  ),
+  'command-specific' => array(
+    'sql-sync' => array(
+      'simulate' => '1',
+      'source-dump' => '/tmp/prima-prod-source-dump.sql',
+    ),
+  ),
+);
+
 // This alias is used in install and update scripts.
 // Rewrite it in your aliases.local.php as you need.
 
