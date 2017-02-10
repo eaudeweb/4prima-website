@@ -147,7 +147,9 @@
       <div id="banner-inside" class="clearfix">
         <div class="row">
           <div class="col-md-12">
-            <?php print render($page['banner']); ?>
+            <div class="row">
+              <?php print render($page['banner']); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -230,12 +232,6 @@
 
               <?php if ($title || $breadcrumb): ?>
                 <div class="title-container">
-                  <?php print render($title_prefix); ?>
-                  <?php if ($title):?>
-                    <h1 class="page-title"><?php print $title; ?></h1>
-                  <?php endif; ?>
-                  <?php print render($title_suffix); ?>
-
                   <?php if ($breadcrumb):?>
                     <!-- #breadcrumb -->
                     <div id="breadcrumb" class="clearfix">
@@ -247,6 +243,13 @@
                     </div>
                     <!-- EOF: #breadcrumb -->
                   <?php endif; ?>
+
+                  <?php print render($title_prefix); ?>
+                  <?php if ($title):?>
+                    <h1 class="page-title"><?php print $title; ?></h1>
+                  <?php endif; ?>
+                  <?php print render($title_suffix); ?>
+
                 </div>
               <?php endif; ?>
 

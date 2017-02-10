@@ -11,6 +11,21 @@
       }
     }
   }
+  @media (max-width: @screen-md-max) {
+    > .container {
+      display: table;
+      width: 100%;
+      > .row {
+        display: table-row;
+        width: 100%;
+        > [class*="col-"] {
+          display: table-cell;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
 
 #header {

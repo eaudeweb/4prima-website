@@ -1,12 +1,27 @@
-@screen-xs: 480px;
-@screen-sm: 768px;
-@screen-md: 992px;
-@screen-lg: 1200px;
+@logo-orange:               #EF8209;
+@logo-blue:                 #0088D0;
+@logo-dark-blue:            #246DB5;
+@logo-green:                #A4C62B;
+@logo-yellow:               #F5E040;
+@black-color:               #1C1C1C;
 
-@logo-orange: #EF8209;
-@logo-blue: #0088D0;
-@logo-green: #A4C62B;
-@logo-yellow: #F5E040;
-@black-color: #1C1C1C;
+@main-color:                @logo-blue;
 
-@main-color: @logo-blue;
+@screen-xs:                 480px;
+@screen-sm:                 768px;
+@screen-md:                 992px;
+@screen-lg:                 1200px;
+
+@screen-xs-min:             @screen-xs;
+@screen-sm-min:             @screen-sm;
+@screen-md-min:             @screen-md;
+@screen-lg-min:             @screen-lg;
+
+@screen-xs-max:             (@screen-sm-min - 1);
+@screen-sm-max:             (@screen-md-min - 1);
+@screen-md-max:             (@screen-lg-min - 1);
+
+@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+@grid-gutter-width:         30px;
