@@ -661,6 +661,9 @@ ul.menu li.expanded ul {
   font-size: 12px;
   padding: 0;
 }
+.node:not(.node-teaser) > .field:not(:last-child) {
+  margin-bottom: 15px;
+}
 .user-picture {
   margin: 0px 15px 0 0;
   display: inline-block;
@@ -1299,6 +1302,9 @@ textarea {
 }
 .page-node-edit .vertical-tabs li {
   list-style: none;
+}
+.file .file-icon {
+  display: inline;
 }
 #pre-header {
   background-color: #1C1C1C;
