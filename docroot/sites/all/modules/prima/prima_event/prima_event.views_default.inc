@@ -1043,6 +1043,26 @@ function prima_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
   );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Event type (field_event_type) */
+  $handler->display->display_options['filters']['field_event_type_tid']['id'] = 'field_event_type_tid';
+  $handler->display->display_options['filters']['field_event_type_tid']['table'] = 'field_data_field_event_type';
+  $handler->display->display_options['filters']['field_event_type_tid']['field'] = 'field_event_type_tid';
+  $handler->display->display_options['filters']['field_event_type_tid']['value'] = array(
+    9 => '9',
+    8 => '8',
+  );
+  $handler->display->display_options['filters']['field_event_type_tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['field_event_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_event_type_tid']['vocabulary'] = 'event_type';
 
   /* Display: Upcoming */
   $handler = $view->new_display('block', 'Upcoming', 'block_2');
