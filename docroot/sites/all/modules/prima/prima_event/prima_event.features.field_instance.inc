@@ -54,6 +54,48 @@ function prima_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_documents'.
+  $field_instances['node-event-field_documents'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_documents',
+    'label' => 'Resources',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'event_resources',
+      'file_extensions' => 'txt pdf doc docx ppt pptx png jpeg jpg',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_date'.
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
@@ -258,7 +300,7 @@ function prima_event_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -425,6 +467,7 @@ function prima_event_field_default_field_instances() {
   t('Event type');
   t('Geolocation');
   t('Location');
+  t('Resources');
   t('Title');
   t('Website');
 
