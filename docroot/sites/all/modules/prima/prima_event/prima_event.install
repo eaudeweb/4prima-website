@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Enable new module - Diff and Feature revert.
+ */
+function prima_event_update_7001() {
+  module_enable(array('diff'));
+  features_revert_module('prima_event');
+}
