@@ -67,7 +67,100 @@ function prima_contact_person_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 1,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_calls_prima'.
+  $field_instances['node-contact-field_calls_prima'] = array(
+    'bundle' => 'contact',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_calls_prima',
+    'label' => 'News and calls from PRIMA',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_department'.
+  $field_instances['node-contact-field_department'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_department',
+    'label' => 'Department / Unit',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 255,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -112,7 +205,96 @@ function prima_contact_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 2,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_field_of_work'.
+  $field_instances['node-contact-field_field_of_work'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_field_of_work',
+    'label' => 'Field of work',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_mobile_phone'.
+  $field_instances['node-contact-field_mobile_phone'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_mobile_phone',
+    'label' => 'Mobile phone',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
     ),
   );
 
@@ -145,7 +327,7 @@ function prima_contact_person_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_phone',
-    'label' => 'Phone',
+    'label' => 'Office phone',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -158,7 +340,96 @@ function prima_contact_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_position'.
+  $field_instances['node-contact-field_position'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_position',
+    'label' => 'Position',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_title_of_contact'.
+  $field_instances['node-contact-field_title_of_contact'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_title_of_contact',
+    'label' => 'Title of contact',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
     ),
   );
 
@@ -195,7 +466,7 @@ function prima_contact_person_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Name',
+    'label' => 'Contact name',
     'required' => 1,
     'settings' => array(
       'hide_label' => array(
@@ -219,9 +490,15 @@ function prima_contact_person_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Contact name');
+  t('Department / Unit');
   t('E-mail');
-  t('Name');
-  t('Phone');
+  t('Field of work');
+  t('Mobile phone');
+  t('News and calls from PRIMA');
+  t('Office phone');
+  t('Position');
+  t('Title of contact');
 
   return $field_instances;
 }

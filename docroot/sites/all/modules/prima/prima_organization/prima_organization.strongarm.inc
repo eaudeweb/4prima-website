@@ -1,138 +1,122 @@
 <?php
 /**
  * @file
- * prima_contact_person.strongarm.inc
+ * prima_organization.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function prima_contact_person_strongarm() {
+function prima_organization_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_contact';
+  $strongarm->name = 'comment_anonymous_organization';
   $strongarm->value = 0;
-  $export['comment_anonymous_contact'] = $strongarm;
+  $export['comment_anonymous_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_contact';
-  $strongarm->value = '1';
-  $export['comment_contact'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_contact';
+  $strongarm->name = 'comment_default_mode_organization';
   $strongarm->value = 1;
-  $export['comment_default_mode_contact'] = $strongarm;
+  $export['comment_default_mode_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_contact';
+  $strongarm->name = 'comment_default_per_page_organization';
   $strongarm->value = '50';
-  $export['comment_default_per_page_contact'] = $strongarm;
+  $export['comment_default_per_page_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_contact';
+  $strongarm->name = 'comment_form_location_organization';
   $strongarm->value = 1;
-  $export['comment_form_location_contact'] = $strongarm;
+  $export['comment_form_location_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_contact';
+  $strongarm->name = 'comment_organization';
   $strongarm->value = '1';
-  $export['comment_preview_contact'] = $strongarm;
+  $export['comment_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_contact';
+  $strongarm->name = 'comment_preview_organization';
+  $strongarm->value = '1';
+  $export['comment_preview_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_organization';
   $strongarm->value = 1;
-  $export['comment_subject_field_contact'] = $strongarm;
+  $export['comment_subject_field_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__contact';
+  $strongarm->name = 'field_bundle_settings_node__organization';
   $strongarm->value = array(
-    'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
-      ),
-      'token' => array(
-        'custom_settings' => TRUE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
+    'view_modes' => array(),
     'extra_fields' => array(
       'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
         'path' => array(
-          'weight' => '10',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__contact'] = $strongarm;
+  $export['field_bundle_settings_node__organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_contact';
+  $strongarm->name = 'menu_options_organization';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_contact'] = $strongarm;
+  $export['menu_options_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_contact';
+  $strongarm->name = 'menu_parent_organization';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_contact'] = $strongarm;
+  $export['menu_parent_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_contact';
+  $strongarm->name = 'node_options_organization';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_contact'] = $strongarm;
+  $export['node_options_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_contact';
+  $strongarm->name = 'node_preview_organization';
   $strongarm->value = '1';
-  $export['node_preview_contact'] = $strongarm;
+  $export['node_preview_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_contact';
+  $strongarm->name = 'node_submitted_organization';
   $strongarm->value = 0;
-  $export['node_submitted_contact'] = $strongarm;
+  $export['node_submitted_organization'] = $strongarm;
 
   return $export;
 }
