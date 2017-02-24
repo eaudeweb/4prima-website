@@ -1,0 +1,13 @@
+<?php
+/**
+* Enable module - Prima Organization.
+*/
+function prima_registration_update_7001() {
+  $modules = array(
+    'feeds',
+    'feeds_ui',
+    'feeds_import',
+    'registration_views',
+  );
+  module_enable($modules);
+}

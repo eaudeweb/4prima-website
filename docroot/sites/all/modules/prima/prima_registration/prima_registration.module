@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the 4Prima registration feature.
+ */
+
+include_once 'prima_registration.features.inc';

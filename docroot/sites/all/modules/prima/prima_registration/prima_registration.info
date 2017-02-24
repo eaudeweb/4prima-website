@@ -1,0 +1,9 @@
+name = 4Prima registration
+description = Customized registration.
+core = 7.x
+package = 4Prima
+version = 7.x-1.0
+dependencies[] = entity
+dependencies[] = registration
+features[features_api][] = api:2
+features[registration_type][] = prima_event_registration

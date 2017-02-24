@@ -348,6 +348,13 @@ $options['init-modules'] = array(
   'simplenews',
   'mailsystem',
   'htmlmail',
+  'registration',
+  'registration_views',
+  'job_scheduler',
+  'feeds',
+  'feeds_ui',
+  'feeds_import',
+  'prima_registration',
 //  'elysia_cron',
 
 //  'locale',
