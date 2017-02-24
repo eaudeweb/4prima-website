@@ -67,7 +67,7 @@ function prima_contact_person_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -114,7 +114,7 @@ function prima_contact_person_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -157,10 +157,10 @@ function prima_contact_person_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 255,
+        'size' => 120,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -205,7 +205,7 @@ function prima_contact_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -248,7 +248,7 @@ function prima_contact_person_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -294,7 +294,51 @@ function prima_contact_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-contact-field_organization'.
+  $field_instances['node-contact-field_organization'] = array(
+    'bundle' => 'contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_organization',
+    'label' => 'Organization',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
@@ -340,7 +384,7 @@ function prima_contact_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -497,6 +541,7 @@ function prima_contact_person_field_default_field_instances() {
   t('Mobile phone');
   t('News and calls from PRIMA');
   t('Office phone');
+  t('Organization');
   t('Position');
   t('Title of contact');
 
