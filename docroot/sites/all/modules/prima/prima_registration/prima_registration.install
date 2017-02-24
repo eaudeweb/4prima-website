@@ -1,6 +1,6 @@
 <?php
 /**
-* Enable module - Prima Organization.
+* Enable module - Prima registration.
 */
 function prima_registration_update_7001() {
   $modules = array(
