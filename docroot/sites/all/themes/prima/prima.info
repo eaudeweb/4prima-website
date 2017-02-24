@@ -35,5 +35,5 @@ regions[page_bottom] = Page bottom
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
-
+stylesheets[all][] = css/jquery.dataTables.min.css
 stylesheets[all][] = css/style.css

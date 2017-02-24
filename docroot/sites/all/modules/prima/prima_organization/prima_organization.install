@@ -1,0 +1,10 @@
+<?php
+/**
+* Enable module - Prima Organization.
+*/
+function prima_organization_update_7001() {
+  $modules = array(
+    'prima_organization',
+  );
+  module_enable($modules);
+}
