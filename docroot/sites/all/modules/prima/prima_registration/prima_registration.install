@@ -11,3 +11,18 @@ function prima_registration_update_7001() {
   );
   module_enable($modules);
 }
+
+/**
+ * Enable modules.
+ */
+function prima_registration_update_7002() {
+  $modules = array(
+    'feeds_entity_processor',
+    'feeds_tamper',
+    'feeds_tamper_ui',
+    'feeds_tamper_string2id',
+    'views_data_export',
+  );
+  module_enable($modules);
+  features_revert_module('prima_registration');
+}

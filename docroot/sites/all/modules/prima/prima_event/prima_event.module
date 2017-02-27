@@ -13,4 +13,100 @@ function prima_event_ctools_plugin_directory($module, $plugin) {
   if ($module == 'addressfield') {
     return 'plugins/' . $plugin;
   }
+
+  if ($module == 'feeds_tamper' && $plugin == 'plugins') {
+    return 'plugins/feeds_tamper';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function prima_event_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'feeds_import_form') {
+
+    $importer = feeds_importer($form['#importer_id']);
+    $configuration = $importer->getConfig();
+    if (!isset($configuration['processor']['config']['values']['entity_type'])) {
+      return;
+    }
+    $entity_type = $configuration['processor']['config']['values']['entity_type'];
+
+    $query = new EntityFieldQuery();
+    $result = $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', $entity_type)
+      ->execute();
+    $events = node_load_multiple(array_keys($result['node']));
+
+    $options = array();
+    if ($events) {
+      foreach ($events as $event) {
+        $options[$event->nid] = $event->title;
+      }
+    }
+    $form['feeds']['event'] = array(
+      '#type' => 'select',
+      '#title' => t('Event'),
+      '#options' => $options,
+      '#description' => t('Set this to the <em>@entity_type</em> to what you want to import the content.', array('@entity_type' => $entity_type)),
+      '#weight' => -100,
+      '#required' => TRUE,
+    );
+    $form['#submit'] = array('prima_feeds_import_form_submit');
+  }
+}
+
+/**
+ * Submit handler for feeds_import_form().
+ */
+function prima_feeds_import_form_submit($form, &$form_state) {
+
+  // Save source and import.
+  $source = feeds_source($form['#importer_id']);
+
+  if (!empty($form_state['values']['feeds']) && is_array($form_state['values']['feeds'])) {
+    $source->addConfig($form_state['values']['feeds']);
+    $source->save();
+  }
+
+  // Get instance of the current importer.
+  $importer = feeds_importer($form['#importer_id']);
+
+  // Get configuration for the instance of the current importer.
+  $configuration = $importer->getConfig();
+
+  // Overwrite the host entity id with the current node id.
+  $configuration['processor']['config']['values']['entity']['entity_id'] = $form_state['values']['feeds']['event'];
+
+  // Add configuration changes back to curent instance configuration.
+  $importer->addConfig($configuration);
+
+  // Save overwritten configuration into DB.
+  $save = new stdClass();
+  $save->id = $form['#importer_id'];
+  $save->config = $configuration;
+
+  if ($config = db_query("SELECT config FROM {feeds_importer} WHERE id = :id", array(':id' => $form['#importer_id']))->fetchField()) {
+    drupal_write_record('feeds_importer', $save, 'id');
+    // Only rebuild menu if content_type has changed. Don't worry about
+    // rebuilding menus when creating a new importer since it will default
+    // to the standalone page.
+    $config = unserialize($config);
+    if ($config['content_type'] != $save->config['content_type']) {
+      variable_set('menu_rebuild_needed', TRUE);
+    }
+  }
+  else {
+    drupal_write_record('feeds_importer', $save);
+  }
+
+  // Refresh feed if import on create is selected.
+  if ($source->importer->config['import_on_create']) {
+    // Get the instance of the source.
+    $source = feeds_source($form['#importer_id']);
+    $source->startImport();
+  }
+
+  // Add to schedule, make sure importer is scheduled, too.
+  $source->schedule();
 }
