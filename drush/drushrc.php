@@ -354,6 +354,11 @@ $options['init-modules'] = array(
   'feeds',
   'feeds_ui',
   'feeds_import',
+  'feeds_entity_processor',
+  'feeds_tamper',
+  'feeds_tamper_ui',
+  'feeds_tamper_string2id',
+  'views_data_export',
   'prima_registration',
 //  'elysia_cron',
 
