@@ -66,6 +66,7 @@ features[user_permission][] = update any prima_event_registration registration
 features[user_permission][] = update own prima_event_registration registration
 features[user_permission][] = view own prima_event_registration registration
 features[user_permission][] = view prima_event_registration registration
+features[views_view][] = administer_registrations
 features[views_view][] = event_registrations
 features_exclude[dependencies][addressfield] = addressfield
 features_exclude[dependencies][ctools] = ctools
