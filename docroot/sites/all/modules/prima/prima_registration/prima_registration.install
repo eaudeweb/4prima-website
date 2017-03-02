@@ -26,3 +26,10 @@ function prima_registration_update_7002() {
   module_enable($modules);
   features_revert_module('prima_registration');
 }
+
+/**
+ * Feed importer - make email unique value per event.
+ */
+function prima_registration_update_7003() {
+  features_revert_module('prima_registration');
+}

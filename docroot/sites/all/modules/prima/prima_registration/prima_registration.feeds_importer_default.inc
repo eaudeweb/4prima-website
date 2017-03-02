@@ -51,7 +51,7 @@ function prima_registration_feeds_importer_default() {
           'updated' => NULL,
           'entity' => array(
             'entity_type' => 'node',
-            'entity_id' => '98',
+            'entity_id' => '119',
           ),
           'author' => '',
           'user' => array(
@@ -62,26 +62,26 @@ function prima_registration_feeds_importer_default() {
         'authorize' => TRUE,
         'mappings' => array(
           0 => array(
-            'source' => 'Email',
-            'target' => 'anon_mail',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          1 => array(
             'source' => 'Contact name',
             'target' => 'field_reg_contact_name',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          2 => array(
+          1 => array(
             'source' => 'Title of contact',
             'target' => 'field_reg_title_of_contact',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          3 => array(
+          2 => array(
             'source' => 'Email',
             'target' => 'anon_mail',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          3 => array(
+            'source' => 'Position',
+            'target' => 'field_reg_position',
             'unique' => FALSE,
             'language' => 'und',
           ),
@@ -92,42 +92,36 @@ function prima_registration_feeds_importer_default() {
             'language' => 'und',
           ),
           5 => array(
-            'source' => 'Position',
-            'target' => 'field_reg_position',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          6 => array(
             'source' => 'Department / Unit',
             'target' => 'field_reg_department_uni',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          7 => array(
+          6 => array(
             'source' => 'Mobile phone',
             'target' => 'field_reg_mobile_phone',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          8 => array(
+          7 => array(
             'source' => 'Office phone',
             'target' => 'field_office_phone',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          9 => array(
+          8 => array(
             'source' => 'Address',
             'target' => 'field_reg_address:data',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          10 => array(
+          9 => array(
             'source' => 'Field of work',
             'target' => 'field_reg_field_of_work',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          11 => array(
+          10 => array(
             'source' => 'News and calls from PRIMA',
             'target' => 'field_reg_news_and_calls',
             'unique' => FALSE,
