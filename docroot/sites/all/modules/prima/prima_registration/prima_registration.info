@@ -17,6 +17,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[feeds_importer][] = 4prima_event_registration_import
+features[feeds_tamper][] = 4prima_event_registration_import-country-country_to_code
 features[feeds_tamper][] = 4prima_event_registration_import-email-unique_field
 features[feeds_tamper][] = 4prima_event_registration_import-organization-efq_finder_or_create
 features[feeds_tamper][] = 4prima_event_registration_import-organization-string2id

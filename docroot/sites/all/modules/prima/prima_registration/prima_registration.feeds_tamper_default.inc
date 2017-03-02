@@ -13,6 +13,18 @@ function prima_registration_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-country-country_to_code';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Country';
+  $feeds_tamper->plugin_id = 'country_to_code';
+  $feeds_tamper->settings = array();
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Convert country to ISO code';
+  $export['4prima_event_registration_import-country-country_to_code'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = '4prima_event_registration_import-email-unique_field';
   $feeds_tamper->importer = '4prima_event_registration_import';
   $feeds_tamper->source = 'Email';

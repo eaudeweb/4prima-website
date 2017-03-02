@@ -219,17 +219,33 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_office_phone']['id'] = 'field_office_phone';
   $handler->display->display_options['fields']['field_office_phone']['table'] = 'field_data_field_office_phone';
   $handler->display->display_options['fields']['field_office_phone']['field'] = 'field_office_phone';
-  /* Field: Registration: Address */
-  $handler->display->display_options['fields']['field_reg_address']['id'] = 'field_reg_address';
-  $handler->display->display_options['fields']['field_reg_address']['table'] = 'field_data_field_reg_address';
-  $handler->display->display_options['fields']['field_reg_address']['field'] = 'field_reg_address';
-  $handler->display->display_options['fields']['field_reg_address']['click_sort_column'] = 'country';
-  $handler->display->display_options['fields']['field_reg_address']['settings'] = array(
-    'use_widget_handlers' => 1,
-    'format_handlers' => array(
-      'address' => 'address',
-    ),
-  );
+  /* Field: Registration: Address - Country */
+  $handler->display->display_options['fields']['field_reg_address_country']['id'] = 'field_reg_address_country';
+  $handler->display->display_options['fields']['field_reg_address_country']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_country']['field'] = 'field_reg_address_country';
+  $handler->display->display_options['fields']['field_reg_address_country']['label'] = 'Country';
+  $handler->display->display_options['fields']['field_reg_address_country']['display_name'] = 1;
+  /* Field: Registration: Address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['id'] = 'field_reg_address_thoroughfare';
+  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['field'] = 'field_reg_address_thoroughfare';
+  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['label'] = 'Address';
+  /* Field: Registration: Address - Postal code */
+  $handler->display->display_options['fields']['field_reg_address_postal_code']['id'] = 'field_reg_address_postal_code';
+  $handler->display->display_options['fields']['field_reg_address_postal_code']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_postal_code']['field'] = 'field_reg_address_postal_code';
+  $handler->display->display_options['fields']['field_reg_address_postal_code']['label'] = 'Postal code';
+  /* Field: Registration: Address - Locality (i.e. City) */
+  $handler->display->display_options['fields']['field_reg_address_locality']['id'] = 'field_reg_address_locality';
+  $handler->display->display_options['fields']['field_reg_address_locality']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_locality']['field'] = 'field_reg_address_locality';
+  $handler->display->display_options['fields']['field_reg_address_locality']['label'] = 'City';
+  /* Field: Registration: Address - Administrative area (i.e. State / Province) */
+  $handler->display->display_options['fields']['field_reg_address_administrative_area']['id'] = 'field_reg_address_administrative_area';
+  $handler->display->display_options['fields']['field_reg_address_administrative_area']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_administrative_area']['field'] = 'field_reg_address_administrative_area';
+  $handler->display->display_options['fields']['field_reg_address_administrative_area']['label'] = 'State / Province';
+  $handler->display->display_options['fields']['field_reg_address_administrative_area']['display_name'] = 1;
   /* Field: Registration: Field of work */
   $handler->display->display_options['fields']['field_reg_field_of_work']['id'] = 'field_reg_field_of_work';
   $handler->display->display_options['fields']['field_reg_field_of_work']['table'] = 'field_data_field_reg_field_of_work';

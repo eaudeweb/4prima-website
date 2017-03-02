@@ -51,7 +51,7 @@ function prima_registration_feeds_importer_default() {
           'updated' => NULL,
           'entity' => array(
             'entity_type' => 'node',
-            'entity_id' => '119',
+            'entity_id' => '98',
           ),
           'author' => '',
           'user' => array(
@@ -110,18 +110,42 @@ function prima_registration_feeds_importer_default() {
             'language' => 'und',
           ),
           8 => array(
-            'source' => 'Address',
-            'target' => 'field_reg_address:data',
+            'source' => 'Country',
+            'target' => 'field_reg_address:country',
             'unique' => FALSE,
             'language' => 'und',
           ),
           9 => array(
+            'source' => 'Address',
+            'target' => 'field_reg_address:thoroughfare',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          10 => array(
+            'source' => 'Postal code',
+            'target' => 'field_reg_address:postal_code',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          11 => array(
+            'source' => 'City',
+            'target' => 'field_reg_address:dependent_locality',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          12 => array(
+            'source' => 'State / Province',
+            'target' => 'field_reg_address:administrative_area',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          13 => array(
             'source' => 'Field of work',
             'target' => 'field_reg_field_of_work',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          10 => array(
+          14 => array(
             'source' => 'News and calls from PRIMA',
             'target' => 'field_reg_news_and_calls',
             'unique' => FALSE,
