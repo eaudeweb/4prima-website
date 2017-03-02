@@ -20,11 +20,71 @@ function prima_event_ctools_plugin_directory($module, $plugin) {
 }
 
 /**
+ * Return all registration field instances.
+ *
+ * @return array
+ *   A list of field instances
+ */
+function prima_event_registration_get_registration_instances($params = array()) {
+  $registration_fields = field_read_fields(array('type' => 'registration'));
+
+  $registration_instances = array();
+  if (!empty($registration_fields)) {
+    $field_name = array(
+      'field_name' => array_keys($registration_fields)
+    );
+    $params = array_merge($field_name, $params);
+    $registration_instances = field_read_instances($params);
+  }
+
+  return $registration_instances;
+}
+/**
+ * Implements hook_menu().
+ */
+function prima_event_menu() {
+  foreach (prima_event_registration_get_registration_instances() as $instance) {
+    $type = $instance['entity_type'];
+    if (!in_array($type, array('registration', 'registration_type'))) {
+      $items[$type . '/%entity_object/registrations/list-export'] = array(
+        'load arguments' => array($type),
+        'title' => 'Export',
+        'page callback' => 'registration_export_redirect',
+        'page arguments' => array(0, 1),
+        'access callback' => 'registration_administer_registrations_access',
+        'access arguments' => array(0, 1),
+        'weight' => 99,
+        'type' => MENU_LOCAL_TASK,
+      );
+
+      $items[$type . '/%entity_object/registrations/list-import'] = array(
+        'load arguments' => array($type),
+        'title' => 'Import',
+        'page callback' => 'registration_import_redirect',
+        'page arguments' => array(0, 1),
+        'access callback' => 'registration_administer_registrations_access',
+        'access arguments' => array(0, 1),
+        'weight' => 100,
+        'type' => MENU_LOCAL_TASK,
+      );
+    }
+  }
+  return $items;
+}
+
+function registration_export_redirect($entity_type, $entity, $account = NULL) {
+  drupal_goto('node/'.$entity->nid.'/registrations/export');
+}
+
+function registration_import_redirect($entity_type, $entity, $account = NULL) {
+  drupal_goto('import/4prima_event_registration_import/'.$entity->nid);
+}
+
+/**
  * Implements hook_form_alter().
  */
 function prima_event_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'feeds_import_form') {
-
     $importer = feeds_importer($form['#importer_id']);
     $configuration = $importer->getConfig();
     if (!isset($configuration['processor']['config']['values']['entity_type'])) {
@@ -44,6 +104,7 @@ function prima_event_form_alter(&$form, &$form_state, $form_id) {
         $options[$event->nid] = $event->title;
       }
     }
+
     $form['feeds']['event'] = array(
       '#type' => 'select',
       '#title' => t('Event'),
@@ -52,6 +113,17 @@ function prima_event_form_alter(&$form, &$form_state, $form_id) {
       '#weight' => -100,
       '#required' => TRUE,
     );
+
+    if (isset($form_state['build_info']['args'][1])){
+      if (array_key_exists($form_state['build_info']['args'][1],$options)){
+        $form['feeds']['event']['#default_value'] = $form_state['build_info']['args'][1];
+        $form['feeds']['event']['#disabled'] = TRUE;
+      }else{
+        drupal_not_found();
+        die();
+      }
+    }
+
     $form['#submit'] = array('prima_feeds_import_form_submit');
   }
 }
