@@ -229,7 +229,12 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_reg_address_thoroughfare']['id'] = 'field_reg_address_thoroughfare';
   $handler->display->display_options['fields']['field_reg_address_thoroughfare']['table'] = 'field_data_field_reg_address';
   $handler->display->display_options['fields']['field_reg_address_thoroughfare']['field'] = 'field_reg_address_thoroughfare';
-  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['label'] = 'Address';
+  $handler->display->display_options['fields']['field_reg_address_thoroughfare']['label'] = 'Address 1';
+  /* Field: Registration: Address - Premise (i.e. Apartment / Suite number) */
+  $handler->display->display_options['fields']['field_reg_address_premise']['id'] = 'field_reg_address_premise';
+  $handler->display->display_options['fields']['field_reg_address_premise']['table'] = 'field_data_field_reg_address';
+  $handler->display->display_options['fields']['field_reg_address_premise']['field'] = 'field_reg_address_premise';
+  $handler->display->display_options['fields']['field_reg_address_premise']['label'] = 'Address 2';
   /* Field: Registration: Address - Postal code */
   $handler->display->display_options['fields']['field_reg_address_postal_code']['id'] = 'field_reg_address_postal_code';
   $handler->display->display_options['fields']['field_reg_address_postal_code']['table'] = 'field_data_field_reg_address';
