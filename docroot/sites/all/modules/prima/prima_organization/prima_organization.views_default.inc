@@ -110,6 +110,7 @@ function prima_organization_views_default_views() {
     'use_widget_handlers' => 0,
     'format_handlers' => array(
       'address' => 'address',
+      'address-hide-city' => 'address-hide-city',
       'address-hide-postal-code' => 'address-hide-postal-code',
       'address-hide-street' => 'address-hide-street',
     ),
@@ -148,6 +149,41 @@ function prima_organization_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Name';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Address */
+  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['alter']['text'] = '[field_address-country]';
+  $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_address']['settings'] = array(
+    'use_widget_handlers' => 0,
+    'format_handlers' => array(
+      'address' => 'address',
+      'address-hide-city' => 'address-hide-city',
+      'address-hide-postal-code' => 'address-hide-postal-code',
+      'address-hide-street' => 'address-hide-street',
+    ),
+  );
+  /* Field: Content: Organization type */
+  $handler->display->display_options['fields']['field_organization_type']['id'] = 'field_organization_type';
+  $handler->display->display_options['fields']['field_organization_type']['table'] = 'field_data_field_organization_type';
+  $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
+  $handler->display->display_options['fields']['field_organization_type']['label'] = 'Category';
+  $handler->display->display_options['fields']['field_organization_type']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website']['type'] = 'link_url';
   $handler->display->display_options['path'] = 'organizations';
 
   /* Display: Administrate organizations */
@@ -249,6 +285,7 @@ function prima_organization_views_default_views() {
     'use_widget_handlers' => 0,
     'format_handlers' => array(
       'address' => 'address',
+      'address-hide-city' => 'address-hide-city',
       'address-hide-postal-code' => 'address-hide-postal-code',
       'address-hide-street' => 'address-hide-street',
     ),
