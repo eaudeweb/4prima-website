@@ -5,3 +5,12 @@
  */
 
 include_once 'prima_organization.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function prima_organization_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'addressfield') {
+    return 'plugins/' . $plugin;
+  }
+}
