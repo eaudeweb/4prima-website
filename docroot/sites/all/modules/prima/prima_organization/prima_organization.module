@@ -14,3 +14,17 @@ function prima_organization_ctools_plugin_directory($module, $plugin) {
     return 'plugins/' . $plugin;
   }
 }
+
+function user_has_roles($roles) {
+  //checks if user has role/roles
+  return !!count(array_intersect(is_array($roles)? $roles : array($roles), array_values($GLOBALS['user']->roles)));
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function prima_organization_node_presave($node) {
+  if (user_is_anonymous() || (user_is_logged_in() && !user_has_roles('administrator'))) {
+    $node->status = FALSE;
+  }
+}
