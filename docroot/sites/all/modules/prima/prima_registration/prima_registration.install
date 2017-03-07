@@ -54,3 +54,10 @@ function prima_registration_update_7005() {
 function prima_registration_update_7006() {
   features_revert_module('prima_registration');
 }
+
+/**
+ * Feed importer Registrations/Organizations CVS source fields order the same on export/import files.
+ */
+function prima_registration_update_7007() {
+  features_revert_module('prima_registration');
+}
