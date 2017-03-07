@@ -50,12 +50,9 @@ function feeds_tamper_term_title_to_id_callback($result, $item_key, $element_key
       $terms[$term_value->name] = $term_value->tid;
     }
   }
-  dpm($field);
-  dpm($terms);
   if(array_key_exists($field,$terms)){
     $field = $terms[$field];
   }else{
     $field = '';
   }
-  dpm($field);
 }
