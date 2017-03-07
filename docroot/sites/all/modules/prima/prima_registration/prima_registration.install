@@ -47,3 +47,10 @@ function prima_registration_update_7004() {
 function prima_registration_update_7005() {
   features_revert_module('prima_registration');
 }
+
+/**
+ * Organization feeds importer.
+ */
+function prima_registration_update_7006() {
+  features_revert_module('prima_registration');
+}

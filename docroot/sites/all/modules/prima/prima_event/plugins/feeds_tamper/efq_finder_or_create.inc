@@ -15,6 +15,22 @@ $plugin = array(
 );
 
 /**
+ * Custom callback to build form fields.
+ */
+function ajax_add_mapping_field_callback($form, &$form_state)
+{
+  return isset($form['plugin']['settings']['mapping_fields']) ? $form['plugin']['settings']['mapping_fields'] : $form['settings']['mapping_fields'];
+}
+
+/**
+ * Custom callback to build form fields.
+ */
+function ajax_remove_mapping_field_callback($form, &$form_state)
+{
+  return isset($form['plugin']['settings']['mapping_fields']) ? $form['plugin']['settings']['mapping_fields'] : $form['settings']['mapping_fields'];
+}
+
+/**
  * Configuration form.
  */
 function feeds_tamper_efq_finder_or_create_form($importer, $element_key, array $settings, array &$form_state) {
@@ -32,7 +48,7 @@ function feeds_tamper_efq_finder_or_create_form($importer, $element_key, array $
   $entity_type = _feeds_tamper_efq_finder_or_create_get_value('entity_type', $form_state, $settings);
   $form['update'] = array(
     '#type' => 'submit',
-    '#submit' => array('feeds_tamper_ui_add_plugin_form_submit'),
+    '#submit' => array('feeds_tamper_efq_finder_or_create_form_submit'),
     '#value' => t('Update'),
     '#attributes' => array('class' => array('no-js')),
   );
@@ -108,6 +124,113 @@ function feeds_tamper_efq_finder_or_create_form($importer, $element_key, array $
     '#required' => TRUE,
   );
 
+  $number = 0;
+  $addTextbox = FALSE;
+  $removeTextbox = FALSE;
+
+  $form['mapping_fields'] = array
+  (
+    '#type' => 'container',
+    '#tree' => true,
+    '#prefix' => '<div id="mapping-fields-wrapper">',
+    '#suffix' => '</div>',
+  );
+
+  if (array_key_exists('triggering_element', $form_state) &&
+    array_key_exists('#value', $form_state['triggering_element']) &&
+    $form_state['triggering_element']['#value'] == t('Add mapping')
+  ) {
+    $addTextbox = TRUE;
+  }
+
+
+  if (array_key_exists('triggering_element', $form_state) &&
+    array_key_exists('#value', $form_state['triggering_element']) &&
+    $form_state['triggering_element']['#value'] == t('Remove mapping')
+  ) {
+    $addTextbox = FALSE;
+    $removeTextbox = TRUE;
+  }
+
+  $mapping_fields = _feeds_tamper_efq_finder_or_create_get_value('mapping_fields', $form_state, $settings);
+  if ($mapping_fields)
+  {
+    foreach ($mapping_fields as $element) {
+      if($removeTextbox && $number == $form_state['triggering_element']['#id']){
+        unset($form_state['values']['settings']['mapping_fields'][$number]);
+      }else{
+        $form['mapping_fields'][$number] = array(
+          '#type' => 'fieldset',
+          '#tree' => true,
+          '#title'=> 'Mapping',
+        );
+
+        $form['mapping_fields'][$number]['field'] = array(
+          '#type'  => 'textfield',
+          '#title' => 'Mapping Field',
+          '#default_value' => $element['field'],
+        );
+        $form['mapping_fields'][$number]['entity'] = array(
+          '#type'  => 'textfield',
+          '#title' => 'Entity Field',
+          '#default_value' => $element['entity'],
+        );
+
+        $form['mapping_fields'][$number]['remove'] = array(
+          '#type' => 'button',
+          '#name' => t('Remove mapping') . ' ' . rand(1,100) . time(),
+          '#id' => $number,
+          '#ajax' => array(
+            'callback' => array('ajax_remove_mapping_field_callback'),
+            'wrapper'  => 'mapping-fields-wrapper',
+            'method'  => 'replace',
+          ),
+          '#value' => t('Remove mapping'),
+        );
+      }
+      $number++;
+    }
+  }
+  if ($addTextbox) {
+    $form['mapping_fields'][$number] = array(
+      '#type' => 'fieldset',
+      '#tree' => true,
+      '#title'=> 'Mapping',
+    );
+    $form['mapping_fields'][$number]['field'] = array(
+      '#type'  => 'textfield',
+      '#title' => 'Mapping Field',
+    );
+    $form['mapping_fields'][$number]['entity'] = array(
+      '#type'  => 'textfield',
+      '#title' => 'Entity Field',
+    );
+
+    $form['mapping_fields'][$number]['remove'] = array(
+      '#type' => 'button',
+      '#name' => t('Remove mapping') . ' ' . ' ' . rand(1,100) . time(),
+      '#id' => $number,
+      '#ajax' => array(
+        'callback' => 'ajax_remove_mapping_field_callback',
+        'wrapper'  => 'mapping-fields-wrapper',
+        'method'  => 'replace',
+      ),
+      '#value' => t('Remove mapping'),
+    );
+
+  }
+
+  $form['add_button'] = array(
+    '#type' => 'button',
+    '#name' => t('Add mapping'),
+    '#ajax' => array(
+      'callback' => 'ajax_add_mapping_field_callback',
+      'wrapper'  => 'mapping-fields-wrapper',
+      'method'  => 'replace',
+    ),
+    '#value' => t('Add mapping'),
+  );
+
   if (!$field || in_array($field, $entity_info['schema_fields_sql']['base table'])) {
     return $form;
   }
@@ -164,6 +287,7 @@ function feeds_tamper_efq_finder_or_create_ajax(array $form, array &$form_state)
  * Sets an entity id based on the value of a field.
  */
 function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element_key, &$field, array $settings) {
+
   $query = new EntityFieldQuery();
 
   $query->entityCondition('entity_type', $settings['entity_type']);
@@ -188,6 +312,7 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
     $field = key($result);
   }
   else {
+
     // We didn't find a value, Create the item.
     $entity_type = $settings['entity_type'];
     $entity = entity_create($entity_type, array('type' => $settings['bundle']));
@@ -195,6 +320,28 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
     if ($settings['property']) {
       $wrapper->$settings['field']->set($field);
     }
+
+    //dpm($result->items[$item_key]);
+
+    $bundle_fields = field_info_instances($entity_type,  $settings['bundle']);
+
+    $main_fields = array();
+
+    if(isset($settings['mapping_fields'])){
+      foreach($settings['mapping_fields'] as $mapping_field){
+        if(isset($result->items[$item_key][strtolower($mapping_field['field'])])){
+          if(array_key_exists($mapping_field['entity'],$bundle_fields)){
+            //Set the data directly
+            $wrapper->$mapping_field['entity']->set($result->items[$item_key][strtolower($mapping_field['field'])]);
+           }else{
+            //Split the data
+            list($main_field,$sub_field) = explode(':',$mapping_field['entity']);
+            $main_fields[$main_field][$sub_field] = $result->items[$item_key][drupal_strtolower($mapping_field['field'])];
+            }
+          }
+      }
+    }
+
     $wrapper->save();
 
     $query = new EntityFieldQuery();
@@ -219,6 +366,20 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
     if (!empty($query_result)) {
       $result = reset($query_result);
       $field = key($result);
+
+      if($settings['entity_type'] == 'node'){
+        $node = node_load($field);
+        if($main_fields){
+          foreach($main_fields as $key => $value){
+            $subfields = array();
+            foreach($value as $k=>$v){
+              $subfields[$k] = $v;
+            }
+            $node->{$key}[LANGUAGE_NONE][] = $subfields;
+          }
+        }
+        node_save($node);
+      }
     }
     else {
       // We didn't find a value, remove the item.
@@ -226,4 +387,30 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
       unset($result->items[$item_key][$element_key]);
     }
   }
+}
+
+
+/**
+ * Add plugin form submit handler.
+ */
+function feeds_tamper_efq_finder_or_create_form_submit($form, &$form_state) {
+  if ($form_state['triggering_element']['#value'] == t('Add')) {
+    $obj = feeds_tamper_new_instance();
+    $obj->plugin_id = $form_state['values']['plugin_id'];
+    if (isset($form_state['values']['settings'])) {
+      $obj->settings = $form_state['values']['settings'];
+    }
+    $obj->importer = $form_state['importer']->id;
+
+    $obj->source = $form_state['source'];
+    $obj->description = $form_state['values']['description'];
+    $obj->id = $form_state['values']['id'];
+
+    feeds_tamper_save_instance($obj);
+    $form_state['redirect'] = 'admin/structure/feeds/' . $obj->importer . '/tamper';
+    $source_name = feeds_tamper_ui_source_name($obj);
+    drupal_set_message(t('Plugin %description was successfully added to %source.', array('%description' => $obj->description, '%source' => $source_name)));
+    return;
+  }
+  $form_state['rebuild'] = TRUE;
 }
