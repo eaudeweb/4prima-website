@@ -39,6 +39,14 @@ function feeds_tamper_efq_finder_or_create_form($importer, $element_key, array $
     '#suffix' => '</div>',
   );
 
+  $source_field = _feeds_tamper_efq_finder_or_create_get_value('source_field', $form_state, $settings);
+  $form['source_field'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Use value from another mapping source field.'),
+    '#default_value' => $source_field,
+    '#description' => 'If left blank, current source (set in "Mapping" will be used).',
+  );
+
   // Get some info on entities and bundles.
   $entity_types = array();
   foreach (entity_get_info() as $machine_name => $info) {
@@ -288,6 +296,13 @@ function feeds_tamper_efq_finder_or_create_ajax(array $form, array &$form_state)
  */
 function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element_key, &$field, array $settings) {
 
+  if(isset($settings['source_field']) &&
+    !empty($settings['source_field']) &&
+    isset($result->items[$item_key][drupal_strtolower($settings['source_field'])]) &&
+    !empty($result->items[$item_key][drupal_strtolower($settings['source_field'])])
+  ){
+    $field = $result->items[$item_key][drupal_strtolower($settings['source_field'])];
+  }
   $query = new EntityFieldQuery();
 
   $query->entityCondition('entity_type', $settings['entity_type']);
@@ -321,8 +336,6 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
       $wrapper->$settings['field']->set($field);
     }
 
-    //dpm($result->items[$item_key]);
-
     $bundle_fields = field_info_instances($entity_type,  $settings['bundle']);
 
     $main_fields = array();
@@ -332,7 +345,7 @@ function feeds_tamper_efq_finder_or_create_callback($result, $item_key, $element
         if(isset($result->items[$item_key][strtolower($mapping_field['field'])])){
           if(array_key_exists($mapping_field['entity'],$bundle_fields)){
             //Set the data directly
-            $wrapper->$mapping_field['entity']->set($result->items[$item_key][strtolower($mapping_field['field'])]);
+            $wrapper->$mapping_field['entity']->set($result->items[$item_key][drupal_strtolower($mapping_field['field'])]);
            }else{
             //Split the data
             list($main_field,$sub_field) = explode(':',$mapping_field['entity']);
