@@ -24,7 +24,10 @@ function prima_organization_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Organizations';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -438,6 +441,102 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = 'organizations-%timestamp-full.csv';
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Organization name';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Organization type */
+  $handler->display->display_options['fields']['field_organization_type_1']['id'] = 'field_organization_type_1';
+  $handler->display->display_options['fields']['field_organization_type_1']['table'] = 'field_data_field_organization_type';
+  $handler->display->display_options['fields']['field_organization_type_1']['field'] = 'field_organization_type';
+  $handler->display->display_options['fields']['field_organization_type_1']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'Organization description';
+  /* Field: Content: Address - Country */
+  $handler->display->display_options['fields']['field_address_country']['id'] = 'field_address_country';
+  $handler->display->display_options['fields']['field_address_country']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_country']['field'] = 'field_address_country';
+  $handler->display->display_options['fields']['field_address_country']['label'] = 'Organization country';
+  $handler->display->display_options['fields']['field_address_country']['display_name'] = 1;
+  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = 'Organization address 1';
+  /* Field: Content: Address - Premise (i.e. Apartment / Suite number) */
+  $handler->display->display_options['fields']['field_address_premise']['id'] = 'field_address_premise';
+  $handler->display->display_options['fields']['field_address_premise']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_premise']['field'] = 'field_address_premise';
+  $handler->display->display_options['fields']['field_address_premise']['label'] = 'Organization address 2';
+  /* Field: Content: Address - Postal code */
+  $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
+  $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
+  $handler->display->display_options['fields']['field_address_postal_code']['label'] = 'Organization postal code';
+  /* Field: Content: Address - Locality (i.e. City) */
+  $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
+  $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
+  $handler->display->display_options['fields']['field_address_locality']['label'] = 'Organization city';
+  /* Field: Content: Address - Administrative area (i.e. State / Province) */
+  $handler->display->display_options['fields']['field_address_administrative_area']['id'] = 'field_address_administrative_area';
+  $handler->display->display_options['fields']['field_address_administrative_area']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
+  $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'Organization state / province';
+  $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
+  $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website_1']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website title';
+  $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website_1']['type'] = 'link_title_plain';
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_website_2']['id'] = 'field_website_2';
+  $handler->display->display_options['fields']['field_website_2']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website_2']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website_2']['label'] = 'Organization website url';
+  $handler->display->display_options['fields']['field_website_2']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website_2']['type'] = 'link_plain';
+  /* Field: Content: E-mail */
+  $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
+  $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
+  /* Field: Content: Office phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['label'] = 'Organization phone';
+  $handler->display->display_options['path'] = 'admin/content/organizations/export';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'default' => 0,
+    'page' => 0,
+  );
   $export['organizations'] = $view;
 
   return $export;

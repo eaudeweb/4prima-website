@@ -8,3 +8,10 @@ function prima_organization_update_7001() {
   );
   module_enable($modules);
 }
+
+/**
+ * Feature revert - organizations CSV export.
+ */
+function prima_organization_update_7002() {
+  features_revert_module('prima_organization');
+}
