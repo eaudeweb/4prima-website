@@ -15,3 +15,15 @@ function prima_organization_update_7001() {
 function prima_organization_update_7002() {
   features_revert_module('prima_organization');
 }
+
+/**
+ * Feature revert - organizations CSV import.
+ */
+function prima_organization_update_7003() {
+  $modules = array(
+    'field_validation',
+    'field_validation_ui',
+  );
+  module_enable($modules);
+  features_revert_module('prima_organization');
+}

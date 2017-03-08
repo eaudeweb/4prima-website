@@ -21,7 +21,6 @@ function feeds_tamper_unique_field_form($importer, $element_key, $settings) {
 
 function feeds_tamper_unique_field__callback($result, $item_key, $element_key, &$field, $settings, $source) {
   $config = $source->importer()->getConfig();
-
   $query = db_select('registration', 'r')
     ->condition('entity_id', $config['processor']['config']['values']['entity']['entity_id'])
     ->condition('entity_type', $config['processor']['config']['values']['entity']['entity_type'])
