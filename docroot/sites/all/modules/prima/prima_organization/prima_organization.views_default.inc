@@ -268,6 +268,14 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Import/Export organizations';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/import/4prima_organizations_import" class="button">Import organizations from CSV</a> <a href="/admin/content/organizations/export" class="button">Export organizations to CSV</a>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
@@ -530,9 +538,9 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_phone']['label'] = 'Organization phone';
   $handler->display->display_options['path'] = 'admin/content/organizations/export';
   $handler->display->display_options['displays'] = array(
-    'page_1' => 'page_1',
     'default' => 0,
     'page' => 0,
+    'page_1' => 0,
   );
   $export['organizations'] = $view;
 

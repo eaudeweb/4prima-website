@@ -27,3 +27,10 @@ function prima_organization_update_7003() {
   module_enable($modules);
   features_revert_module('prima_organization');
 }
+
+/**
+ * Feature revert - Import/Export organizations buttons on Administrate Organizations view.
+ */
+function prima_organization_update_7004() {
+  features_revert_module('prima_organization');
+}
