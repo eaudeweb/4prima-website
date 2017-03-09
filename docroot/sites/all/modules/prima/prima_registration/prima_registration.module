@@ -5,3 +5,115 @@
  */
 
 include_once 'prima_registration.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function prima_registration_block_info() {
+  $blocks['check_registration'] = array(
+    'info' => t('Check registration block'),
+    'status' => 1,
+    'region' => 'content',
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'node/187',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ *
+ * @param string $delta Block delta (block identifier)
+ * @return array
+ */
+function prima_registration_block_view($delta = '') {
+  switch($delta) {
+    case 'check_registration':
+      if(user_access('access content')) {
+        $form = drupal_get_form('prima_registration_block_check_registration_form');
+        $markup = '<div></div>';
+        $markup .= drupal_render($form);
+        $block['content'] = $markup;
+        //$block['content'] = drupal_render(drupal_get_form('prima_registration_block_check_registration_form'));
+        return $block;
+      }
+      break;
+  }
+}
+
+/**
+ * Check registration block form.
+ */
+function prima_registration_block_check_registration_form($form, &$form_state){
+  $form = array();
+
+  $form['#prefix'] = '<div id="check-registration-form-wrapper">';
+  $form['#suffix'] = '</div>';
+  $form['email'] = array(
+    '#type' => 'textfield',
+    '#size' => 30,
+    '#title' => t('Check your email below:'),
+    '#attributes' => array('placeholder' => t('E-mail address'), 'title' => t('E-mail address')),
+  );
+  if (user_is_anonymous()) {
+    $form['captcha'] = array(
+      '#type' => 'captcha',
+      '#captcha_type' => 'default',
+    );
+  }
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Check'),
+  );
+
+  $form['#validate'] = array('prima_registration_block_check_registration_form_validate');
+  $form['#submit'] = array('prima_registration_block_check_registration_form_submit');
+  return $form;
+}
+
+/**
+ * Check registration block form validate.
+ */
+function prima_registration_block_check_registration_form_validate($form, &$form_state) {
+  $email = trim($form_state['values']['email']);
+  if (strlen($email) != 0) {
+    if (!valid_email_address($form_state['values']['email'])) {
+      form_set_error('email_osh', t('E-mail address not valid.'));
+    }
+  }
+  else {
+    form_set_error('email', t('Please enter the e-mail address.'));
+  }
+  check_registration_reorder_error_messages();
+}
+
+/**
+ * Check registration block form submit.
+ */
+function prima_registration_block_check_registration_form_submit($form, &$form_state) {
+  $email = $form_state['values']['email'];
+  $query = db_select('registration', 'r')
+    ->condition('anon_mail', $email);
+  $count = $query->countQuery()->execute()->fetchField();
+  if($count > 0){
+    drupal_set_message(t('<em>@email</em> is registered in our database.',array('@email' => $email)));
+  }else{
+    drupal_set_message(t('<em>@email</em> is not registered in our database.',array('@email' => $email)),'info');
+  }
+}
+/**
+ * Check registration block form utils.
+ */
+function check_registration_reorder_error_messages(){
+  $error_messages = drupal_get_messages('error');
+
+  if (isset($error_messages['error'])) {
+    sort($error_messages['error']);
+
+    foreach($error_messages['error'] as $idx => $error) {
+      drupal_set_message($error,'error');
+    }
+  }
+}
