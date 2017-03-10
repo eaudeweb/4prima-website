@@ -97,11 +97,33 @@ function prima_registration_views_default_views() {
       'empty_column' => 0,
     ),
   );
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['label'] = 'No results.';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  /* Relationship: Registration: Registration to Node */
+  $handler->display->display_options['relationships']['registration_related_node']['id'] = 'registration_related_node';
+  $handler->display->display_options['relationships']['registration_related_node']['table'] = 'registration';
+  $handler->display->display_options['relationships']['registration_related_node']['field'] = 'registration_related_node';
+  $handler->display->display_options['relationships']['registration_related_node']['label'] = 'Event Registration';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_reg_organization_target_id']['id'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['relationships']['field_reg_organization_target_id']['table'] = 'field_data_field_reg_organization';
+  $handler->display->display_options['relationships']['field_reg_organization_target_id']['field'] = 'field_reg_organization_target_id';
   /* Field: Registration: Registration ID */
   $handler->display->display_options['fields']['registration_id']['id'] = 'registration_id';
   $handler->display->display_options['fields']['registration_id']['table'] = 'registration';
   $handler->display->display_options['fields']['registration_id']['field'] = 'registration_id';
   $handler->display->display_options['fields']['registration_id']['exclude'] = TRUE;
+  /* Field: Registration: Anonymous e-mail */
+  $handler->display->display_options['fields']['anon_mail']['id'] = 'anon_mail';
+  $handler->display->display_options['fields']['anon_mail']['table'] = 'registration';
+  $handler->display->display_options['fields']['anon_mail']['field'] = 'anon_mail';
+  $handler->display->display_options['fields']['anon_mail']['label'] = 'E-mail';
   /* Field: Registration: Title of contact */
   $handler->display->display_options['fields']['field_reg_title_of_contact']['id'] = 'field_reg_title_of_contact';
   $handler->display->display_options['fields']['field_reg_title_of_contact']['table'] = 'field_data_field_reg_title_of_contact';
@@ -125,6 +147,13 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['relationship'] = 'registration_related_node';
+  $handler->display->display_options['fields']['title_field']['label'] = 'Event';
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 1;
   /* Field: Registration: Delete link */
   $handler->display->display_options['fields']['delete_registration']['id'] = 'delete_registration';
   $handler->display->display_options['fields']['delete_registration']['table'] = 'registration';
@@ -151,6 +180,54 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Actions';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[view_registration]&nbsp;&nbsp;[edit_registration]&nbsp;&nbsp;[delete_registration]';
+  /* Filter criterion: Content: Nid */
+  $handler->display->display_options['filters']['nid']['id'] = 'nid';
+  $handler->display->display_options['filters']['nid']['table'] = 'node';
+  $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['relationship'] = 'registration_related_node';
+  $handler->display->display_options['filters']['nid']['group'] = 1;
+  $handler->display->display_options['filters']['nid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
+  $handler->display->display_options['filters']['nid']['expose']['label'] = 'Event';
+  $handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
+  $handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
+  $handler->display->display_options['filters']['nid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Registration: Anonymous e-mail */
+  $handler->display->display_options['filters']['anon_mail']['id'] = 'anon_mail';
+  $handler->display->display_options['filters']['anon_mail']['table'] = 'registration';
+  $handler->display->display_options['filters']['anon_mail']['field'] = 'anon_mail';
+  $handler->display->display_options['filters']['anon_mail']['group'] = 1;
+  $handler->display->display_options['filters']['anon_mail']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['anon_mail']['expose']['operator_id'] = 'anon_mail_op';
+  $handler->display->display_options['filters']['anon_mail']['expose']['label'] = 'E-mail';
+  $handler->display->display_options['filters']['anon_mail']['expose']['operator'] = 'anon_mail_op';
+  $handler->display->display_options['filters']['anon_mail']['expose']['identifier'] = 'anon_mail';
+  $handler->display->display_options['filters']['anon_mail']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Registration: Organization (field_reg_organization) */
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['id'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['table'] = 'field_data_field_reg_organization';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['field'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['operator_id'] = 'field_reg_organization_target_id_op';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['label'] = 'Organization (field_reg_organization)';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['operator'] = 'field_reg_organization_target_id_op';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['identifier'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -328,14 +405,14 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website url';
   $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_1']['type'] = 'link_plain';
-  /* Field: Content: General email */
+  /* Field: Content: E-mail */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['relationship'] = 'field_reg_organization_target_id';
   $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
   $handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
-  /* Field: Content: Phone */
+  /* Field: Content: Office phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
@@ -346,14 +423,39 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['arguments']['entity_id']['table'] = 'registration';
   $handler->display->display_options['arguments']['entity_id']['field'] = 'entity_id';
   $handler->display->display_options['arguments']['entity_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['entity_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['entity_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['entity_id']['default_argument_options']['argument'] = 'all';
   $handler->display->display_options['arguments']['entity_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['entity_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['entity_id']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Registration: Anonymous e-mail */
+  $handler->display->display_options['arguments']['anon_mail']['id'] = 'anon_mail';
+  $handler->display->display_options['arguments']['anon_mail']['table'] = 'registration';
+  $handler->display->display_options['arguments']['anon_mail']['field'] = 'anon_mail';
+  $handler->display->display_options['arguments']['anon_mail']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['anon_mail']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['anon_mail']['default_argument_options']['argument'] = 'all';
+  $handler->display->display_options['arguments']['anon_mail']['default_argument_skip_url'] = TRUE;
+  $handler->display->display_options['arguments']['anon_mail']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['anon_mail']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['anon_mail']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['anon_mail']['limit'] = '0';
+  /* Contextual filter: Registration: Organization (field_reg_organization) */
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['id'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['table'] = 'field_data_field_reg_organization';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['field'] = 'field_reg_organization_target_id';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['default_argument_options']['argument'] = 'all';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['default_argument_skip_url'] = TRUE;
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_reg_organization_target_id']['summary_options']['items_per_page'] = '25';
 
   /* Display: Data export */
   $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
   $handler->display->display_options['style_options']['provide_file'] = 1;
   $handler->display->display_options['style_options']['filename'] = 'registrations-%1-title-%timestamp-full.csv';
@@ -364,7 +466,7 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['style_options']['newline_token'] = '1';
   $handler->display->display_options['style_options']['header'] = 1;
   $handler->display->display_options['style_options']['keep_html'] = 0;
-  $handler->display->display_options['path'] = 'node/%/registrations/export';
+  $handler->display->display_options['path'] = 'node/%/registrations/export/%/%';
   $handler->display->display_options['displays'] = array(
     'default' => 'default',
   );

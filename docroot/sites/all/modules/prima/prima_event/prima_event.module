@@ -73,7 +73,7 @@ function prima_event_menu() {
 }
 
 function registration_export_redirect($entity_type, $entity, $account = NULL) {
-  drupal_goto('node/'.$entity->nid.'/registrations/export');
+  drupal_goto('node/'.$entity->nid.'/registrations/export/all/all');
 }
 
 function registration_import_redirect($entity_type, $entity, $account = NULL) {

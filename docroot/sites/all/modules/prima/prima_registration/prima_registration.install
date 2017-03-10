@@ -71,3 +71,10 @@ function prima_registration_update_7008() {
   );
   module_enable($modules);
 }
+
+/**
+ * Feature rvert - new exposed filter for Administer registrations view.
+ */
+function prima_registration_update_7009() {
+  features_revert_module('prima_registration');
+}

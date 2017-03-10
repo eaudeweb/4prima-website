@@ -117,3 +117,55 @@ function check_registration_reorder_error_messages(){
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter.
+ */
+function prima_registration_form_views_exposed_form_alter(&$form, &$form_state) {
+  if($form['#id'] == 'views-exposed-form-administer-registrations-page'){
+
+    $events_options = array('' => t('All'));
+
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node');
+    $query->entityCondition('bundle', 'event');
+    $result = $query->execute();
+    if($result){
+      $events = node_load_multiple(array_keys($result['node']));
+      if($events){
+        foreach($events as $event){
+          $events_options[$event->nid] = $event->title;
+        }
+      }
+    }
+    $form['nid'] = array(
+      '#type' => 'select',
+      '#options' => $events_options,
+    );
+
+    $organizations_options = array('' => t('All'));
+
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node');
+    $query->entityCondition('bundle', 'organization');
+    $result = $query->execute();
+    if($result){
+      $organizartions = node_load_multiple(array_keys($result['node']));
+      if($events){
+        foreach($organizartions as $organization){
+          $organizations_options[$organization->nid] = $organization->title;
+        }
+      }
+    }
+    $form['field_reg_organization_target_id'] = array(
+      '#type' => 'select',
+      '#options' => $organizations_options,
+    );
+
+    $event = !empty($form_state['input']['nid']) ? $form_state['input']['nid'] : 'all';
+    $anon_email = !empty($form_state['input']['anon_mail']) ? $form_state['input']['anon_mail'] : 'all';
+    $organization = !empty($form_state['input']['field_reg_organization_target_id']) ? $form_state['input']['field_reg_organization_target_id'] : 'all';
+    $form['#prefix'] = '<a href="/node/'.$event.'/registrations/export/' . $anon_email. '/' . $organization . '" class="button">'.t('Export registrations to CSV').'</a>';
+  }
+  return $form;
+}
