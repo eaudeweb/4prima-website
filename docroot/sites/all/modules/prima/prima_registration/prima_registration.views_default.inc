@@ -288,6 +288,16 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_reg_position']['id'] = 'field_reg_position';
   $handler->display->display_options['fields']['field_reg_position']['table'] = 'field_data_field_reg_position';
   $handler->display->display_options['fields']['field_reg_position']['field'] = 'field_reg_position';
+  /* Field: Registration: Type of participation */
+  $handler->display->display_options['fields']['field_type_of_participation']['id'] = 'field_type_of_participation';
+  $handler->display->display_options['fields']['field_type_of_participation']['table'] = 'field_data_field_type_of_participation';
+  $handler->display->display_options['fields']['field_type_of_participation']['field'] = 'field_type_of_participation';
+  /* Field: Field: Website */
+  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website']['type'] = 'link_absolute';
   /* Field: Registration: Department / Unit */
   $handler->display->display_options['fields']['field_reg_department_uni']['id'] = 'field_reg_department_uni';
   $handler->display->display_options['fields']['field_reg_department_uni']['table'] = 'field_data_field_reg_department_uni';
@@ -340,6 +350,18 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_reg_news_and_calls']['id'] = 'field_reg_news_and_calls';
   $handler->display->display_options['fields']['field_reg_news_and_calls']['table'] = 'field_data_field_reg_news_and_calls';
   $handler->display->display_options['fields']['field_reg_news_and_calls']['field'] = 'field_reg_news_and_calls';
+  /* Field: Registration: Passport No. */
+  $handler->display->display_options['fields']['field_passport_no_']['id'] = 'field_passport_no_';
+  $handler->display->display_options['fields']['field_passport_no_']['table'] = 'field_data_field_passport_no_';
+  $handler->display->display_options['fields']['field_passport_no_']['field'] = 'field_passport_no_';
+  /* Field: Registration: Nationality */
+  $handler->display->display_options['fields']['field_nationality']['id'] = 'field_nationality';
+  $handler->display->display_options['fields']['field_nationality']['table'] = 'field_data_field_nationality';
+  $handler->display->display_options['fields']['field_nationality']['field'] = 'field_nationality';
+  /* Field: Registration: Other comments */
+  $handler->display->display_options['fields']['field_other_comments']['id'] = 'field_other_comments';
+  $handler->display->display_options['fields']['field_other_comments']['table'] = 'field_data_field_other_comments';
+  $handler->display->display_options['fields']['field_other_comments']['field'] = 'field_other_comments';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -397,18 +419,11 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'Organization state / province';
   $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
   /* Field: Field: Website */
-  $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
-  $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
-  $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
-  $handler->display->display_options['fields']['field_website']['relationship'] = 'field_reg_organization_target_id';
-  $handler->display->display_options['fields']['field_website']['label'] = 'Organization website title';
-  $handler->display->display_options['fields']['field_website']['click_sort_column'] = 'url';
-  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
   $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website_1']['field'] = 'field_website';
   $handler->display->display_options['fields']['field_website_1']['relationship'] = 'field_reg_organization_target_id';
-  $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website url';
+  $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website';
   $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_1']['type'] = 'link_plain';
   /* Field: Content: E-mail */

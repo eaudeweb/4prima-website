@@ -51,7 +51,7 @@ function prima_registration_feeds_importer_default() {
           'updated' => NULL,
           'entity' => array(
             'entity_type' => 'node',
-            'entity_id' => '98',
+            'entity_id' => '118',
           ),
           'author' => '',
           'user' => array(
@@ -86,150 +86,174 @@ function prima_registration_feeds_importer_default() {
             'language' => 'und',
           ),
           4 => array(
+            'source' => 'Type of participation',
+            'target' => 'field_type_of_participation',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          5 => array(
+            'source' => 'Website',
+            'target' => 'field_website:url',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          6 => array(
             'source' => 'Department / Unit',
             'target' => 'field_reg_department_uni',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          5 => array(
+          7 => array(
             'source' => 'Mobile phone',
             'target' => 'field_reg_mobile_phone',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          6 => array(
+          8 => array(
             'source' => 'Office phone',
             'target' => 'field_office_phone',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          7 => array(
+          9 => array(
             'source' => 'Country',
             'target' => 'field_reg_address:country',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          8 => array(
+          10 => array(
             'source' => 'Address 1',
             'target' => 'field_reg_address:thoroughfare',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          9 => array(
+          11 => array(
             'source' => 'Address 2',
             'target' => 'field_reg_address:premise',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          10 => array(
+          12 => array(
             'source' => 'Postal code',
             'target' => 'field_reg_address:postal_code',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          11 => array(
+          13 => array(
             'source' => 'City',
             'target' => 'field_reg_address:dependent_locality',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          12 => array(
+          14 => array(
             'source' => 'State / Province',
             'target' => 'field_reg_address:administrative_area',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          13 => array(
+          15 => array(
             'source' => 'Field of work',
             'target' => 'field_reg_field_of_work',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          14 => array(
+          16 => array(
             'source' => 'News and calls from PRIMA',
             'target' => 'field_reg_news_and_calls',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          15 => array(
+          17 => array(
+            'source' => 'Passport No.',
+            'target' => 'field_passport_no_',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          18 => array(
+            'source' => 'Nationality',
+            'target' => 'field_nationality',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          19 => array(
+            'source' => 'Other comments',
+            'target' => 'field_other_comments',
+            'unique' => FALSE,
+            'language' => 'und',
+          ),
+          20 => array(
             'source' => 'Organization name',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          16 => array(
+          21 => array(
             'source' => 'Organization type',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          17 => array(
+          22 => array(
             'source' => 'Organization description',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          18 => array(
+          23 => array(
             'source' => 'Organization country',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          19 => array(
+          24 => array(
             'source' => 'Organization address 1',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          20 => array(
+          25 => array(
             'source' => 'Organization address 2',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          21 => array(
+          26 => array(
             'source' => 'Organization postal code',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          22 => array(
+          27 => array(
             'source' => 'Organization city',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          23 => array(
+          28 => array(
             'source' => 'Organization state / province',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          24 => array(
-            'source' => 'Organization website title',
+          29 => array(
+            'source' => 'Organization website',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          25 => array(
-            'source' => 'Organization website url',
-            'target' => 'Temporary target 1',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          26 => array(
+          30 => array(
             'source' => 'Organization general e-mail',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          27 => array(
+          31 => array(
             'source' => 'Organization phone',
             'target' => 'Temporary target 1',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          28 => array(
+          32 => array(
             'source' => ' ',
             'target' => 'entityreference:field_reg_organization',
             'unique' => FALSE,

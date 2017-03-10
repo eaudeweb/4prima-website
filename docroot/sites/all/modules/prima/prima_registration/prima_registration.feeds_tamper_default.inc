@@ -70,7 +70,7 @@ function prima_registration_feeds_tamper_default() {
         'remove' => 'Remove mapping',
       ),
       9 => array(
-        'field' => 'Organization website url',
+        'field' => 'Organization website',
         'entity' => 'field_website:url',
         'remove' => 'Remove mapping',
       ),
