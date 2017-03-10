@@ -55,3 +55,10 @@ function prima_organization_update_7006() {
 function prima_organization_update_7007() {
   features_revert_module('prima_organization');
 }
+
+/**
+ * Feature revert.
+ */
+function prima_organization_update_7008() {
+  features_revert_module('prima_organization');
+}

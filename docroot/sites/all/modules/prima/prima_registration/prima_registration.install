@@ -92,3 +92,10 @@ function prima_registration_update_7010() {
 function prima_registration_update_7011() {
   features_revert_module('prima_registration');
 }
+
+/**
+ * Feature revert.
+ */
+function prima_registration_update_7012() {
+  features_revert_module('prima_registration');
+}
