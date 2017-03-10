@@ -63,7 +63,7 @@ function prima_organization_default_page_manager_pages() {
         'identifier' => 'Node',
         'keyword' => 'node',
         'name' => 'entity:node',
-        'entity_id' => '194',
+        'entity_id' => '191',
         'id' => 1,
       ),
     ),
