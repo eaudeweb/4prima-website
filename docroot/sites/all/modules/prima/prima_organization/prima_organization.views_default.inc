@@ -151,6 +151,16 @@ function prima_organization_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class=\'alert alert-info\'><p>Your organisation is not listed? You can <a href=\'/register-organization\'>register it online</a>.</p></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
@@ -526,12 +536,12 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_website_2']['label'] = 'Organization website url';
   $handler->display->display_options['fields']['field_website_2']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_2']['type'] = 'link_plain';
-  /* Field: Content: E-mail */
+  /* Field: Content: General email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
-  /* Field: Content: Office phone */
+  /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';

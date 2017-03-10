@@ -34,3 +34,10 @@ function prima_organization_update_7003() {
 function prima_organization_update_7004() {
   features_revert_module('prima_organization');
 }
+
+/**
+ * Feature revert - added Register your organization page.
+ */
+function prima_organization_update_7005() {
+  features_revert_module('prima_organization');
+}
