@@ -49,7 +49,7 @@ function prima_registration_default_registration_state() {
     "default_state" : "0",
     "active" : "1",
     "held" : "0",
-    "show_on_form" : "0",
+    "show_on_form" : "1",
     "weight" : "1",
     "rdf_mapping" : []
   }');
