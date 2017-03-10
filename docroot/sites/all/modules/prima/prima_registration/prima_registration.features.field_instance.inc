@@ -208,7 +208,7 @@ function prima_registration_field_default_field_instances() {
     'bundle' => 'prima_event_registration',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Name according to Passport.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -221,7 +221,7 @@ function prima_registration_field_default_field_instances() {
     'entity_type' => 'registration',
     'field_name' => 'field_reg_contact_name',
     'label' => 'Contact name',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -396,7 +396,7 @@ function prima_registration_field_default_field_instances() {
     'entity_type' => 'registration',
     'field_name' => 'field_reg_organization',
     'label' => 'Organization',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -567,6 +567,7 @@ function prima_registration_field_default_field_instances() {
   t('Department / Unit');
   t('Field of work');
   t('Mobile phone');
+  t('Name according to Passport.');
   t('Nationality');
   t('News and calls from PRIMA');
   t('Office phone');
