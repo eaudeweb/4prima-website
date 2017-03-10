@@ -182,3 +182,16 @@ function prima_feeds_import_form_submit($form, &$form_state) {
   // Add to schedule, make sure importer is scheduled, too.
   $source->schedule();
 }
+
+function prima_event_views_pre_render(&$view) {
+  if($view->name == 'event_registrations'){
+    $emails = array();
+    foreach($view->result as $key => $result){
+      if(array_key_exists($result->registration_anon_mail,$emails)){
+        unset($view->result[$key]);
+      }else{
+        $emails[$result->registration_anon_mail] = $result->registration_anon_mail;
+      }
+    }
+  }
+}

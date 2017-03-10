@@ -88,7 +88,7 @@ function prima_registration_feeds_tamper_default() {
     'add_button' => 'Add mapping',
     'property' => TRUE,
   );
-  $feeds_tamper->weight = 1;
+  $feeds_tamper->weight = 4;
   $feeds_tamper->description = 'Entity Field Query finder or create';
   $export['4prima_event_registration_import-_-efq_finder_or_create'] = $feeds_tamper;
 
@@ -110,9 +110,39 @@ function prima_registration_feeds_tamper_default() {
       'view' => 'event_registrations:default',
     ),
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 3;
   $feeds_tamper->description = 'Convert string into entity ID';
   $export['4prima_event_registration_import-_-string2id'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-_-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = ' ';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 2;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-_-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-contact_name-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Contact name';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-contact_name-trim'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -129,14 +159,59 @@ function prima_registration_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-email-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Email';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-email-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = '4prima_event_registration_import-email-unique_field';
   $feeds_tamper->importer = '4prima_event_registration_import';
   $feeds_tamper->source = 'Email';
   $feeds_tamper->plugin_id = 'unique_field';
   $feeds_tamper->settings = array();
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 3;
   $feeds_tamper->description = 'Unique Field';
   $export['4prima_event_registration_import-email-unique_field'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-mobile_phone-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Mobile phone';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-mobile_phone-trim'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-office_phone-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Office phone';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-office_phone-trim'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -184,6 +259,21 @@ function prima_registration_feeds_tamper_default() {
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Convert country to ISO code';
   $export['4prima_event_registration_import-organization_country-country_to_code'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-organization_general_e-mail-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Organization general e-mail';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-organization_general_e-mail-trim'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = TRUE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -282,6 +372,21 @@ function prima_registration_feeds_tamper_default() {
   $feeds_tamper->weight = 24;
   $feeds_tamper->description = 'Convert string into entity ID';
   $export['4prima_event_registration_import-organization_name-string2id'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = '4prima_event_registration_import-organization_name-trim';
+  $feeds_tamper->importer = '4prima_event_registration_import';
+  $feeds_tamper->source = 'Organization name';
+  $feeds_tamper->plugin_id = 'trim';
+  $feeds_tamper->settings = array(
+    'mask' => '',
+    'side' => 'trim',
+  );
+  $feeds_tamper->weight = 26;
+  $feeds_tamper->description = 'Trim';
+  $export['4prima_event_registration_import-organization_name-trim'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

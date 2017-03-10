@@ -219,7 +219,7 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['filters']['field_reg_organization_target_id']['field'] = 'field_reg_organization_target_id';
   $handler->display->display_options['filters']['field_reg_organization_target_id']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['operator_id'] = 'field_reg_organization_target_id_op';
-  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['label'] = 'Organization (field_reg_organization)';
+  $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['label'] = 'Organization';
   $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['operator'] = 'field_reg_organization_target_id_op';
   $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['identifier'] = 'field_reg_organization_target_id';
   $handler->display->display_options['filters']['field_reg_organization_target_id']['expose']['remember_roles'] = array(

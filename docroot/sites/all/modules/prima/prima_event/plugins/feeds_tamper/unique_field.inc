@@ -20,11 +20,20 @@ function feeds_tamper_unique_field_form($importer, $element_key, $settings) {
 }
 
 function feeds_tamper_unique_field__callback($result, $item_key, $element_key, &$field, $settings, $source) {
-  $config = $source->importer()->getConfig();
-  $query = db_select('registration', 'r')
-    ->condition('entity_id', $config['processor']['config']['values']['entity']['entity_id'])
-    ->condition('entity_type', $config['processor']['config']['values']['entity']['entity_type'])
-    ->condition('anon_mail', $field);
-  $count = $query->countQuery()->execute()->fetchField();
-  if($count > 0) unset($result->items[$item_key]);
+  global $feeds_tamper_unique_field_uniques;
+  if(!array_key_exists($field,$feeds_tamper_unique_field_uniques)){
+    $config = $source->importer()->getConfig();
+    $query = db_select('registration', 'r')
+      ->condition('entity_id', $config['processor']['config']['values']['entity']['entity_id'])
+      ->condition('entity_type', $config['processor']['config']['values']['entity']['entity_type'])
+      ->condition('anon_mail', $field);
+    $count = $query->countQuery()->execute()->fetchField();
+    if($count > 0) {
+      unset($result->items[$item_key]);
+    }else{
+      $feeds_tamper_unique_field_uniques[$field] = $field;
+    }
+  }else{
+    unset($result->items[$item_key]);
+  }
 }
