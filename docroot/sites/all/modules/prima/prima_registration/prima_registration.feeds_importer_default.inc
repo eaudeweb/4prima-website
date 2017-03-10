@@ -51,7 +51,7 @@ function prima_registration_feeds_importer_default() {
           'updated' => NULL,
           'entity' => array(
             'entity_type' => 'node',
-            'entity_id' => '118',
+            'entity_id' => '98',
           ),
           'author' => '',
           'user' => array(
