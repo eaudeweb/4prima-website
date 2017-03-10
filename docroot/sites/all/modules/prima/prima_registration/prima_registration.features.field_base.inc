@@ -10,6 +10,27 @@
 function prima_registration_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_nationality'.
+  $field_bases['field_nationality'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_nationality',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_office_phone'.
   $field_bases['field_office_phone'] = array(
     'active' => 1,
@@ -17,6 +38,46 @@ function prima_registration_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_office_phone',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_other_comments'.
+  $field_bases['field_other_comments'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_other_comments',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_passport_no_'.
+  $field_bases['field_passport_no_'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_passport_no_',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -235,6 +296,33 @@ function prima_registration_field_default_field_bases() {
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'title_of_contact',
+          'parent' => 0,
+        ),
+      ),
+      'options_list_callback' => 'title_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_type_of_participation'.
+  $field_bases['field_type_of_participation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_type_of_participation',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'type_of_participation',
           'parent' => 0,
         ),
       ),

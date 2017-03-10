@@ -11,6 +11,41 @@ function prima_registration_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
+  // 'registration-prima_event_registration-field_nationality'.
+  $field_instances['registration-prima_event_registration-field_nationality'] = array(
+    'bundle' => 'prima_event_registration',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_nationality',
+    'label' => 'Nationality',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance:
   // 'registration-prima_event_registration-field_office_phone'.
   $field_instances['registration-prima_event_registration-field_office_phone'] = array(
     'bundle' => 'prima_event_registration',
@@ -42,6 +77,76 @@ function prima_registration_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'registration-prima_event_registration-field_other_comments'.
+  $field_instances['registration-prima_event_registration-field_other_comments'] = array(
+    'bundle' => 'prima_event_registration',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_other_comments',
+    'label' => 'Other comments',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 8,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'registration-prima_event_registration-field_passport_no_'.
+  $field_instances['registration-prima_event_registration-field_passport_no_'] = array(
+    'bundle' => 'prima_event_registration',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_passport_no_',
+    'label' => 'Passport No.',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
     ),
   );
 
@@ -370,6 +475,38 @@ function prima_registration_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'registration-prima_event_registration-field_type_of_participation'.
+  $field_instances['registration-prima_event_registration-field_type_of_participation'] = array(
+    'bundle' => 'prima_event_registration',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'registration',
+    'field_name' => 'field_type_of_participation',
+    'label' => 'Type of participation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
@@ -377,11 +514,15 @@ function prima_registration_field_default_field_instances() {
   t('Department / Unit');
   t('Field of work');
   t('Mobile phone');
+  t('Nationality');
   t('News and calls from PRIMA');
   t('Office phone');
   t('Organization');
+  t('Other comments');
+  t('Passport No.');
   t('Position');
   t('Title of contact');
+  t('Type of participation');
 
   return $field_instances;
 }
