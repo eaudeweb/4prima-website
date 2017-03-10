@@ -28,3 +28,24 @@ function prima_organization_node_presave($node) {
     $node->status = FALSE;
   }
 }
+
+function prima_organization_form_alter(&$form, &$form_state,$form_id) {
+  switch($form_id){
+   case 'organization_node_form':
+   case 'registration_form':
+     if (user_is_anonymous()) {
+       $form['captcha'] = array(
+         '#type' => 'captcha',
+         '#captcha_type' => 'default',
+         '#weight' => 99,
+       );
+       $form['actions']['#weight'] = 999;
+     }
+     break;
+ }
+/* echo '<pre>';
+  print_r($form);
+ echo '<pre>';*/
+
+ return $form;
+}
