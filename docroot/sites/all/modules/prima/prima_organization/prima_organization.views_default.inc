@@ -523,25 +523,17 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'Organization state / province';
   $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
   /* Field: Field: Website */
-  $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
-  $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
-  $handler->display->display_options['fields']['field_website_1']['field'] = 'field_website';
-  $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website title';
-  $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_website_1']['type'] = 'link_title_plain';
-  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website_2']['id'] = 'field_website_2';
   $handler->display->display_options['fields']['field_website_2']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website_2']['field'] = 'field_website';
-  $handler->display->display_options['fields']['field_website_2']['label'] = 'Organization website url';
   $handler->display->display_options['fields']['field_website_2']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_website_2']['type'] = 'link_plain';
-  /* Field: Content: E-mail */
+  $handler->display->display_options['fields']['field_website_2']['type'] = 'link_absolute';
+  /* Field: Content: General email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
-  /* Field: Content: Office phone */
+  /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';

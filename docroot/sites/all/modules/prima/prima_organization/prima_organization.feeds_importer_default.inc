@@ -48,6 +48,7 @@ function prima_organization_feeds_importer_default() {
             'source' => 'Organization name',
             'target' => 'title_field',
             'unique' => 1,
+            'language' => 'und',
           ),
           1 => array(
             'source' => 'Organization type',
@@ -98,24 +99,18 @@ function prima_organization_feeds_importer_default() {
             'language' => 'und',
           ),
           9 => array(
-            'source' => 'Organization website title',
-            'target' => 'field_website:title',
-            'unique' => FALSE,
-            'language' => 'und',
-          ),
-          10 => array(
-            'source' => 'Organization website url',
+            'source' => 'Website',
             'target' => 'field_website:url',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          11 => array(
+          10 => array(
             'source' => 'Organization general e-mail',
             'target' => 'field_email',
             'unique' => FALSE,
             'language' => 'und',
           ),
-          12 => array(
+          11 => array(
             'source' => 'Organization phone',
             'target' => 'field_phone',
             'unique' => FALSE,

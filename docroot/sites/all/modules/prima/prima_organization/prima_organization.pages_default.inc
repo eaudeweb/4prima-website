@@ -28,6 +28,8 @@ function prima_organization_default_page_manager_pages() {
         'not' => FALSE,
       ),
     ),
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array();
   $page->arguments = array();
