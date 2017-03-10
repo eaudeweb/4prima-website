@@ -61,3 +61,13 @@ function prima_registration_update_7006() {
 function prima_registration_update_7007() {
   features_revert_module('prima_registration');
 }
+
+/**
+ * Enable module.
+ */
+function prima_registration_update_7008() {
+  $modules = array(
+    'module_filter',
+  );
+  module_enable($modules);
+}

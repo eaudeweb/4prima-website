@@ -360,6 +360,7 @@ $options['init-modules'] = array(
   'feeds_tamper_string2id',
   'views_data_export',
   'prima_registration',
+  'module_filter',
 //  'elysia_cron',
 
 //  'locale',
