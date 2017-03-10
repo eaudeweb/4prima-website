@@ -123,7 +123,7 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Category';
   $handler->display->display_options['fields']['field_organization_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -190,7 +190,7 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_organization_type']['field'] = 'field_organization_type';
   $handler->display->display_options['fields']['field_organization_type']['label'] = 'Category';
   $handler->display->display_options['fields']['field_organization_type']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -315,7 +315,7 @@ function prima_organization_views_default_views() {
       'address-hide-street' => 'address-hide-street',
     ),
   );
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -522,26 +522,26 @@ function prima_organization_views_default_views() {
   $handler->display->display_options['fields']['field_address_administrative_area']['field'] = 'field_address_administrative_area';
   $handler->display->display_options['fields']['field_address_administrative_area']['label'] = 'Organization state / province';
   $handler->display->display_options['fields']['field_address_administrative_area']['display_name'] = 1;
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
   $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website_1']['field'] = 'field_website';
   $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website title';
   $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_1']['type'] = 'link_title_plain';
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website_2']['id'] = 'field_website_2';
   $handler->display->display_options['fields']['field_website_2']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website_2']['field'] = 'field_website';
   $handler->display->display_options['fields']['field_website_2']['label'] = 'Organization website url';
   $handler->display->display_options['fields']['field_website_2']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_2']['type'] = 'link_plain';
-  /* Field: Content: General email */
+  /* Field: Content: E-mail */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
-  /* Field: Content: Phone */
+  /* Field: Content: Office phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
