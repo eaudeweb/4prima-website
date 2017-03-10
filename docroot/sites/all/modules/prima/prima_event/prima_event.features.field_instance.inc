@@ -404,9 +404,9 @@ function prima_event_field_default_field_instances() {
           'open' => NULL,
         ),
         'settings' => array(
-          'confirmation' => 'Registration has been saved.',
+          'confirmation' => 'Thank you for registering.',
           'confirmation_redirect' => '',
-          'from_address' => 'claudia.ifrim@eaudeweb.ro',
+          'from_address' => 'info@semide.org',
           'maximum_spaces' => 1,
           'multiple_registrations' => 0,
         ),
