@@ -111,3 +111,10 @@ function prima_registration_update_7013() {
   module_enable($modules);
   features_revert_module('prima_registration');
 }
+
+/**
+ * Enable module and feature revert.
+ */
+function prima_registration_update_7014() {
+  features_revert_module('prima_registration');
+}
