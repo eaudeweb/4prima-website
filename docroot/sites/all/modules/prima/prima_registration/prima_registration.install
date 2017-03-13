@@ -99,3 +99,15 @@ function prima_registration_update_7011() {
 function prima_registration_update_7012() {
   features_revert_module('prima_registration');
 }
+
+/**
+ * Enable module and feature revert.
+ */
+function prima_registration_update_7013() {
+  $modules = array(
+    'rules',
+    'rules_admin'
+  );
+  module_enable($modules);
+  features_revert_module('prima_registration');
+}
