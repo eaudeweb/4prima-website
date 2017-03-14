@@ -9,8 +9,27 @@ function prima_event_update_7001() {
 }
 
 /**
- * Added field_registration to event content type.
+ * Enable new modules and revert event feature.
  */
 function prima_event_update_7002() {
+  $modules = array(
+    'feeds',
+    'feeds_ui',
+    'feeds_import',
+    'registration_views',
+    'feeds_entity_processor',
+    'feeds_tamper',
+    'feeds_tamper_ui',
+    'feeds_tamper_string2id',
+    'views_data_export',
+    'module_filter',
+    'rules',
+    'rules_admin',
+    'field_validation',
+    'field_validation_ui',
+    'prima_organization',
+    'prima_registration',
+  );
+  module_enable($modules);
   features_revert_module('prima_event');
 }

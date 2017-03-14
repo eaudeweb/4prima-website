@@ -87,7 +87,7 @@ function prima_contact_person_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '11',
+          'weight' => '4',
         ),
       ),
       'display' => array(),

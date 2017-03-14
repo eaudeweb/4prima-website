@@ -39,7 +39,7 @@ function prima_registration_default_registration_state() {
     "active" : "1",
     "held" : "0",
     "show_on_form" : "0",
-    "weight" : "1",
+    "weight" : "-15",
     "rdf_mapping" : []
   }');
   $items['complete'] = entity_import('registration_state', '{
@@ -50,7 +50,7 @@ function prima_registration_default_registration_state() {
     "active" : "1",
     "held" : "0",
     "show_on_form" : "1",
-    "weight" : "1",
+    "weight" : "-14",
     "rdf_mapping" : []
   }');
   $items['held'] = entity_import('registration_state', '{
@@ -61,7 +61,7 @@ function prima_registration_default_registration_state() {
     "active" : "0",
     "held" : "1",
     "show_on_form" : "0",
-    "weight" : "1",
+    "weight" : "-13",
     "rdf_mapping" : []
   }');
   $items['pending'] = entity_import('registration_state', '{
@@ -72,7 +72,7 @@ function prima_registration_default_registration_state() {
     "active" : "1",
     "held" : "0",
     "show_on_form" : "0",
-    "weight" : "1",
+    "weight" : "-12",
     "rdf_mapping" : []
   }');
   return $items;
