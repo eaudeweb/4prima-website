@@ -184,14 +184,26 @@ function prima_feeds_import_form_submit($form, &$form_state) {
 }
 
 function prima_event_views_pre_render(&$view) {
-  if($view->name == 'event_registrations'){
-    $emails = array();
-    foreach($view->result as $key => $result){
-      if(array_key_exists($result->registration_anon_mail,$emails)){
-        unset($view->result[$key]);
-      }else{
-        $emails[$result->registration_anon_mail] = $result->registration_anon_mail;
+  switch ($view->name) {
+    case 'event_registrations':
+      $emails = array();
+      foreach($view->result as $key => $result){
+        if(array_key_exists($result->registration_anon_mail,$emails)){
+          unset($view->result[$key]);
+        }else{
+          $emails[$result->registration_anon_mail] = $result->registration_anon_mail;
+        }
       }
-    }
+      break;
+    case 'events':
+      if ($view->current_display == 'events_registration_public') {
+        foreach ($view->result as $key => $result) {
+          if (empty($result->field_field_registration[0]['raw']['registration_type']) &&
+            empty($result->field_field_external_registration)) {
+            unset($view->result[$key]);
+          }
+        }
+      }
+      break;
   }
 }

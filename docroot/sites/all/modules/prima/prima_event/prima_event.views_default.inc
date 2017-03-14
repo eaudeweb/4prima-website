@@ -578,7 +578,7 @@ function prima_event_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -857,7 +857,7 @@ function prima_event_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -938,7 +938,7 @@ function prima_event_views_default_views() {
   $handler->display->display_options['path'] = 'next-events';
 
   /* Display: Events registration */
-  $handler = $view->new_display('page', 'Events registration', 'page_2');
+  $handler = $view->new_display('page', 'Events registration', 'events_registration_public');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Registration';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
@@ -1117,7 +1117,7 @@ function prima_event_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Website */
+  /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
   $handler->display->display_options['fields']['field_website']['field'] = 'field_website';
@@ -1138,12 +1138,25 @@ function prima_event_views_default_views() {
   $handler->display->display_options['fields']['field_registration']['id'] = 'field_registration';
   $handler->display->display_options['fields']['field_registration']['table'] = 'field_data_field_registration';
   $handler->display->display_options['fields']['field_registration']['field'] = 'field_registration';
+  $handler->display->display_options['fields']['field_registration']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_registration']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_registration']['type'] = 'registration_link';
   $handler->display->display_options['fields']['field_registration']['settings'] = array(
     'label' => '',
     'i18n_string_key' => 'ctools:ctools:_custom:field_registration',
   );
+  /* Field: Content: External registration link */
+  $handler->display->display_options['fields']['field_external_registration']['id'] = 'field_external_registration';
+  $handler->display->display_options['fields']['field_external_registration']['table'] = 'field_data_field_external_registration';
+  $handler->display->display_options['fields']['field_external_registration']['field'] = 'field_external_registration';
+  $handler->display->display_options['fields']['field_external_registration']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_external_registration']['click_sort_column'] = 'url';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Registration';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_registration] [field_external_registration]';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Date -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
@@ -1178,6 +1191,12 @@ function prima_event_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value2']['group'] = 1;
   $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Registration (field_registration) */
+  $handler->display->display_options['filters']['field_registration_registration_type']['id'] = 'field_registration_registration_type';
+  $handler->display->display_options['filters']['field_registration_registration_type']['table'] = 'field_data_field_registration';
+  $handler->display->display_options['filters']['field_registration_registration_type']['field'] = 'field_registration_registration_type';
+  $handler->display->display_options['filters']['field_registration_registration_type']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_registration_registration_type']['group'] = 1;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
   $handler->display->display_options['filters']['status_1']['table'] = 'node';
@@ -1205,11 +1224,12 @@ function prima_event_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['group'] = 2;
   $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
-  /* Filter criterion: Content: Registration (field_registration) */
-  $handler->display->display_options['filters']['field_registration_registration_type']['id'] = 'field_registration_registration_type';
-  $handler->display->display_options['filters']['field_registration_registration_type']['table'] = 'field_data_field_registration';
-  $handler->display->display_options['filters']['field_registration_registration_type']['field'] = 'field_registration_registration_type';
-  $handler->display->display_options['filters']['field_registration_registration_type']['operator'] = 'not empty';
+  /* Filter criterion: Content: External registration link (field_external_registration:url) */
+  $handler->display->display_options['filters']['field_external_registration_url']['id'] = 'field_external_registration_url';
+  $handler->display->display_options['filters']['field_external_registration_url']['table'] = 'field_data_field_external_registration';
+  $handler->display->display_options['filters']['field_external_registration_url']['field'] = 'field_external_registration_url';
+  $handler->display->display_options['filters']['field_external_registration_url']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_external_registration_url']['group'] = 2;
   $handler->display->display_options['path'] = 'registration';
   $export['events'] = $view;
 
