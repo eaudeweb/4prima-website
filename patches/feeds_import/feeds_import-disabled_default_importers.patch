@@ -1,0 +1,47 @@
+diff --git a/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.feeds_importer_default.inc b/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.feeds_importer_default.inc
+index 4544d29..46adadf 100644
+--- a/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.feeds_importer_default.inc
++++ b/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.feeds_importer_default.inc
+@@ -11,7 +11,7 @@ function feeds_import_feeds_importer_default() {
+   $export = array();
+ 
+   $feeds_importer = new stdClass();
+-  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
++  $feeds_importer->disabled = TRUE; /* Edit this to true to make a default feeds_importer disabled initially */
+   $feeds_importer->api_version = 1;
+   $feeds_importer->id = 'node';
+   $feeds_importer->config = array(
+@@ -70,7 +70,7 @@ function feeds_import_feeds_importer_default() {
+   $export['node'] = $feeds_importer;
+ 
+   $feeds_importer = new stdClass();
+-  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
++  $feeds_importer->disabled = TRUE; /* Edit this to true to make a default feeds_importer disabled initially */
+   $feeds_importer->api_version = 1;
+   $feeds_importer->id = 'user';
+   $feeds_importer->config = array(
+diff --git a/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.info b/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.info
+index 9793db5..9cb3c75 100644
+--- a/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.info
++++ b/docroot/sites/all/modules/contrib/feeds/feeds_import/feeds_import.info
+@@ -2,17 +2,13 @@ name = Feeds Import
+ description = An example of a node importer and a user importer.
+ core = 7.x
+ package = Feeds
++version = 7.x-2.0-beta3
++project = feeds
+ dependencies[] = ctools
+ dependencies[] = feeds
++datestamp = 1479993785
+ features[ctools][] = feeds:feeds_importer_default:1
+ features[features_api][] = api:2
+ features[feeds_importer][] = node
+ features[feeds_importer][] = user
+ files[] = feeds_import.test
+-
+-; Information added by Drupal.org packaging script on 2016-11-24
+-version = "7.x-2.0-beta3"
+-core = "7.x"
+-project = "feeds"
+-datestamp = "1479993785"
+-
