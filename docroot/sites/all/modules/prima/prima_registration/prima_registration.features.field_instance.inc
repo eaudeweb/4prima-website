@@ -396,7 +396,7 @@ function prima_registration_field_default_field_instances() {
     'entity_type' => 'registration',
     'field_name' => 'field_reg_organization',
     'label' => 'Organization',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
