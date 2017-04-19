@@ -1,1 +1,11 @@
 <?php
+
+/**
+ * Feature revert.
+ */
+function prima_registration_update_7001() {
+  features_revert_module('prima_registration');
+  db_update('registration')
+    ->fields(['count'=>1])
+    ->execute();
+}

@@ -45,7 +45,7 @@ function prima_registration_feeds_importer_default() {
           'entity_id' => '120',
           'entity_type' => 'event',
           'anon_mail' => '',
-          'count' => '',
+          'count' => '1',
           'state' => 'complete',
           'created' => NULL,
           'updated' => NULL,
