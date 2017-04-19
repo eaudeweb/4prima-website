@@ -426,14 +426,14 @@ function prima_registration_views_default_views() {
   $handler->display->display_options['fields']['field_website_1']['label'] = 'Organization website';
   $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_1']['type'] = 'link_plain';
-  /* Field: Content: E-mail */
+  /* Field: Content: General email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['relationship'] = 'field_reg_organization_target_id';
   $handler->display->display_options['fields']['field_email']['label'] = 'Organization general e-mail';
   $handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
-  /* Field: Content: Office phone */
+  /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
   $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
   $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';

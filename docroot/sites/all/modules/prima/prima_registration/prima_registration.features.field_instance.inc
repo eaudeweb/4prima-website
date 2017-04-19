@@ -99,7 +99,7 @@ function prima_registration_field_default_field_instances() {
     'entity_type' => 'registration',
     'field_name' => 'field_other_comments',
     'label' => 'Other comments',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -186,7 +186,7 @@ function prima_registration_field_default_field_instances() {
         'default_country' => 'site_default',
         'format_handlers' => array(
           'address' => 'address',
-          'address-country-required' => 'address-country-required',
+          'address-optional' => 'address-optional',
           'address-hide-city' => 0,
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
@@ -194,7 +194,7 @@ function prima_registration_field_default_field_instances() {
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
+          'address-country-required' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
