@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Feature revert - added new field for files on news content type.
+ */
+function prima_news_update_7001() {
+  features_revert_module('prima_news');
+}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Feature revert.
+ * Feature revert and update count for imported registrants - bugfix.
  */
 function prima_registration_update_7001() {
   features_revert_module('prima_registration');
